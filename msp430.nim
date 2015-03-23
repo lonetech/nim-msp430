@@ -14,6 +14,7 @@ type
     DS:  int16
     SEL: int16
     # Only port A (aka port 1 and 2) has interrupts
+    padc, pade, pad10, pad12, pad14, pad16: int16
     IES: int16
     IE:  int16
     IFG: int16
@@ -31,6 +32,11 @@ macro declGPIO(n: expr): stmt {.immediate.} =
 
 var
   WDTCTL* {.header: "<msp430.h>", importc.} : int16
+  P1IV* {.header: "<msp430.h>", importc.} : int16
+  P2IV* {.header: "<msp430.h>", importc.} : int16
+
+proc enable_interrupts*() {.header: "<intrinsics.h>", importc: "_EINT".}
+proc disable_interrupts*() {.header: "<intrinsics.h>", importc: "_DINT".}
 
 declGPIO(PA)
 declGPIO(PJ)
