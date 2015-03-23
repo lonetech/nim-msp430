@@ -19,6 +19,16 @@ type
     IE:  int16
     IFG: int16
 
+proc `[]`*(word: int16, bit: range[0..15]): range[0..1] =
+  if (word and (1 shl bit))!=0: return 1
+  else: return 0
+template `[]=`*(word: var int16, bit: range[0..15], value: range[0..1]) =
+  let bitval : int16 =  1 shl bit
+  if value!=0:
+    word = word or bitval
+  else:
+    word = word and not bitval
+
 macro declGPIO(n: expr): stmt {.immediate.} =
   result = newNimNode(nnkStmtList)
   n.expectKind(nnkIdent)

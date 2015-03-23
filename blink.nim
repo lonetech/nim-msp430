@@ -26,12 +26,12 @@ template toggleLED() =
   PJ.OUT = PJ.OUT xor 8
 
 proc main =
-  PJ.DIR = PJ.DIR or 8
-  PA.DIR = PA.DIR and not 256
-  PA.OUT = PA.OUT or 256
-  PA.REN = PA.REN or 256
-  PA.IES = PA.IES or 256
-  PA.IE = PA.IE or 256
+  PJ.DIR[3] = 1
+  PA.DIR[8] = 0
+  PA.OUT[8] = 1
+  PA.REN[8] = 1
+  PA.IES[8] = 1
+  PA.IE[8] = 1
   PA.IFG = 0
   enable_interrupts()
 
