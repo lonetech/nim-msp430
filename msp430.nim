@@ -1,9 +1,20 @@
 import macros
 
 const mcu="msp430f5510"
+const msp430includes="/usr/msp430/include"
+#const msp430includes=staticExec("msp430mcu-config --incpath"
 
 {.passC: "-mmcu="&mcu.}
 {.passL: "-mmcu="&mcu.}
+
+macro importmsp430(header: static[string]): stmt =
+  # We could use os.`/` but the target has no OS. 
+  discard staticExec("c2nim -o:"&header&".nim "&msp430includes&"/"&header&".h")
+  # Rename __MSP430 macros and import iomacros
+  if header==mcu:
+    discard staticExec("ed -s "&header&".nim < msp430_c2nim.ed")
+  return parseStmt("include "&header)
+importmsp430(mcu)
 
 type
   GPIO = tuple
@@ -39,40 +50,16 @@ macro declGPIO(n: expr): stmt {.immediate.} =
   # macros) which have initializers in the runtime (empty, but each wastes
   # six words). But building the expression directly is awfully clumsy.
   # This makes me see more appeal to lisp. 
-  result.add(parseStmt("var "&name&"IN {.header: \"<msp430.h>\", importc.} : int16"),
+  result.add(#parseStmt("var "&name&"IN {.header: \"<msp430.h>\", importc.} : int16"),
              parseStmt("template "&name&"*: expr = cast[ptr GPIO](addr "&name&"IN)"))
-
-var
-  WDTCTL* {.header: "<msp430.h>", importc.} : int16
-  P1IV* {.header: "<msp430.h>", importc.} : int16
-  P2IV* {.header: "<msp430.h>", importc.} : int16
-  PMMCTL0_H {.header: "<msp430.h>", importc.} : uint8
-  PMMCTL0_L {.header: "<msp430.h>", importc.} : int8
-  PMMIFG {.header: "<msp430.h>", importc.} : int16
-  SVSMHCTL {.header: "<msp430.h>", importc.} : int16
-  SVSMLCTL {.header: "<msp430.h>", importc.} : int16
-#const
-  SVSMHDLYIFG {.header: "<msp430.h>", importc.} : int16
-  SVSMLDLYIFG {.header: "<msp430.h>", importc.} : int16
-  SVMLVLRIFG {.header: "<msp430.h>", importc.} : int16
-  SVMLIFG {.header: "<msp430.h>", importc.} : int16
-  SVSHE {.header: "<msp430.h>", importc.} : int16
-  SVSHRVL0 {.header: "<msp430.h>", importc.} : int16
-  SVMHE {.header: "<msp430.h>", importc.} : int16
-  SVSMHRRL0 {.header: "<msp430.h>", importc.} : int16
-  SVSLE {.header: "<msp430.h>", importc.} : int16
-  SVMLE {.header: "<msp430.h>", importc.} : int16
-  SVSMLRRL0 {.header: "<msp430.h>", importc.} : int16
-  PMMCOREV0 {.header: "<msp430.h>", importc.} : int8
-  SVSLRVL0 {.header: "<msp430.h>", importc.} : int16
-
 
 proc enable_interrupts*() {.header: "<intrinsics.h>", importc: "_EINT".}
 proc disable_interrupts*() {.header: "<intrinsics.h>", importc: "_DINT".}
 
 declGPIO(PA)
+declGPIO(PB)
+declGPIO(PC)
 declGPIO(PJ)
-
 
 proc setVCoreUp*(level: range[0..3]) =
   ## Set core voltage level - only shift one level at a time!
@@ -98,6 +85,22 @@ proc setVCoreUp*(level: range[0..3]) =
   # Lock PMM registers for write access
   PMMCTL0_H = 0x00
 
+proc enableXT2*() {.inline.} =
+  # TODO: Implement various possible values
+  # Set XT2 parameters for 4MHz crystal
+  USCTL6 = (USCTL6 and 0xff) or 0b00_0_0_000_0_00000000
+  #          00  lowest drive strength for 4MHz crystal
+  #             -  reserved
+  #               0  not bypassed (enable osc amp)
+  #                 ---  reserved
+  #                     0  turn osc on (even if not used by UCS)
+  #                       xxxxxxxx  don't touch XT1 settings
+  # Map the pins to XT2
+  PC.SEL = PC.SEL or 0b1100
+  # We could wait for it to lock:
+  when false:
+    while USCTL7[3]:
+      USCTL7[3]=0
 
 template setPragma(node: stmt, name: string, value: string) =
   if node.pragma.kind==nnkEmpty:
@@ -119,12 +122,15 @@ macro ISR*(procs: stmt): stmt {.immediate.} =
   for node in procs.children:
     node.expectKind(nnkProcDef)
     let name : string = $node.name.ident
-    node.setPragma("codegenDecl", "$# __attribute__((__interrupt__("&name&"_VECTOR))) $# $#")
+    # Rename the ISR to not collide with C macros
     node.setPragma("exportc", "ISR_" & name)
+    node.pragma.add(newNimNode(nnkExprColonExpr)
+                    .add(newIdentNode("codegenDecl"))
+                    .add(parseExpr("\"$# __attribute__((__interrupt__(\"& $"&name&"_VECTOR&\"))) $# $#\"")))
     keeps.add(newNimNode(nnkDiscardstmt).add(node.name))
   # discard statements are generated to keep the proc referenced
   # dead code elimination doesn't know of the ISR vector table
-  result = procs.add(keeps)
+  return procs.add(keeps)
 
 # Example usage
 #ISR:
