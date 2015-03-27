@@ -19,6 +19,7 @@ type
     IE:  int16
     IFG: int16
 
+# Some sugar to do bit twiddling
 proc `[]`*(word: int16, bit: range[0..15]): range[0..1] =
   if (word and (1 shl bit))!=0: return 1
   else: return 0
@@ -28,6 +29,7 @@ template `[]=`*(word: var int16, bit: range[0..15], value: range[0..1]) =
     word = word or bitval
   else:
     word = word and not bitval
+
 
 macro declGPIO(n: expr): stmt {.immediate.} =
   result = newNimNode(nnkStmtList)
@@ -44,12 +46,58 @@ var
   WDTCTL* {.header: "<msp430.h>", importc.} : int16
   P1IV* {.header: "<msp430.h>", importc.} : int16
   P2IV* {.header: "<msp430.h>", importc.} : int16
+  PMMCTL0_H {.header: "<msp430.h>", importc.} : uint8
+  PMMCTL0_L {.header: "<msp430.h>", importc.} : int8
+  PMMIFG {.header: "<msp430.h>", importc.} : int16
+  SVSMHCTL {.header: "<msp430.h>", importc.} : int16
+  SVSMLCTL {.header: "<msp430.h>", importc.} : int16
+#const
+  SVSMHDLYIFG {.header: "<msp430.h>", importc.} : int16
+  SVSMLDLYIFG {.header: "<msp430.h>", importc.} : int16
+  SVMLVLRIFG {.header: "<msp430.h>", importc.} : int16
+  SVMLIFG {.header: "<msp430.h>", importc.} : int16
+  SVSHE {.header: "<msp430.h>", importc.} : int16
+  SVSHRVL0 {.header: "<msp430.h>", importc.} : int16
+  SVMHE {.header: "<msp430.h>", importc.} : int16
+  SVSMHRRL0 {.header: "<msp430.h>", importc.} : int16
+  SVSLE {.header: "<msp430.h>", importc.} : int16
+  SVMLE {.header: "<msp430.h>", importc.} : int16
+  SVSMLRRL0 {.header: "<msp430.h>", importc.} : int16
+  PMMCOREV0 {.header: "<msp430.h>", importc.} : int8
+  SVSLRVL0 {.header: "<msp430.h>", importc.} : int16
+
 
 proc enable_interrupts*() {.header: "<intrinsics.h>", importc: "_EINT".}
 proc disable_interrupts*() {.header: "<intrinsics.h>", importc: "_DINT".}
 
 declGPIO(PA)
 declGPIO(PJ)
+
+
+proc setVCoreUp*(level: range[0..3]) =
+  ## Set core voltage level - only shift one level at a time!
+  # Open PMM registers for write access
+  PMMCTL0_H = 0xa5
+  # Make sure no flags are set for iterative sequences
+  while (PMMIFG and (SVSMHDLYIFG or SVSMLDLYIFG)) != 0: continue
+  # Set SVS/SVM high side new level
+  SVSMHCTL = SVSHE or SVSHRVL0 * level or SVMHE or SVSMHRRL0 * level
+  # Set SVM low side to new level
+  SVSMLCTL = SVSLE or SVMLE or SVSMLRRL0 * level
+  # Wait till SVM is settled
+  while (PMMIFG and SVSMLDLYIFG) == 0: continue
+  # Clear already set flags
+  PMMIFG = PMMIFG and not (SVMLVLRIFG or SVMLIFG)
+  # Set VCore to new level
+  PMMCTL0_L = PMMCOREV0 * level
+  # Wait till new level reached
+  if (PMMIFG and SVMLIFG) != 0:
+    while (PMMIFG and SVMLVLRIFG) == 0: continue
+  # Set SVS/SVM low side to new level
+  SVSMLCTL = SVSLE or SVSLRVL0 * level or SVMLE or SVSMLRRL0 * level
+  # Lock PMM registers for write access
+  PMMCTL0_H = 0x00
+
 
 template setPragma(node: stmt, name: string, value: string) =
   if node.pragma.kind==nnkEmpty:
@@ -63,7 +111,7 @@ template setPragma(node: stmt, name: string) =
   node.pragma.add(newIdentNode(name))
 
 macro ISR*(procs: stmt): stmt {.immediate.} =
-  # Statement macro that modifies a proc to work as interrupt handler
+  ## Statement macro that modifies a proc to work as interrupt handler
   # The vectors are only resolved at C level, so this routine does not
   # need to know which exist. 
   let keeps = newNimNode(nnkStmtList)

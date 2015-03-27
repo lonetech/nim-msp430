@@ -105,3 +105,8 @@ ISR:
       of OUTPUT_ENDPOINT7:
         PA.OUT = 9
 
+proc usbinit*() =
+  # Raise operating voltage to levels that permit USB
+  setVCoreUp 1
+  setVCoreUp 2
+  setVCoreUp 3
