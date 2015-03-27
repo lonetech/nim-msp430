@@ -65,11 +65,10 @@ main()
 # 1,8,9,15  5v
 # 4,5,12   gnd
 # 7  b2   d3   ta0_0
-# 6  y1   d4   ta0_1   needs capacitor
+# 6  y1   d4   ta0_1   has capacitor
 # 14 b3   d2   p1_0
-# 13 y2   d5   ta0_2   needs capacitor
-# 11 x2   d6   ta0_3   needs capacitor
-# 3  x1   d7   ta0_4   needs capacitor
-# pins yet to connect
+# 13 y2   d5   ta0_2   has capacitor
+# 11 x2   d6   ta0_3   has capacitor
+# 3  x1   d7   ta0_4   has capacitor
 # 2  b1   d8   p1_6
 # 10 b4   d9   p1_7
