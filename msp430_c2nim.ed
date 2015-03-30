@@ -1,0 +1,52 @@
+# TODO: Translate this whole mess into Nim.
+# Strip underscores from beginning and end
+,s/\b_\+//g
+,s/__\b//g
+# Except for addresses, where we append ADDR
+,s/_\b/_ADDR/g
+# Some parts have __ for symbolic part values
+,s/\([A-Z0-9]\)__\([A-Z]\)/\1_\2/g
+# Others have it for numeric values, avoid clashing with bit names
+,s/\B__\B/_VAL_/g
+# Some parts have _0 for bit and __1 for divider, for instance
+,s/\([^V]AL\|[^A]L\|[^L]\)_\([0-9]\+\)\b/\1_BIT\2/g
+# RTCYEARL is already RTCYEAR_L
+,s/\(\b\([A-Z0-9]\+\)\([LH]\)\* = \2_\3\)/# \1/g
+# Move the interrupt vectors to avoid forward references
+/Interrupt Vectors/,/End of Modules/m/STANDARD BITS/
+# Doubly defined constants
+/UCRXIE/s/^/#/
+-s/^/#/
+-s/^/#/
+/UCRXIFG/s/^/#/
+-s/^/#/
+-s/^/#/
+# A lot of the defines are aliases, not constants
+/P4MAP0\*/-m/P4MAP7/
+/USBKEYPID\*/-m/USBKEYPID\*/
+/UCA0CTL1\*/-m/UCA0CTL0\*/
+/UCA0BR0\*/-m/UCA0BR1\*/
+/UCA0IRTCTL\*/-m/UCA0IRRCTL\*/
+/UCA0IE\*/-m/UCA0IFG\*/
+/UCB0CTL1\*/-m/UCB0CTL0\*/
+/UCB0BR0\*/-m/UCB0BR1\*/
+/UCB0IE\*/-m/UCB0IFG\*/
+/UCA1CTL1\*/-m/UCA1CTL0\*/
+/UCA1BR0\*/-m/UCA1BR1\*/
+/UCA1IRTCTL\*/-m/UCA1IRRCTL\*/
+/UCA1IE\*/-m/UCA1IFG\*/
+/UCB1CTL1\*/-m/UCB1CTL0\*/
+/UCB1BR0\*/-m/UCB1BR1\*/
+/UCB1IE\*/-m/UCB1IFG\*/
+
+,s/^    \([A-Z][A-Z0-9_]*\* = (\?[A-Z][A-Z0-9_]*)\? *\(#.*\)\?\)$/  template \1/
+g/^  template/-s/^  const/  #const/
+# Remove some legacy aliases (easier than fixing them up)
+g/^    PMAPPW/d
+g/sfrb(OP2_[LHB],/d
+# Inject iomacros import
+0i
+import iomacros
+.
+# Save
+w
