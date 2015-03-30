@@ -230,22 +230,22 @@ when not(defined(MSP430F5510)):
     ADC10SHT1_H* = (0x00000002) # ADC10 Sample Hold Select Bit: 1 
     ADC10SHT2_H* = (0x00000004) # ADC10 Sample Hold Select Bit: 2 
     ADC10SHT3_H* = (0x00000008) # ADC10 Sample Hold Select Bit: 3 
-    ADC10SHT_BIT0* = (0x00000000) # ADC10 Sample Hold Select 0 
-    ADC10SHT_BIT1* = (0x00000100) # ADC10 Sample Hold Select 1 
-    ADC10SHT_BIT2* = (0x00000200) # ADC10 Sample Hold Select 2 
-    ADC10SHT_BIT3* = (0x00000300) # ADC10 Sample Hold Select 3 
-    ADC10SHT_BIT4* = (0x00000400) # ADC10 Sample Hold Select 4 
-    ADC10SHT_BIT5* = (0x00000500) # ADC10 Sample Hold Select 5 
-    ADC10SHT_BIT6* = (0x00000600) # ADC10 Sample Hold Select 6 
-    ADC10SHT_BIT7* = (0x00000700) # ADC10 Sample Hold Select 7 
-    ADC10SHT_BIT8* = (0x00000800) # ADC10 Sample Hold Select 8 
-    ADC10SHT_BIT9* = (0x00000900) # ADC10 Sample Hold Select 9 
-    ADC10SHT_BIT10* = (0x00000A00) # ADC10 Sample Hold Select 10 
-    ADC10SHT_BIT11* = (0x00000B00) # ADC10 Sample Hold Select 11 
-    ADC10SHT_BIT12* = (0x00000C00) # ADC10 Sample Hold Select 12 
-    ADC10SHT_BIT13* = (0x00000D00) # ADC10 Sample Hold Select 13 
-    ADC10SHT_BIT14* = (0x00000E00) # ADC10 Sample Hold Select 14 
-    ADC10SHT_BIT15* = (0x00000F00) # ADC10 Sample Hold Select 15 
+    ADC10SHT_VAL_0* = (0x00000000) # ADC10 Sample Hold Select 0 
+    ADC10SHT_VAL_1* = (0x00000100) # ADC10 Sample Hold Select 1 
+    ADC10SHT_VAL_2* = (0x00000200) # ADC10 Sample Hold Select 2 
+    ADC10SHT_VAL_3* = (0x00000300) # ADC10 Sample Hold Select 3 
+    ADC10SHT_VAL_4* = (0x00000400) # ADC10 Sample Hold Select 4 
+    ADC10SHT_VAL_5* = (0x00000500) # ADC10 Sample Hold Select 5 
+    ADC10SHT_VAL_6* = (0x00000600) # ADC10 Sample Hold Select 6 
+    ADC10SHT_VAL_7* = (0x00000700) # ADC10 Sample Hold Select 7 
+    ADC10SHT_VAL_8* = (0x00000800) # ADC10 Sample Hold Select 8 
+    ADC10SHT_VAL_9* = (0x00000900) # ADC10 Sample Hold Select 9 
+    ADC10SHT_VAL_10* = (0x00000A00) # ADC10 Sample Hold Select 10 
+    ADC10SHT_VAL_11* = (0x00000B00) # ADC10 Sample Hold Select 11 
+    ADC10SHT_VAL_12* = (0x00000C00) # ADC10 Sample Hold Select 12 
+    ADC10SHT_VAL_13* = (0x00000D00) # ADC10 Sample Hold Select 13 
+    ADC10SHT_VAL_14* = (0x00000E00) # ADC10 Sample Hold Select 14 
+    ADC10SHT_VAL_15* = (0x00000F00) # ADC10 Sample Hold Select 15 
   # ADC10CTL1 Control Bits 
   const 
     ADC10BUSY* = (0x00000001) # ADC10 Busy 
@@ -276,26 +276,26 @@ when not(defined(MSP430F5510)):
     ADC10SHP_H* = (0x00000002) # ADC10 Sample/Hold Pulse Mode 
     ADC10SHS0_H* = (0x00000004) # ADC10 Sample/Hold Source 0 
     ADC10SHS1_H* = (0x00000008) # ADC10 Sample/Hold Source 1 
-    ADC10CONSEQ_BIT0* = (0x00000000) # ADC10 Conversion Sequence Select: 0 
-    ADC10CONSEQ_BIT1* = (0x00000002) # ADC10 Conversion Sequence Select: 1 
-    ADC10CONSEQ_BIT2* = (0x00000004) # ADC10 Conversion Sequence Select: 2 
-    ADC10CONSEQ_BIT3* = (0x00000006) # ADC10 Conversion Sequence Select: 3 
-    ADC10SSEL_BIT0* = (0x00000000) # ADC10 Clock Source Select: 0 
-    ADC10SSEL_BIT1* = (0x00000008) # ADC10 Clock Source Select: 1 
-    ADC10SSEL_BIT2* = (0x00000010) # ADC10 Clock Source Select: 2 
-    ADC10SSEL_BIT3* = (0x00000018) # ADC10 Clock Source Select: 3 
-    ADC10DIV_BIT0* = (0x00000000) # ADC10 Clock Divider Select: 0 
-    ADC10DIV_BIT1* = (0x00000020) # ADC10 Clock Divider Select: 1 
-    ADC10DIV_BIT2* = (0x00000040) # ADC10 Clock Divider Select: 2 
-    ADC10DIV_BIT3* = (0x00000060) # ADC10 Clock Divider Select: 3 
-    ADC10DIV_BIT4* = (0x00000080) # ADC10 Clock Divider Select: 4 
-    ADC10DIV_BIT5* = (0x000000A0) # ADC10 Clock Divider Select: 5 
-    ADC10DIV_BIT6* = (0x000000C0) # ADC10 Clock Divider Select: 6 
-    ADC10DIV_BIT7* = (0x000000E0) # ADC10 Clock Divider Select: 7 
-    ADC10SHS_BIT0* = (0x00000000) # ADC10 Sample/Hold Source: 0 
-    ADC10SHS_BIT1* = (0x00000400) # ADC10 Sample/Hold Source: 1 
-    ADC10SHS_BIT2* = (0x00000800) # ADC10 Sample/Hold Source: 2 
-    ADC10SHS_BIT3* = (0x00000C00) # ADC10 Sample/Hold Source: 3 
+    ADC10CONSEQ_VAL_0* = (0x00000000) # ADC10 Conversion Sequence Select: 0 
+    ADC10CONSEQ_VAL_1* = (0x00000002) # ADC10 Conversion Sequence Select: 1 
+    ADC10CONSEQ_VAL_2* = (0x00000004) # ADC10 Conversion Sequence Select: 2 
+    ADC10CONSEQ_VAL_3* = (0x00000006) # ADC10 Conversion Sequence Select: 3 
+    ADC10SSEL_VAL_0* = (0x00000000) # ADC10 Clock Source Select: 0 
+    ADC10SSEL_VAL_1* = (0x00000008) # ADC10 Clock Source Select: 1 
+    ADC10SSEL_VAL_2* = (0x00000010) # ADC10 Clock Source Select: 2 
+    ADC10SSEL_VAL_3* = (0x00000018) # ADC10 Clock Source Select: 3 
+    ADC10DIV_VAL_0* = (0x00000000) # ADC10 Clock Divider Select: 0 
+    ADC10DIV_VAL_1* = (0x00000020) # ADC10 Clock Divider Select: 1 
+    ADC10DIV_VAL_2* = (0x00000040) # ADC10 Clock Divider Select: 2 
+    ADC10DIV_VAL_3* = (0x00000060) # ADC10 Clock Divider Select: 3 
+    ADC10DIV_VAL_4* = (0x00000080) # ADC10 Clock Divider Select: 4 
+    ADC10DIV_VAL_5* = (0x000000A0) # ADC10 Clock Divider Select: 5 
+    ADC10DIV_VAL_6* = (0x000000C0) # ADC10 Clock Divider Select: 6 
+    ADC10DIV_VAL_7* = (0x000000E0) # ADC10 Clock Divider Select: 7 
+    ADC10SHS_VAL_0* = (0x00000000) # ADC10 Sample/Hold Source: 0 
+    ADC10SHS_VAL_1* = (0x00000400) # ADC10 Sample/Hold Source: 1 
+    ADC10SHS_VAL_2* = (0x00000800) # ADC10 Sample/Hold Source: 2 
+    ADC10SHS_VAL_3* = (0x00000C00) # ADC10 Sample/Hold Source: 3 
   # ADC10CTL2 Control Bits 
   const 
     ADC10REFBURST* = (0x00000001) # ADC10 Reference Burst 
@@ -314,10 +314,10 @@ when not(defined(MSP430F5510)):
   const 
     ADC10PDIV0_H* = (0x00000001) # ADC10 predivider Bit: 0 
     ADC10PDIV1_H* = (0x00000002) # ADC10 predivider Bit: 1 
-    ADC10PDIV_BIT0* = (0x00000000) # ADC10 predivider /1 
-    ADC10PDIV_BIT1* = (0x00000100) # ADC10 predivider /2 
-    ADC10PDIV_BIT2* = (0x00000200) # ADC10 predivider /64 
-    ADC10PDIV_BIT3* = (0x00000300) # ADC10 predivider reserved 
+#    ADC10PDIV_VAL_0* = (0x00000000) # ADC10 predivider /1 
+#    ADC10PDIV_VAL_1* = (0x00000100) # ADC10 predivider /2 
+#    ADC10PDIV_VAL_2* = (0x00000200) # ADC10 predivider /64 
+#    ADC10PDIV_VAL_3* = (0x00000300) # ADC10 predivider reserved 
     ADC10PDIV_VAL_1* = (0x00000000) # ADC10 predivider /1 
     ADC10PDIV_VAL_4* = (0x00000100) # ADC10 predivider /2 
     ADC10PDIV_VAL_64* = (0x00000200) # ADC10 predivider /64 
@@ -341,30 +341,30 @@ when not(defined(MSP430F5510)):
     ADC10SREF2_L* = (0x00000040) # ADC10 Select Reference Bit 2 
   # ADC10MCTL0 Control Bits 
   const 
-    ADC10INCH_BIT0* = (0)        # ADC10 Input Channel 0 
-    ADC10INCH_BIT1* = (1)        # ADC10 Input Channel 1 
-    ADC10INCH_BIT2* = (2)        # ADC10 Input Channel 2 
-    ADC10INCH_BIT3* = (3)        # ADC10 Input Channel 3 
-    ADC10INCH_BIT4* = (4)        # ADC10 Input Channel 4 
-    ADC10INCH_BIT5* = (5)        # ADC10 Input Channel 5 
-    ADC10INCH_BIT6* = (6)        # ADC10 Input Channel 6 
-    ADC10INCH_BIT7* = (7)        # ADC10 Input Channel 7 
-    ADC10INCH_BIT8* = (8)        # ADC10 Input Channel 8 
-    ADC10INCH_BIT9* = (9)        # ADC10 Input Channel 9 
-    ADC10INCH_BIT10* = (10)      # ADC10 Input Channel 10 
-    ADC10INCH_BIT11* = (11)      # ADC10 Input Channel 11 
-    ADC10INCH_BIT12* = (12)      # ADC10 Input Channel 12 
-    ADC10INCH_BIT13* = (13)      # ADC10 Input Channel 13 
-    ADC10INCH_BIT14* = (14)      # ADC10 Input Channel 14 
-    ADC10INCH_BIT15* = (15)      # ADC10 Input Channel 15 
-    ADC10SREF_BIT0* = (0x00000000) # ADC10 Select Reference 0 
-    ADC10SREF_BIT1* = (0x00000010) # ADC10 Select Reference 1 
-    ADC10SREF_BIT2* = (0x00000020) # ADC10 Select Reference 2 
-    ADC10SREF_BIT3* = (0x00000030) # ADC10 Select Reference 3 
-    ADC10SREF_BIT4* = (0x00000040) # ADC10 Select Reference 4 
-    ADC10SREF_BIT5* = (0x00000050) # ADC10 Select Reference 5 
-    ADC10SREF_BIT6* = (0x00000060) # ADC10 Select Reference 6 
-    ADC10SREF_BIT7* = (0x00000070) # ADC10 Select Reference 7 
+    ADC10INCH_VAL_0* = (0)        # ADC10 Input Channel 0 
+    ADC10INCH_VAL_1* = (1)        # ADC10 Input Channel 1 
+    ADC10INCH_VAL_2* = (2)        # ADC10 Input Channel 2 
+    ADC10INCH_VAL_3* = (3)        # ADC10 Input Channel 3 
+    ADC10INCH_VAL_4* = (4)        # ADC10 Input Channel 4 
+    ADC10INCH_VAL_5* = (5)        # ADC10 Input Channel 5 
+    ADC10INCH_VAL_6* = (6)        # ADC10 Input Channel 6 
+    ADC10INCH_VAL_7* = (7)        # ADC10 Input Channel 7 
+    ADC10INCH_VAL_8* = (8)        # ADC10 Input Channel 8 
+    ADC10INCH_VAL_9* = (9)        # ADC10 Input Channel 9 
+    ADC10INCH_VAL_10* = (10)      # ADC10 Input Channel 10 
+    ADC10INCH_VAL_11* = (11)      # ADC10 Input Channel 11 
+    ADC10INCH_VAL_12* = (12)      # ADC10 Input Channel 12 
+    ADC10INCH_VAL_13* = (13)      # ADC10 Input Channel 13 
+    ADC10INCH_VAL_14* = (14)      # ADC10 Input Channel 14 
+    ADC10INCH_VAL_15* = (15)      # ADC10 Input Channel 15 
+    ADC10SREF_VAL_0* = (0x00000000) # ADC10 Select Reference 0 
+    ADC10SREF_VAL_1* = (0x00000010) # ADC10 Select Reference 1 
+    ADC10SREF_VAL_2* = (0x00000020) # ADC10 Select Reference 2 
+    ADC10SREF_VAL_3* = (0x00000030) # ADC10 Select Reference 3 
+    ADC10SREF_VAL_4* = (0x00000040) # ADC10 Select Reference 4 
+    ADC10SREF_VAL_5* = (0x00000050) # ADC10 Select Reference 5 
+    ADC10SREF_VAL_6* = (0x00000060) # ADC10 Select Reference 6 
+    ADC10SREF_VAL_7* = (0x00000070) # ADC10 Select Reference 7 
   # ADC10IE Interrupt Enable Bits 
   const 
     ADC10IE0* = (0x00000001)  # ADC10_A Interrupt enable 
@@ -489,38 +489,38 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)  /* Comp. B */
   const 
     CBIMEN_H* = (0x00000080)  # Comp. B Neg. Channel Input Enable 
-    CBIPSEL_BIT0* = (0x00000000) # Comp. B V+ terminal Input Select: Channel 0 
-    CBIPSEL_BIT1* = (0x00000001) # Comp. B V+ terminal Input Select: Channel 1 
-    CBIPSEL_BIT2* = (0x00000002) # Comp. B V+ terminal Input Select: Channel 2 
-    CBIPSEL_BIT3* = (0x00000003) # Comp. B V+ terminal Input Select: Channel 3 
-    CBIPSEL_BIT4* = (0x00000004) # Comp. B V+ terminal Input Select: Channel 4 
-    CBIPSEL_BIT5* = (0x00000005) # Comp. B V+ terminal Input Select: Channel 5 
-    CBIPSEL_BIT6* = (0x00000006) # Comp. B V+ terminal Input Select: Channel 6 
-    CBIPSEL_BIT7* = (0x00000007) # Comp. B V+ terminal Input Select: Channel 7 
-    CBIPSEL_BIT8* = (0x00000008) # Comp. B V+ terminal Input Select: Channel 8 
-    CBIPSEL_BIT9* = (0x00000009) # Comp. B V+ terminal Input Select: Channel 9 
-    CBIPSEL_BIT10* = (0x0000000A) # Comp. B V+ terminal Input Select: Channel 10 
-    CBIPSEL_BIT11* = (0x0000000B) # Comp. B V+ terminal Input Select: Channel 11 
-    CBIPSEL_BIT12* = (0x0000000C) # Comp. B V+ terminal Input Select: Channel 12 
-    CBIPSEL_BIT13* = (0x0000000D) # Comp. B V+ terminal Input Select: Channel 13 
-    CBIPSEL_BIT14* = (0x0000000E) # Comp. B V+ terminal Input Select: Channel 14 
-    CBIPSEL_BIT15* = (0x0000000F) # Comp. B V+ terminal Input Select: Channel 15 
-    CBIMSEL_BIT0* = (0x00000000) # Comp. B V- Terminal Input Select: Channel 0 
-    CBIMSEL_BIT1* = (0x00000100) # Comp. B V- Terminal Input Select: Channel 1 
-    CBIMSEL_BIT2* = (0x00000200) # Comp. B V- Terminal Input Select: Channel 2 
-    CBIMSEL_BIT3* = (0x00000300) # Comp. B V- Terminal Input Select: Channel 3 
-    CBIMSEL_BIT4* = (0x00000400) # Comp. B V- Terminal Input Select: Channel 4 
-    CBIMSEL_BIT5* = (0x00000500) # Comp. B V- Terminal Input Select: Channel 5 
-    CBIMSEL_BIT6* = (0x00000600) # Comp. B V- Terminal Input Select: Channel 6 
-    CBIMSEL_BIT7* = (0x00000700) # Comp. B V- Terminal Input Select: Channel 7 
-    CBIMSEL_BIT8* = (0x00000800) # Comp. B V- terminal Input Select: Channel 8 
-    CBIMSEL_BIT9* = (0x00000900) # Comp. B V- terminal Input Select: Channel 9 
-    CBIMSEL_BIT10* = (0x00000A00) # Comp. B V- terminal Input Select: Channel 10 
-    CBIMSEL_BIT11* = (0x00000B00) # Comp. B V- terminal Input Select: Channel 11 
-    CBIMSEL_BIT12* = (0x00000C00) # Comp. B V- terminal Input Select: Channel 12 
-    CBIMSEL_BIT13* = (0x00000D00) # Comp. B V- terminal Input Select: Channel 13 
-    CBIMSEL_BIT14* = (0x00000E00) # Comp. B V- terminal Input Select: Channel 14 
-    CBIMSEL_BIT15* = (0x00000F00) # Comp. B V- terminal Input Select: Channel 15 
+    CBIPSEL_VAL_0* = (0x00000000) # Comp. B V+ terminal Input Select: Channel 0 
+    CBIPSEL_VAL_1* = (0x00000001) # Comp. B V+ terminal Input Select: Channel 1 
+    CBIPSEL_VAL_2* = (0x00000002) # Comp. B V+ terminal Input Select: Channel 2 
+    CBIPSEL_VAL_3* = (0x00000003) # Comp. B V+ terminal Input Select: Channel 3 
+    CBIPSEL_VAL_4* = (0x00000004) # Comp. B V+ terminal Input Select: Channel 4 
+    CBIPSEL_VAL_5* = (0x00000005) # Comp. B V+ terminal Input Select: Channel 5 
+    CBIPSEL_VAL_6* = (0x00000006) # Comp. B V+ terminal Input Select: Channel 6 
+    CBIPSEL_VAL_7* = (0x00000007) # Comp. B V+ terminal Input Select: Channel 7 
+    CBIPSEL_VAL_8* = (0x00000008) # Comp. B V+ terminal Input Select: Channel 8 
+    CBIPSEL_VAL_9* = (0x00000009) # Comp. B V+ terminal Input Select: Channel 9 
+    CBIPSEL_VAL_10* = (0x0000000A) # Comp. B V+ terminal Input Select: Channel 10 
+    CBIPSEL_VAL_11* = (0x0000000B) # Comp. B V+ terminal Input Select: Channel 11 
+    CBIPSEL_VAL_12* = (0x0000000C) # Comp. B V+ terminal Input Select: Channel 12 
+    CBIPSEL_VAL_13* = (0x0000000D) # Comp. B V+ terminal Input Select: Channel 13 
+    CBIPSEL_VAL_14* = (0x0000000E) # Comp. B V+ terminal Input Select: Channel 14 
+    CBIPSEL_VAL_15* = (0x0000000F) # Comp. B V+ terminal Input Select: Channel 15 
+    CBIMSEL_VAL_0* = (0x00000000) # Comp. B V- Terminal Input Select: Channel 0 
+    CBIMSEL_VAL_1* = (0x00000100) # Comp. B V- Terminal Input Select: Channel 1 
+    CBIMSEL_VAL_2* = (0x00000200) # Comp. B V- Terminal Input Select: Channel 2 
+    CBIMSEL_VAL_3* = (0x00000300) # Comp. B V- Terminal Input Select: Channel 3 
+    CBIMSEL_VAL_4* = (0x00000400) # Comp. B V- Terminal Input Select: Channel 4 
+    CBIMSEL_VAL_5* = (0x00000500) # Comp. B V- Terminal Input Select: Channel 5 
+    CBIMSEL_VAL_6* = (0x00000600) # Comp. B V- Terminal Input Select: Channel 6 
+    CBIMSEL_VAL_7* = (0x00000700) # Comp. B V- Terminal Input Select: Channel 7 
+    CBIMSEL_VAL_8* = (0x00000800) # Comp. B V- terminal Input Select: Channel 8 
+    CBIMSEL_VAL_9* = (0x00000900) # Comp. B V- terminal Input Select: Channel 9 
+    CBIMSEL_VAL_10* = (0x00000A00) # Comp. B V- terminal Input Select: Channel 10 
+    CBIMSEL_VAL_11* = (0x00000B00) # Comp. B V- terminal Input Select: Channel 11 
+    CBIMSEL_VAL_12* = (0x00000C00) # Comp. B V- terminal Input Select: Channel 12 
+    CBIMSEL_VAL_13* = (0x00000D00) # Comp. B V- terminal Input Select: Channel 13 
+    CBIMSEL_VAL_14* = (0x00000E00) # Comp. B V- terminal Input Select: Channel 14 
+    CBIMSEL_VAL_15* = (0x00000F00) # Comp. B V- terminal Input Select: Channel 15 
   # CBCTL1 Control Bits 
   const 
     CBOUT* = (0x00000001)     # Comp. B Output 
@@ -563,14 +563,14 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)  /* Comp. B */
   ##define RESERVED            (0x8000)  /* Comp. B */
   const 
-    CBFDLY_BIT0* = (0x00000000)  # Comp. B Filter delay 0 : 450ns 
-    CBFDLY_BIT1* = (0x00000040)  # Comp. B Filter delay 1 : 900ns 
-    CBFDLY_BIT2* = (0x00000080)  # Comp. B Filter delay 2 : 1800ns 
-    CBFDLY_BIT3* = (0x000000C0)  # Comp. B Filter delay 3 : 3600ns 
-    CBPWRMD_BIT0* = (0x00000000) # Comp. B Power Mode 0 : High speed 
-    CBPWRMD_BIT1* = (0x00000100) # Comp. B Power Mode 1 : Normal 
-    CBPWRMD_BIT2* = (0x00000200) # Comp. B Power Mode 2 : Ultra-Low
-    CBPWRMD_BIT3* = (0x00000300) # Comp. B Power Mode 3 : Reserved 
+    CBFDLY_VAL_0* = (0x00000000)  # Comp. B Filter delay 0 : 450ns 
+    CBFDLY_VAL_1* = (0x00000040)  # Comp. B Filter delay 1 : 900ns 
+    CBFDLY_VAL_2* = (0x00000080)  # Comp. B Filter delay 2 : 1800ns 
+    CBFDLY_VAL_3* = (0x000000C0)  # Comp. B Filter delay 3 : 3600ns 
+    CBPWRMD_VAL_0* = (0x00000000) # Comp. B Power Mode 0 : High speed 
+    CBPWRMD_VAL_1* = (0x00000100) # Comp. B Power Mode 1 : Normal 
+    CBPWRMD_VAL_2* = (0x00000200) # Comp. B Power Mode 2 : Ultra-Low
+    CBPWRMD_VAL_3* = (0x00000300) # Comp. B Power Mode 3 : Reserved 
   # CBCTL2 Control Bits 
   const 
     CBREF00* = (0x00000001)   # Comp. B Reference 0 Resistor Select Bit : 0 
@@ -609,78 +609,78 @@ when not(defined(MSP430F5510)):
     CBREFL0_H* = (0x00000020) # Comp. B Reference voltage level Bit : 0 
     CBREFL1_H* = (0x00000040) # Comp. B Reference voltage level Bit : 1 
     CBREFACC_H* = (0x00000080) # Comp. B Reference Accuracy 
-    CBREF0_BIT0* = (0x00000000)  # Comp. B Int. Ref.0 Select 0 : 1/32 
-    CBREF0_BIT1* = (0x00000001)  # Comp. B Int. Ref.0 Select 1 : 2/32 
-    CBREF0_BIT2* = (0x00000002)  # Comp. B Int. Ref.0 Select 2 : 3/32 
-    CBREF0_BIT3* = (0x00000003)  # Comp. B Int. Ref.0 Select 3 : 4/32 
-    CBREF0_BIT4* = (0x00000004)  # Comp. B Int. Ref.0 Select 4 : 5/32 
-    CBREF0_BIT5* = (0x00000005)  # Comp. B Int. Ref.0 Select 5 : 6/32 
-    CBREF0_BIT6* = (0x00000006)  # Comp. B Int. Ref.0 Select 6 : 7/32 
-    CBREF0_BIT7* = (0x00000007)  # Comp. B Int. Ref.0 Select 7 : 8/32 
-    CBREF0_BIT8* = (0x00000008)  # Comp. B Int. Ref.0 Select 0 : 9/32 
-    CBREF0_BIT9* = (0x00000009)  # Comp. B Int. Ref.0 Select 1 : 10/32 
-    CBREF0_BIT10* = (0x0000000A) # Comp. B Int. Ref.0 Select 2 : 11/32 
-    CBREF0_BIT11* = (0x0000000B) # Comp. B Int. Ref.0 Select 3 : 12/32 
-    CBREF0_BIT12* = (0x0000000C) # Comp. B Int. Ref.0 Select 4 : 13/32 
-    CBREF0_BIT13* = (0x0000000D) # Comp. B Int. Ref.0 Select 5 : 14/32 
-    CBREF0_BIT14* = (0x0000000E) # Comp. B Int. Ref.0 Select 6 : 15/32 
-    CBREF0_BIT15* = (0x0000000F) # Comp. B Int. Ref.0 Select 7 : 16/32 
-    CBREF0_BIT16* = (0x00000010) # Comp. B Int. Ref.0 Select 0 : 17/32 
-    CBREF0_BIT17* = (0x00000011) # Comp. B Int. Ref.0 Select 1 : 18/32 
-    CBREF0_BIT18* = (0x00000012) # Comp. B Int. Ref.0 Select 2 : 19/32 
-    CBREF0_BIT19* = (0x00000013) # Comp. B Int. Ref.0 Select 3 : 20/32 
-    CBREF0_BIT20* = (0x00000014) # Comp. B Int. Ref.0 Select 4 : 21/32 
-    CBREF0_BIT21* = (0x00000015) # Comp. B Int. Ref.0 Select 5 : 22/32 
-    CBREF0_BIT22* = (0x00000016) # Comp. B Int. Ref.0 Select 6 : 23/32 
-    CBREF0_BIT23* = (0x00000017) # Comp. B Int. Ref.0 Select 7 : 24/32 
-    CBREF0_BIT24* = (0x00000018) # Comp. B Int. Ref.0 Select 0 : 25/32 
-    CBREF0_BIT25* = (0x00000019) # Comp. B Int. Ref.0 Select 1 : 26/32 
-    CBREF0_BIT26* = (0x0000001A) # Comp. B Int. Ref.0 Select 2 : 27/32 
-    CBREF0_BIT27* = (0x0000001B) # Comp. B Int. Ref.0 Select 3 : 28/32 
-    CBREF0_BIT28* = (0x0000001C) # Comp. B Int. Ref.0 Select 4 : 29/32 
-    CBREF0_BIT29* = (0x0000001D) # Comp. B Int. Ref.0 Select 5 : 30/32 
-    CBREF0_BIT30* = (0x0000001E) # Comp. B Int. Ref.0 Select 6 : 31/32 
-    CBREF0_BIT31* = (0x0000001F) # Comp. B Int. Ref.0 Select 7 : 32/32 
-    CBRS_BIT0* = (0x00000000)    # Comp. B Reference Source 0 : Off 
-    CBRS_BIT1* = (0x00000040)    # Comp. B Reference Source 1 : Vcc 
-    CBRS_BIT2* = (0x00000080)    # Comp. B Reference Source 2 : Shared Ref. 
-    CBRS_BIT3* = (0x000000C0)    # Comp. B Reference Source 3 : Shared Ref. / Off 
-    CBREF1_BIT0* = (0x00000000)  # Comp. B Int. Ref.1 Select 0 : 1/32 
-    CBREF1_BIT1* = (0x00000100)  # Comp. B Int. Ref.1 Select 1 : 2/32 
-    CBREF1_BIT2* = (0x00000200)  # Comp. B Int. Ref.1 Select 2 : 3/32 
-    CBREF1_BIT3* = (0x00000300)  # Comp. B Int. Ref.1 Select 3 : 4/32 
-    CBREF1_BIT4* = (0x00000400)  # Comp. B Int. Ref.1 Select 4 : 5/32 
-    CBREF1_BIT5* = (0x00000500)  # Comp. B Int. Ref.1 Select 5 : 6/32 
-    CBREF1_BIT6* = (0x00000600)  # Comp. B Int. Ref.1 Select 6 : 7/32 
-    CBREF1_BIT7* = (0x00000700)  # Comp. B Int. Ref.1 Select 7 : 8/32 
-    CBREF1_BIT8* = (0x00000800)  # Comp. B Int. Ref.1 Select 0 : 9/32 
-    CBREF1_BIT9* = (0x00000900)  # Comp. B Int. Ref.1 Select 1 : 10/32 
-    CBREF1_BIT10* = (0x00000A00) # Comp. B Int. Ref.1 Select 2 : 11/32 
-    CBREF1_BIT11* = (0x00000B00) # Comp. B Int. Ref.1 Select 3 : 12/32 
-    CBREF1_BIT12* = (0x00000C00) # Comp. B Int. Ref.1 Select 4 : 13/32 
-    CBREF1_BIT13* = (0x00000D00) # Comp. B Int. Ref.1 Select 5 : 14/32 
-    CBREF1_BIT14* = (0x00000E00) # Comp. B Int. Ref.1 Select 6 : 15/32 
-    CBREF1_BIT15* = (0x00000F00) # Comp. B Int. Ref.1 Select 7 : 16/32 
-    CBREF1_BIT16* = (0x00001000) # Comp. B Int. Ref.1 Select 0 : 17/32 
-    CBREF1_BIT17* = (0x00001100) # Comp. B Int. Ref.1 Select 1 : 18/32 
-    CBREF1_BIT18* = (0x00001200) # Comp. B Int. Ref.1 Select 2 : 19/32 
-    CBREF1_BIT19* = (0x00001300) # Comp. B Int. Ref.1 Select 3 : 20/32 
-    CBREF1_BIT20* = (0x00001400) # Comp. B Int. Ref.1 Select 4 : 21/32 
-    CBREF1_BIT21* = (0x00001500) # Comp. B Int. Ref.1 Select 5 : 22/32 
-    CBREF1_BIT22* = (0x00001600) # Comp. B Int. Ref.1 Select 6 : 23/32 
-    CBREF1_BIT23* = (0x00001700) # Comp. B Int. Ref.1 Select 7 : 24/32 
-    CBREF1_BIT24* = (0x00001800) # Comp. B Int. Ref.1 Select 0 : 25/32 
-    CBREF1_BIT25* = (0x00001900) # Comp. B Int. Ref.1 Select 1 : 26/32 
-    CBREF1_BIT26* = (0x00001A00) # Comp. B Int. Ref.1 Select 2 : 27/32 
-    CBREF1_BIT27* = (0x00001B00) # Comp. B Int. Ref.1 Select 3 : 28/32 
-    CBREF1_BIT28* = (0x00001C00) # Comp. B Int. Ref.1 Select 4 : 29/32 
-    CBREF1_BIT29* = (0x00001D00) # Comp. B Int. Ref.1 Select 5 : 30/32 
-    CBREF1_BIT30* = (0x00001E00) # Comp. B Int. Ref.1 Select 6 : 31/32 
-    CBREF1_BIT31* = (0x00001F00) # Comp. B Int. Ref.1 Select 7 : 32/32 
-    CBREFL_BIT0* = (0x00000000)  # Comp. B Reference voltage level 0 : None 
-    CBREFL_BIT1* = (0x00002000)  # Comp. B Reference voltage level 1 : 1.5V 
-    CBREFL_BIT2* = (0x00004000)  # Comp. B Reference voltage level 2 : 2.0V  
-    CBREFL_BIT3* = (0x00006000)  # Comp. B Reference voltage level 3 : 2.5V  
+    CBREF0_VAL_0* = (0x00000000)  # Comp. B Int. Ref.0 Select 0 : 1/32 
+    CBREF0_VAL_1* = (0x00000001)  # Comp. B Int. Ref.0 Select 1 : 2/32 
+    CBREF0_VAL_2* = (0x00000002)  # Comp. B Int. Ref.0 Select 2 : 3/32 
+    CBREF0_VAL_3* = (0x00000003)  # Comp. B Int. Ref.0 Select 3 : 4/32 
+    CBREF0_VAL_4* = (0x00000004)  # Comp. B Int. Ref.0 Select 4 : 5/32 
+    CBREF0_VAL_5* = (0x00000005)  # Comp. B Int. Ref.0 Select 5 : 6/32 
+    CBREF0_VAL_6* = (0x00000006)  # Comp. B Int. Ref.0 Select 6 : 7/32 
+    CBREF0_VAL_7* = (0x00000007)  # Comp. B Int. Ref.0 Select 7 : 8/32 
+    CBREF0_VAL_8* = (0x00000008)  # Comp. B Int. Ref.0 Select 0 : 9/32 
+    CBREF0_VAL_9* = (0x00000009)  # Comp. B Int. Ref.0 Select 1 : 10/32 
+    CBREF0_VAL_10* = (0x0000000A) # Comp. B Int. Ref.0 Select 2 : 11/32 
+    CBREF0_VAL_11* = (0x0000000B) # Comp. B Int. Ref.0 Select 3 : 12/32 
+    CBREF0_VAL_12* = (0x0000000C) # Comp. B Int. Ref.0 Select 4 : 13/32 
+    CBREF0_VAL_13* = (0x0000000D) # Comp. B Int. Ref.0 Select 5 : 14/32 
+    CBREF0_VAL_14* = (0x0000000E) # Comp. B Int. Ref.0 Select 6 : 15/32 
+    CBREF0_VAL_15* = (0x0000000F) # Comp. B Int. Ref.0 Select 7 : 16/32 
+    CBREF0_VAL_16* = (0x00000010) # Comp. B Int. Ref.0 Select 0 : 17/32 
+    CBREF0_VAL_17* = (0x00000011) # Comp. B Int. Ref.0 Select 1 : 18/32 
+    CBREF0_VAL_18* = (0x00000012) # Comp. B Int. Ref.0 Select 2 : 19/32 
+    CBREF0_VAL_19* = (0x00000013) # Comp. B Int. Ref.0 Select 3 : 20/32 
+    CBREF0_VAL_20* = (0x00000014) # Comp. B Int. Ref.0 Select 4 : 21/32 
+    CBREF0_VAL_21* = (0x00000015) # Comp. B Int. Ref.0 Select 5 : 22/32 
+    CBREF0_VAL_22* = (0x00000016) # Comp. B Int. Ref.0 Select 6 : 23/32 
+    CBREF0_VAL_23* = (0x00000017) # Comp. B Int. Ref.0 Select 7 : 24/32 
+    CBREF0_VAL_24* = (0x00000018) # Comp. B Int. Ref.0 Select 0 : 25/32 
+    CBREF0_VAL_25* = (0x00000019) # Comp. B Int. Ref.0 Select 1 : 26/32 
+    CBREF0_VAL_26* = (0x0000001A) # Comp. B Int. Ref.0 Select 2 : 27/32 
+    CBREF0_VAL_27* = (0x0000001B) # Comp. B Int. Ref.0 Select 3 : 28/32 
+    CBREF0_VAL_28* = (0x0000001C) # Comp. B Int. Ref.0 Select 4 : 29/32 
+    CBREF0_VAL_29* = (0x0000001D) # Comp. B Int. Ref.0 Select 5 : 30/32 
+    CBREF0_VAL_30* = (0x0000001E) # Comp. B Int. Ref.0 Select 6 : 31/32 
+    CBREF0_VAL_31* = (0x0000001F) # Comp. B Int. Ref.0 Select 7 : 32/32 
+    CBRS_VAL_0* = (0x00000000)    # Comp. B Reference Source 0 : Off 
+    CBRS_VAL_1* = (0x00000040)    # Comp. B Reference Source 1 : Vcc 
+    CBRS_VAL_2* = (0x00000080)    # Comp. B Reference Source 2 : Shared Ref. 
+    CBRS_VAL_3* = (0x000000C0)    # Comp. B Reference Source 3 : Shared Ref. / Off 
+    CBREF1_VAL_0* = (0x00000000)  # Comp. B Int. Ref.1 Select 0 : 1/32 
+    CBREF1_VAL_1* = (0x00000100)  # Comp. B Int. Ref.1 Select 1 : 2/32 
+    CBREF1_VAL_2* = (0x00000200)  # Comp. B Int. Ref.1 Select 2 : 3/32 
+    CBREF1_VAL_3* = (0x00000300)  # Comp. B Int. Ref.1 Select 3 : 4/32 
+    CBREF1_VAL_4* = (0x00000400)  # Comp. B Int. Ref.1 Select 4 : 5/32 
+    CBREF1_VAL_5* = (0x00000500)  # Comp. B Int. Ref.1 Select 5 : 6/32 
+    CBREF1_VAL_6* = (0x00000600)  # Comp. B Int. Ref.1 Select 6 : 7/32 
+    CBREF1_VAL_7* = (0x00000700)  # Comp. B Int. Ref.1 Select 7 : 8/32 
+    CBREF1_VAL_8* = (0x00000800)  # Comp. B Int. Ref.1 Select 0 : 9/32 
+    CBREF1_VAL_9* = (0x00000900)  # Comp. B Int. Ref.1 Select 1 : 10/32 
+    CBREF1_VAL_10* = (0x00000A00) # Comp. B Int. Ref.1 Select 2 : 11/32 
+    CBREF1_VAL_11* = (0x00000B00) # Comp. B Int. Ref.1 Select 3 : 12/32 
+    CBREF1_VAL_12* = (0x00000C00) # Comp. B Int. Ref.1 Select 4 : 13/32 
+    CBREF1_VAL_13* = (0x00000D00) # Comp. B Int. Ref.1 Select 5 : 14/32 
+    CBREF1_VAL_14* = (0x00000E00) # Comp. B Int. Ref.1 Select 6 : 15/32 
+    CBREF1_VAL_15* = (0x00000F00) # Comp. B Int. Ref.1 Select 7 : 16/32 
+    CBREF1_VAL_16* = (0x00001000) # Comp. B Int. Ref.1 Select 0 : 17/32 
+    CBREF1_VAL_17* = (0x00001100) # Comp. B Int. Ref.1 Select 1 : 18/32 
+    CBREF1_VAL_18* = (0x00001200) # Comp. B Int. Ref.1 Select 2 : 19/32 
+    CBREF1_VAL_19* = (0x00001300) # Comp. B Int. Ref.1 Select 3 : 20/32 
+    CBREF1_VAL_20* = (0x00001400) # Comp. B Int. Ref.1 Select 4 : 21/32 
+    CBREF1_VAL_21* = (0x00001500) # Comp. B Int. Ref.1 Select 5 : 22/32 
+    CBREF1_VAL_22* = (0x00001600) # Comp. B Int. Ref.1 Select 6 : 23/32 
+    CBREF1_VAL_23* = (0x00001700) # Comp. B Int. Ref.1 Select 7 : 24/32 
+    CBREF1_VAL_24* = (0x00001800) # Comp. B Int. Ref.1 Select 0 : 25/32 
+    CBREF1_VAL_25* = (0x00001900) # Comp. B Int. Ref.1 Select 1 : 26/32 
+    CBREF1_VAL_26* = (0x00001A00) # Comp. B Int. Ref.1 Select 2 : 27/32 
+    CBREF1_VAL_27* = (0x00001B00) # Comp. B Int. Ref.1 Select 3 : 28/32 
+    CBREF1_VAL_28* = (0x00001C00) # Comp. B Int. Ref.1 Select 4 : 29/32 
+    CBREF1_VAL_29* = (0x00001D00) # Comp. B Int. Ref.1 Select 5 : 30/32 
+    CBREF1_VAL_30* = (0x00001E00) # Comp. B Int. Ref.1 Select 6 : 31/32 
+    CBREF1_VAL_31* = (0x00001F00) # Comp. B Int. Ref.1 Select 7 : 32/32 
+    CBREFL_VAL_0* = (0x00000000)  # Comp. B Reference voltage level 0 : None 
+    CBREFL_VAL_1* = (0x00002000)  # Comp. B Reference voltage level 1 : 1.5V 
+    CBREFL_VAL_2* = (0x00004000)  # Comp. B Reference voltage level 2 : 2.0V  
+    CBREFL_VAL_3* = (0x00006000)  # Comp. B Reference voltage level 3 : 2.5V  
     CBPD0* = (0x00000001)     # Comp. B Disable Input Buffer of Port Register .0 
     CBPD1* = (0x00000002)     # Comp. B Disable Input Buffer of Port Register .1 
     CBPD2* = (0x00000004)     # Comp. B Disable Input Buffer of Port Register .2 
@@ -798,8 +798,8 @@ when not(defined(MSP430F5510)):
   # DMA_X
   #**********************************************************
   const 
-    MSP430_HAS_DMAX_BIT3* = true # Definition to show that Module is available 
-    MSP430_BASEADDRESS_DMAX_BIT3* = 0x00000500
+    MSP430_HAS_DMAX_3* = true # Definition to show that Module is available 
+    MSP430_BASEADDRESS_DMAX_3* = 0x00000500
     DMACTL0_ADDR* = 0x00000500
   sfrb(DMACTL0_L, DMACTL0_ADDR)
   sfrb(DMACTL0_H, DMACTL0_ADDR + 1)
@@ -963,124 +963,124 @@ when not(defined(MSP430F5510)):
     DMASBDW* = (0x00000040)   # DMA transfer: source byte to destination word 
     DMASWDB* = (0x00000080)   # DMA transfer: source word to destination byte 
     DMASBDB* = (0x000000C0)   # DMA transfer: source byte to destination byte 
-    DMASRCINCR_BIT0* = (0x00000000) # DMA source increment 0: source address unchanged 
-    DMASRCINCR_BIT1* = (0x00000100) # DMA source increment 1: source address unchanged 
-    DMASRCINCR_BIT2* = (0x00000200) # DMA source increment 2: source address decremented 
-    DMASRCINCR_BIT3* = (0x00000300) # DMA source increment 3: source address incremented 
-    DMADSTINCR_BIT0* = (0x00000000) # DMA destination increment 0: destination address unchanged 
-    DMADSTINCR_BIT1* = (0x00000400) # DMA destination increment 1: destination address unchanged 
-    DMADSTINCR_BIT2* = (0x00000800) # DMA destination increment 2: destination address decremented 
-    DMADSTINCR_BIT3* = (0x00000C00) # DMA destination increment 3: destination address incremented 
-    DMADT_BIT0* = (0x00000000)   # DMA transfer mode 0: Single transfer 
-    DMADT_BIT1* = (0x00001000)   # DMA transfer mode 1: Block transfer 
-    DMADT_BIT2* = (0x00002000)   # DMA transfer mode 2: Burst-Block transfer 
-    DMADT_BIT3* = (0x00003000)   # DMA transfer mode 3: Burst-Block transfer 
-    DMADT_BIT4* = (0x00004000)   # DMA transfer mode 4: Repeated Single transfer 
-    DMADT_BIT5* = (0x00005000)   # DMA transfer mode 5: Repeated Block transfer 
-    DMADT_BIT6* = (0x00006000)   # DMA transfer mode 6: Repeated Burst-Block transfer 
-    DMADT_BIT7* = (0x00007000)   # DMA transfer mode 7: Repeated Burst-Block transfer 
+    DMASRCINCR_VAL_0* = (0x00000000) # DMA source increment 0: source address unchanged 
+    DMASRCINCR_VAL_1* = (0x00000100) # DMA source increment 1: source address unchanged 
+    DMASRCINCR_VAL_2* = (0x00000200) # DMA source increment 2: source address decremented 
+    DMASRCINCR_VAL_3* = (0x00000300) # DMA source increment 3: source address incremented 
+    DMADSTINCR_VAL_0* = (0x00000000) # DMA destination increment 0: destination address unchanged 
+    DMADSTINCR_VAL_1* = (0x00000400) # DMA destination increment 1: destination address unchanged 
+    DMADSTINCR_VAL_2* = (0x00000800) # DMA destination increment 2: destination address decremented 
+    DMADSTINCR_VAL_3* = (0x00000C00) # DMA destination increment 3: destination address incremented 
+    DMADT_VAL_0* = (0x00000000)   # DMA transfer mode 0: Single transfer 
+    DMADT_VAL_1* = (0x00001000)   # DMA transfer mode 1: Block transfer 
+    DMADT_VAL_2* = (0x00002000)   # DMA transfer mode 2: Burst-Block transfer 
+    DMADT_VAL_3* = (0x00003000)   # DMA transfer mode 3: Burst-Block transfer 
+    DMADT_VAL_4* = (0x00004000)   # DMA transfer mode 4: Repeated Single transfer 
+    DMADT_VAL_5* = (0x00005000)   # DMA transfer mode 5: Repeated Block transfer 
+    DMADT_VAL_6* = (0x00006000)   # DMA transfer mode 6: Repeated Burst-Block transfer 
+    DMADT_VAL_7* = (0x00007000)   # DMA transfer mode 7: Repeated Burst-Block transfer 
   # DMAIV Definitions 
   const 
     DMAIV_NONE* = (0x00000000) # No Interrupt pending 
     DMAIV_DMA0IFG* = (0x00000002) # DMA0IFG
     DMAIV_DMA1IFG* = (0x00000004) # DMA1IFG
     DMAIV_DMA2IFG* = (0x00000006) # DMA2IFG
-    DMA0TSEL_BIT0* = (0x00000000) # DMA channel 0 transfer select 0:  DMA_REQ (sw) 
-    DMA0TSEL_BIT1* = (0x00000001) # DMA channel 0 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
-    DMA0TSEL_BIT2* = (0x00000002) # DMA channel 0 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
-    DMA0TSEL_BIT3* = (0x00000003) # DMA channel 0 transfer select 3:  Timer1_A (TA1CCR0.IFG) 
-    DMA0TSEL_BIT4* = (0x00000004) # DMA channel 0 transfer select 4:  Timer1_A (TA1CCR2.IFG) 
-    DMA0TSEL_BIT5* = (0x00000005) # DMA channel 0 transfer select 5:  Timer2_A (TA2CCR0.IFG) 
-    DMA0TSEL_BIT6* = (0x00000006) # DMA channel 0 transfer select 6:  Timer2_A (TA2CCR2.IFG) 
-    DMA0TSEL_BIT7* = (0x00000007) # DMA channel 0 transfer select 7:  TimerB (TB0CCR0.IFG) 
-    DMA0TSEL_BIT8* = (0x00000008) # DMA channel 0 transfer select 8:  TimerB (TB0CCR2.IFG) 
-    DMA0TSEL_BIT9* = (0x00000009) # DMA channel 0 transfer select 9:  Reserved 
-    DMA0TSEL_BIT10* = (0x0000000A) # DMA channel 0 transfer select 10: Reserved 
-    DMA0TSEL_BIT11* = (0x0000000B) # DMA channel 0 transfer select 11: Reserved 
-    DMA0TSEL_BIT12* = (0x0000000C) # DMA channel 0 transfer select 12: Reserved 
-    DMA0TSEL_BIT13* = (0x0000000D) # DMA channel 0 transfer select 13: Reserved 
-    DMA0TSEL_BIT14* = (0x0000000E) # DMA channel 0 transfer select 14: Reserved 
-    DMA0TSEL_BIT15* = (0x0000000F) # DMA channel 0 transfer select 15: Reserved 
-    DMA0TSEL_BIT16* = (0x00000010) # DMA channel 0 transfer select 16: USCIA0 receive 
-    DMA0TSEL_BIT17* = (0x00000011) # DMA channel 0 transfer select 17: USCIA0 transmit 
-    DMA0TSEL_BIT18* = (0x00000012) # DMA channel 0 transfer select 18: USCIB0 receive 
-    DMA0TSEL_BIT19* = (0x00000013) # DMA channel 0 transfer select 19: USCIB0 transmit 
-    DMA0TSEL_BIT20* = (0x00000014) # DMA channel 0 transfer select 20: USCIA1 receive 
-    DMA0TSEL_BIT21* = (0x00000015) # DMA channel 0 transfer select 21: USCIA1 transmit 
-    DMA0TSEL_BIT22* = (0x00000016) # DMA channel 0 transfer select 22: USCIB1 receive 
-    DMA0TSEL_BIT23* = (0x00000017) # DMA channel 0 transfer select 23: USCIB1 transmit 
-    DMA0TSEL_BIT24* = (0x00000018) # DMA channel 0 transfer select 24: ADC12IFGx 
-    DMA0TSEL_BIT25* = (0x00000019) # DMA channel 0 transfer select 25: Reserved 
-    DMA0TSEL_BIT26* = (0x0000001A) # DMA channel 0 transfer select 26: Reserved 
-    DMA0TSEL_BIT27* = (0x0000001B) # DMA channel 0 transfer select 27: USB FNRXD 
-    DMA0TSEL_BIT28* = (0x0000001C) # DMA channel 0 transfer select 28: USB ready 
-    DMA0TSEL_BIT29* = (0x0000001D) # DMA channel 0 transfer select 29: Multiplier ready 
-    DMA0TSEL_BIT30* = (0x0000001E) # DMA channel 0 transfer select 30: previous DMA channel DMA2IFG 
-    DMA0TSEL_BIT31* = (0x0000001F) # DMA channel 0 transfer select 31: ext. Trigger (DMAE0) 
-    DMA1TSEL_BIT0* = (0x00000000) # DMA channel 1 transfer select 0:  DMA_REQ (sw) 
-    DMA1TSEL_BIT1* = (0x00000100) # DMA channel 1 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
-    DMA1TSEL_BIT2* = (0x00000200) # DMA channel 1 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
-    DMA1TSEL_BIT3* = (0x00000300) # DMA channel 1 transfer select 3:  Timer1_A (TA1CCR0.IFG) 
-    DMA1TSEL_BIT4* = (0x00000400) # DMA channel 1 transfer select 4:  Timer1_A (TA1CCR2.IFG) 
-    DMA1TSEL_BIT5* = (0x00000500) # DMA channel 1 transfer select 5:  Timer2_A (TA2CCR0.IFG) 
-    DMA1TSEL_BIT6* = (0x00000600) # DMA channel 1 transfer select 6:  Timer2_A (TA2CCR2.IFG) 
-    DMA1TSEL_BIT7* = (0x00000700) # DMA channel 1 transfer select 7:  TimerB (TB0CCR0.IFG) 
-    DMA1TSEL_BIT8* = (0x00000800) # DMA channel 1 transfer select 8:  TimerB (TB0CCR2.IFG) 
-    DMA1TSEL_BIT9* = (0x00000900) # DMA channel 1 transfer select 9:  Reserved 
-    DMA1TSEL_BIT10* = (0x00000A00) # DMA channel 1 transfer select 10: Reserved 
-    DMA1TSEL_BIT11* = (0x00000B00) # DMA channel 1 transfer select 11: Reserved 
-    DMA1TSEL_BIT12* = (0x00000C00) # DMA channel 1 transfer select 12: Reserved 
-    DMA1TSEL_BIT13* = (0x00000D00) # DMA channel 1 transfer select 13: Reserved 
-    DMA1TSEL_BIT14* = (0x00000E00) # DMA channel 1 transfer select 14: Reserved 
-    DMA1TSEL_BIT15* = (0x00000F00) # DMA channel 1 transfer select 15: Reserved 
-    DMA1TSEL_BIT16* = (0x00001000) # DMA channel 1 transfer select 16: USCIA0 receive 
-    DMA1TSEL_BIT17* = (0x00001100) # DMA channel 1 transfer select 17: USCIA0 transmit 
-    DMA1TSEL_BIT18* = (0x00001200) # DMA channel 1 transfer select 18: USCIB0 receive 
-    DMA1TSEL_BIT19* = (0x00001300) # DMA channel 1 transfer select 19: USCIB0 transmit 
-    DMA1TSEL_BIT20* = (0x00001400) # DMA channel 1 transfer select 20: USCIA1 receive 
-    DMA1TSEL_BIT21* = (0x00001500) # DMA channel 1 transfer select 21: USCIA1 transmit 
-    DMA1TSEL_BIT22* = (0x00001600) # DMA channel 1 transfer select 22: USCIB1 receive 
-    DMA1TSEL_BIT23* = (0x00001700) # DMA channel 1 transfer select 23: USCIB1 transmit 
-    DMA1TSEL_BIT24* = (0x00001800) # DMA channel 1 transfer select 24: ADC12IFGx 
-    DMA1TSEL_BIT25* = (0x00001900) # DMA channel 1 transfer select 25: Reserved 
-    DMA1TSEL_BIT26* = (0x00001A00) # DMA channel 1 transfer select 26: Reserved 
-    DMA1TSEL_BIT27* = (0x00001B00) # DMA channel 1 transfer select 27: USB FNRXD 
-    DMA1TSEL_BIT28* = (0x00001C00) # DMA channel 1 transfer select 28: USB ready 
-    DMA1TSEL_BIT29* = (0x00001D00) # DMA channel 1 transfer select 29: Multiplier ready 
-    DMA1TSEL_BIT30* = (0x00001E00) # DMA channel 1 transfer select 30: previous DMA channel DMA0IFG 
-    DMA1TSEL_BIT31* = (0x00001F00) # DMA channel 1 transfer select 31: ext. Trigger (DMAE0) 
-    DMA2TSEL_BIT0* = (0x00000000) # DMA channel 2 transfer select 0:  DMA_REQ (sw) 
-    DMA2TSEL_BIT1* = (0x00000001) # DMA channel 2 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
-    DMA2TSEL_BIT2* = (0x00000002) # DMA channel 2 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
-    DMA2TSEL_BIT3* = (0x00000003) # DMA channel 2 transfer select 3:  Timer1_A (TA1CCR0.IFG) 
-    DMA2TSEL_BIT4* = (0x00000004) # DMA channel 2 transfer select 4:  Timer1_A (TA1CCR2.IFG) 
-    DMA2TSEL_BIT5* = (0x00000005) # DMA channel 2 transfer select 5:  Timer2_A (TA2CCR0.IFG) 
-    DMA2TSEL_BIT6* = (0x00000006) # DMA channel 2 transfer select 6:  Timer2_A (TA2CCR2.IFG) 
-    DMA2TSEL_BIT7* = (0x00000007) # DMA channel 2 transfer select 7:  TimerB (TB0CCR0.IFG) 
-    DMA2TSEL_BIT8* = (0x00000008) # DMA channel 2 transfer select 8:  TimerB (TB0CCR2.IFG) 
-    DMA2TSEL_BIT9* = (0x00000009) # DMA channel 2 transfer select 9:  Reserved 
-    DMA2TSEL_BIT10* = (0x0000000A) # DMA channel 2 transfer select 10: Reserved 
-    DMA2TSEL_BIT11* = (0x0000000B) # DMA channel 2 transfer select 11: Reserved 
-    DMA2TSEL_BIT12* = (0x0000000C) # DMA channel 2 transfer select 12: Reserved 
-    DMA2TSEL_BIT13* = (0x0000000D) # DMA channel 2 transfer select 13: Reserved 
-    DMA2TSEL_BIT14* = (0x0000000E) # DMA channel 2 transfer select 14: Reserved 
-    DMA2TSEL_BIT15* = (0x0000000F) # DMA channel 2 transfer select 15: Reserved 
-    DMA2TSEL_BIT16* = (0x00000010) # DMA channel 2 transfer select 16: USCIA0 receive 
-    DMA2TSEL_BIT17* = (0x00000011) # DMA channel 2 transfer select 17: USCIA0 transmit 
-    DMA2TSEL_BIT18* = (0x00000012) # DMA channel 2 transfer select 18: USCIB0 receive 
-    DMA2TSEL_BIT19* = (0x00000013) # DMA channel 2 transfer select 19: USCIB0 transmit 
-    DMA2TSEL_BIT20* = (0x00000014) # DMA channel 2 transfer select 20: USCIA1 receive 
-    DMA2TSEL_BIT21* = (0x00000015) # DMA channel 2 transfer select 21: USCIA1 transmit 
-    DMA2TSEL_BIT22* = (0x00000016) # DMA channel 2 transfer select 22: USCIB1 receive 
-    DMA2TSEL_BIT23* = (0x00000017) # DMA channel 2 transfer select 23: USCIB1 transmit 
-    DMA2TSEL_BIT24* = (0x00000018) # DMA channel 2 transfer select 24: ADC12IFGx 
-    DMA2TSEL_BIT25* = (0x00000019) # DMA channel 2 transfer select 25: Reserved 
-    DMA2TSEL_BIT26* = (0x0000001A) # DMA channel 2 transfer select 26: Reserved 
-    DMA2TSEL_BIT27* = (0x0000001B) # DMA channel 2 transfer select 27: USB FNRXD 
-    DMA2TSEL_BIT28* = (0x0000001C) # DMA channel 2 transfer select 28: USB ready 
-    DMA2TSEL_BIT29* = (0x0000001D) # DMA channel 2 transfer select 29: Multiplier ready 
-    DMA2TSEL_BIT30* = (0x0000001E) # DMA channel 2 transfer select 30: previous DMA channel DMA1IFG 
-    DMA2TSEL_BIT31* = (0x0000001F) # DMA channel 2 transfer select 31: ext. Trigger (DMAE0) 
+    DMA0TSEL_VAL_0* = (0x00000000) # DMA channel 0 transfer select 0:  DMA_REQ (sw) 
+    DMA0TSEL_VAL_1* = (0x00000001) # DMA channel 0 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
+    DMA0TSEL_VAL_2* = (0x00000002) # DMA channel 0 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
+    DMA0TSEL_VAL_3* = (0x00000003) # DMA channel 0 transfer select 3:  Timer1_A (TA1CCR0.IFG) 
+    DMA0TSEL_VAL_4* = (0x00000004) # DMA channel 0 transfer select 4:  Timer1_A (TA1CCR2.IFG) 
+    DMA0TSEL_VAL_5* = (0x00000005) # DMA channel 0 transfer select 5:  Timer2_A (TA2CCR0.IFG) 
+    DMA0TSEL_VAL_6* = (0x00000006) # DMA channel 0 transfer select 6:  Timer2_A (TA2CCR2.IFG) 
+    DMA0TSEL_VAL_7* = (0x00000007) # DMA channel 0 transfer select 7:  TimerB (TB0CCR0.IFG) 
+    DMA0TSEL_VAL_8* = (0x00000008) # DMA channel 0 transfer select 8:  TimerB (TB0CCR2.IFG) 
+    DMA0TSEL_VAL_9* = (0x00000009) # DMA channel 0 transfer select 9:  Reserved 
+    DMA0TSEL_VAL_10* = (0x0000000A) # DMA channel 0 transfer select 10: Reserved 
+    DMA0TSEL_VAL_11* = (0x0000000B) # DMA channel 0 transfer select 11: Reserved 
+    DMA0TSEL_VAL_12* = (0x0000000C) # DMA channel 0 transfer select 12: Reserved 
+    DMA0TSEL_VAL_13* = (0x0000000D) # DMA channel 0 transfer select 13: Reserved 
+    DMA0TSEL_VAL_14* = (0x0000000E) # DMA channel 0 transfer select 14: Reserved 
+    DMA0TSEL_VAL_15* = (0x0000000F) # DMA channel 0 transfer select 15: Reserved 
+    DMA0TSEL_VAL_16* = (0x00000010) # DMA channel 0 transfer select 16: USCIA0 receive 
+    DMA0TSEL_VAL_17* = (0x00000011) # DMA channel 0 transfer select 17: USCIA0 transmit 
+    DMA0TSEL_VAL_18* = (0x00000012) # DMA channel 0 transfer select 18: USCIB0 receive 
+    DMA0TSEL_VAL_19* = (0x00000013) # DMA channel 0 transfer select 19: USCIB0 transmit 
+    DMA0TSEL_VAL_20* = (0x00000014) # DMA channel 0 transfer select 20: USCIA1 receive 
+    DMA0TSEL_VAL_21* = (0x00000015) # DMA channel 0 transfer select 21: USCIA1 transmit 
+    DMA0TSEL_VAL_22* = (0x00000016) # DMA channel 0 transfer select 22: USCIB1 receive 
+    DMA0TSEL_VAL_23* = (0x00000017) # DMA channel 0 transfer select 23: USCIB1 transmit 
+    DMA0TSEL_VAL_24* = (0x00000018) # DMA channel 0 transfer select 24: ADC12IFGx 
+    DMA0TSEL_VAL_25* = (0x00000019) # DMA channel 0 transfer select 25: Reserved 
+    DMA0TSEL_VAL_26* = (0x0000001A) # DMA channel 0 transfer select 26: Reserved 
+    DMA0TSEL_VAL_27* = (0x0000001B) # DMA channel 0 transfer select 27: USB FNRXD 
+    DMA0TSEL_VAL_28* = (0x0000001C) # DMA channel 0 transfer select 28: USB ready 
+    DMA0TSEL_VAL_29* = (0x0000001D) # DMA channel 0 transfer select 29: Multiplier ready 
+    DMA0TSEL_VAL_30* = (0x0000001E) # DMA channel 0 transfer select 30: previous DMA channel DMA2IFG 
+    DMA0TSEL_VAL_31* = (0x0000001F) # DMA channel 0 transfer select 31: ext. Trigger (DMAE0) 
+    DMA1TSEL_VAL_0* = (0x00000000) # DMA channel 1 transfer select 0:  DMA_REQ (sw) 
+    DMA1TSEL_VAL_1* = (0x00000100) # DMA channel 1 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
+    DMA1TSEL_VAL_2* = (0x00000200) # DMA channel 1 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
+    DMA1TSEL_VAL_3* = (0x00000300) # DMA channel 1 transfer select 3:  Timer1_A (TA1CCR0.IFG) 
+    DMA1TSEL_VAL_4* = (0x00000400) # DMA channel 1 transfer select 4:  Timer1_A (TA1CCR2.IFG) 
+    DMA1TSEL_VAL_5* = (0x00000500) # DMA channel 1 transfer select 5:  Timer2_A (TA2CCR0.IFG) 
+    DMA1TSEL_VAL_6* = (0x00000600) # DMA channel 1 transfer select 6:  Timer2_A (TA2CCR2.IFG) 
+    DMA1TSEL_VAL_7* = (0x00000700) # DMA channel 1 transfer select 7:  TimerB (TB0CCR0.IFG) 
+    DMA1TSEL_VAL_8* = (0x00000800) # DMA channel 1 transfer select 8:  TimerB (TB0CCR2.IFG) 
+    DMA1TSEL_VAL_9* = (0x00000900) # DMA channel 1 transfer select 9:  Reserved 
+    DMA1TSEL_VAL_10* = (0x00000A00) # DMA channel 1 transfer select 10: Reserved 
+    DMA1TSEL_VAL_11* = (0x00000B00) # DMA channel 1 transfer select 11: Reserved 
+    DMA1TSEL_VAL_12* = (0x00000C00) # DMA channel 1 transfer select 12: Reserved 
+    DMA1TSEL_VAL_13* = (0x00000D00) # DMA channel 1 transfer select 13: Reserved 
+    DMA1TSEL_VAL_14* = (0x00000E00) # DMA channel 1 transfer select 14: Reserved 
+    DMA1TSEL_VAL_15* = (0x00000F00) # DMA channel 1 transfer select 15: Reserved 
+    DMA1TSEL_VAL_16* = (0x00001000) # DMA channel 1 transfer select 16: USCIA0 receive 
+    DMA1TSEL_VAL_17* = (0x00001100) # DMA channel 1 transfer select 17: USCIA0 transmit 
+    DMA1TSEL_VAL_18* = (0x00001200) # DMA channel 1 transfer select 18: USCIB0 receive 
+    DMA1TSEL_VAL_19* = (0x00001300) # DMA channel 1 transfer select 19: USCIB0 transmit 
+    DMA1TSEL_VAL_20* = (0x00001400) # DMA channel 1 transfer select 20: USCIA1 receive 
+    DMA1TSEL_VAL_21* = (0x00001500) # DMA channel 1 transfer select 21: USCIA1 transmit 
+    DMA1TSEL_VAL_22* = (0x00001600) # DMA channel 1 transfer select 22: USCIB1 receive 
+    DMA1TSEL_VAL_23* = (0x00001700) # DMA channel 1 transfer select 23: USCIB1 transmit 
+    DMA1TSEL_VAL_24* = (0x00001800) # DMA channel 1 transfer select 24: ADC12IFGx 
+    DMA1TSEL_VAL_25* = (0x00001900) # DMA channel 1 transfer select 25: Reserved 
+    DMA1TSEL_VAL_26* = (0x00001A00) # DMA channel 1 transfer select 26: Reserved 
+    DMA1TSEL_VAL_27* = (0x00001B00) # DMA channel 1 transfer select 27: USB FNRXD 
+    DMA1TSEL_VAL_28* = (0x00001C00) # DMA channel 1 transfer select 28: USB ready 
+    DMA1TSEL_VAL_29* = (0x00001D00) # DMA channel 1 transfer select 29: Multiplier ready 
+    DMA1TSEL_VAL_30* = (0x00001E00) # DMA channel 1 transfer select 30: previous DMA channel DMA0IFG 
+    DMA1TSEL_VAL_31* = (0x00001F00) # DMA channel 1 transfer select 31: ext. Trigger (DMAE0) 
+    DMA2TSEL_VAL_0* = (0x00000000) # DMA channel 2 transfer select 0:  DMA_REQ (sw) 
+    DMA2TSEL_VAL_1* = (0x00000001) # DMA channel 2 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
+    DMA2TSEL_VAL_2* = (0x00000002) # DMA channel 2 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
+    DMA2TSEL_VAL_3* = (0x00000003) # DMA channel 2 transfer select 3:  Timer1_A (TA1CCR0.IFG) 
+    DMA2TSEL_VAL_4* = (0x00000004) # DMA channel 2 transfer select 4:  Timer1_A (TA1CCR2.IFG) 
+    DMA2TSEL_VAL_5* = (0x00000005) # DMA channel 2 transfer select 5:  Timer2_A (TA2CCR0.IFG) 
+    DMA2TSEL_VAL_6* = (0x00000006) # DMA channel 2 transfer select 6:  Timer2_A (TA2CCR2.IFG) 
+    DMA2TSEL_VAL_7* = (0x00000007) # DMA channel 2 transfer select 7:  TimerB (TB0CCR0.IFG) 
+    DMA2TSEL_VAL_8* = (0x00000008) # DMA channel 2 transfer select 8:  TimerB (TB0CCR2.IFG) 
+    DMA2TSEL_VAL_9* = (0x00000009) # DMA channel 2 transfer select 9:  Reserved 
+    DMA2TSEL_VAL_10* = (0x0000000A) # DMA channel 2 transfer select 10: Reserved 
+    DMA2TSEL_VAL_11* = (0x0000000B) # DMA channel 2 transfer select 11: Reserved 
+    DMA2TSEL_VAL_12* = (0x0000000C) # DMA channel 2 transfer select 12: Reserved 
+    DMA2TSEL_VAL_13* = (0x0000000D) # DMA channel 2 transfer select 13: Reserved 
+    DMA2TSEL_VAL_14* = (0x0000000E) # DMA channel 2 transfer select 14: Reserved 
+    DMA2TSEL_VAL_15* = (0x0000000F) # DMA channel 2 transfer select 15: Reserved 
+    DMA2TSEL_VAL_16* = (0x00000010) # DMA channel 2 transfer select 16: USCIA0 receive 
+    DMA2TSEL_VAL_17* = (0x00000011) # DMA channel 2 transfer select 17: USCIA0 transmit 
+    DMA2TSEL_VAL_18* = (0x00000012) # DMA channel 2 transfer select 18: USCIB0 receive 
+    DMA2TSEL_VAL_19* = (0x00000013) # DMA channel 2 transfer select 19: USCIB0 transmit 
+    DMA2TSEL_VAL_20* = (0x00000014) # DMA channel 2 transfer select 20: USCIA1 receive 
+    DMA2TSEL_VAL_21* = (0x00000015) # DMA channel 2 transfer select 21: USCIA1 transmit 
+    DMA2TSEL_VAL_22* = (0x00000016) # DMA channel 2 transfer select 22: USCIB1 receive 
+    DMA2TSEL_VAL_23* = (0x00000017) # DMA channel 2 transfer select 23: USCIB1 transmit 
+    DMA2TSEL_VAL_24* = (0x00000018) # DMA channel 2 transfer select 24: ADC12IFGx 
+    DMA2TSEL_VAL_25* = (0x00000019) # DMA channel 2 transfer select 25: Reserved 
+    DMA2TSEL_VAL_26* = (0x0000001A) # DMA channel 2 transfer select 26: Reserved 
+    DMA2TSEL_VAL_27* = (0x0000001B) # DMA channel 2 transfer select 27: USB FNRXD 
+    DMA2TSEL_VAL_28* = (0x0000001C) # DMA channel 2 transfer select 28: USB ready 
+    DMA2TSEL_VAL_29* = (0x0000001D) # DMA channel 2 transfer select 29: Multiplier ready 
+    DMA2TSEL_VAL_30* = (0x0000001E) # DMA channel 2 transfer select 30: previous DMA channel DMA1IFG 
+    DMA2TSEL_VAL_31* = (0x0000001F) # DMA channel 2 transfer select 31: ext. Trigger (DMAE0) 
     DMA0TSEL_DMA_REQ* = (0x00000000) # DMA channel 0 transfer select 0:  DMA_REQ (sw) 
     DMA0TSEL_TA0CCR0* = (0x00000001) # DMA channel 0 transfer select 1:  Timer0_A (TA0CCR0.IFG) 
     DMA0TSEL_TA0CCR2* = (0x00000002) # DMA channel 0 transfer select 2:  Timer0_A (TA0CCR2.IFG) 
@@ -1409,8 +1409,8 @@ when not(defined(MSP430F5510)):
     MPYSAT* = (0x00000008)    # Saturation mode 
     MPYM0* = (0x00000010)     # Multiplier mode Bit:0 
     MPYM1* = (0x00000020)     # Multiplier mode Bit:1 
-    OP1_BIT32* = (0x00000040)    # Bit-width of operand 1 0:16Bit / 1:32Bit 
-    OP2_BIT32* = (0x00000080)    # Bit-width of operand 2 0:16Bit / 1:32Bit 
+    OP1_VAL_32* = (0x00000040)    # Bit-width of operand 1 0:16Bit / 1:32Bit 
+    OP2_VAL_32* = (0x00000080)    # Bit-width of operand 2 0:16Bit / 1:32Bit 
     MPYDLYWRTEN* = (0x00000100) # Delayed write enable 
     MPYDLY32* = (0x00000200)  # Delayed write mode 
   # MPY32CTL0 Control Bits 
@@ -1429,10 +1429,10 @@ when not(defined(MSP430F5510)):
   const 
     MPYDLYWRTEN_H* = (0x00000001) # Delayed write enable 
     MPYDLY32_H* = (0x00000002) # Delayed write mode 
-    MPYM_BIT0* = (0x00000000)    # Multiplier mode: MPY 
-    MPYM_BIT1* = (0x00000010)    # Multiplier mode: MPYS 
-    MPYM_BIT2* = (0x00000020)    # Multiplier mode: MAC 
-    MPYM_BIT3* = (0x00000030)    # Multiplier mode: MACS 
+    MPYM_VAL_0* = (0x00000000)    # Multiplier mode: MPY 
+    MPYM_VAL_1* = (0x00000010)    # Multiplier mode: MPYS 
+    MPYM_VAL_2* = (0x00000020)    # Multiplier mode: MAC 
+    MPYM_VAL_3* = (0x00000030)    # Multiplier mode: MACS 
     MPYM_MPY* = (0x00000000) # Multiplier mode: MPY 
     MPYM_MPYS* = (0x00000010) # Multiplier mode: MPYS 
     MPYM_MAC* = (0x00000020) # Multiplier mode: MAC 
@@ -1841,10 +1841,10 @@ when not(defined(MSP430F5510)):
     PMMHPMRE_L* = (0x00000080) # PMM Global High Power Module Request Enable 
   # PMMCTL0 Control Bits 
   const 
-    PMMCOREV_BIT0* = (0x00000000) # PMM Core Voltage 0 (1.35V) 
-    PMMCOREV_BIT1* = (0x00000001) # PMM Core Voltage 1 (1.55V) 
-    PMMCOREV_BIT2* = (0x00000002) # PMM Core Voltage 2 (1.75V) 
-    PMMCOREV_BIT3* = (0x00000003) # PMM Core Voltage 3 (1.85V) 
+    PMMCOREV_VAL_0* = (0x00000000) # PMM Core Voltage 0 (1.35V) 
+    PMMCOREV_VAL_1* = (0x00000001) # PMM Core Voltage 1 (1.55V) 
+    PMMCOREV_VAL_2* = (0x00000002) # PMM Core Voltage 2 (1.75V) 
+    PMMCOREV_VAL_3* = (0x00000003) # PMM Core Voltage 3 (1.85V) 
   # PMMCTL1 Control Bits 
   const 
     PMMREFMD* = (0x00000001)  # PMM Reference Mode 
@@ -1890,18 +1890,18 @@ when not(defined(MSP430F5510)):
     SVMHOVPE_H* = (0x00000010) # SVM high side over-voltage enable 
     SVMHE_H* = (0x00000040)   # SVM high side enable 
     SVMHFP_H* = (0x00000080)  # SVM high side full performace mode 
-    SVSMHRRL_BIT0* = (0x00000000) # SVS and SVM high side Reset Release Voltage Level 0 
-    SVSMHRRL_BIT1* = (0x00000001) # SVS and SVM high side Reset Release Voltage Level 1 
-    SVSMHRRL_BIT2* = (0x00000002) # SVS and SVM high side Reset Release Voltage Level 2 
-    SVSMHRRL_BIT3* = (0x00000003) # SVS and SVM high side Reset Release Voltage Level 3 
-    SVSMHRRL_BIT4* = (0x00000004) # SVS and SVM high side Reset Release Voltage Level 4 
-    SVSMHRRL_BIT5* = (0x00000005) # SVS and SVM high side Reset Release Voltage Level 5 
-    SVSMHRRL_BIT6* = (0x00000006) # SVS and SVM high side Reset Release Voltage Level 6 
-    SVSMHRRL_BIT7* = (0x00000007) # SVS and SVM high side Reset Release Voltage Level 7 
-    SVSHRVL_BIT0* = (0x00000000) # SVS high side Reset Release Voltage Level 0 
-    SVSHRVL_BIT1* = (0x00000100) # SVS high side Reset Release Voltage Level 1 
-    SVSHRVL_BIT2* = (0x00000200) # SVS high side Reset Release Voltage Level 2 
-    SVSHRVL_BIT3* = (0x00000300) # SVS high side Reset Release Voltage Level 3 
+    SVSMHRRL_VAL_0* = (0x00000000) # SVS and SVM high side Reset Release Voltage Level 0 
+    SVSMHRRL_VAL_1* = (0x00000001) # SVS and SVM high side Reset Release Voltage Level 1 
+    SVSMHRRL_VAL_2* = (0x00000002) # SVS and SVM high side Reset Release Voltage Level 2 
+    SVSMHRRL_VAL_3* = (0x00000003) # SVS and SVM high side Reset Release Voltage Level 3 
+    SVSMHRRL_VAL_4* = (0x00000004) # SVS and SVM high side Reset Release Voltage Level 4 
+    SVSMHRRL_VAL_5* = (0x00000005) # SVS and SVM high side Reset Release Voltage Level 5 
+    SVSMHRRL_VAL_6* = (0x00000006) # SVS and SVM high side Reset Release Voltage Level 6 
+    SVSMHRRL_VAL_7* = (0x00000007) # SVS and SVM high side Reset Release Voltage Level 7 
+    SVSHRVL_VAL_0* = (0x00000000) # SVS high side Reset Release Voltage Level 0 
+    SVSHRVL_VAL_1* = (0x00000100) # SVS high side Reset Release Voltage Level 1 
+    SVSHRVL_VAL_2* = (0x00000200) # SVS high side Reset Release Voltage Level 2 
+    SVSHRVL_VAL_3* = (0x00000300) # SVS high side Reset Release Voltage Level 3 
   # SVSMLCTL Control Bits 
   const 
     SVSMLRRL0* = (0x00000001) # SVS and SVM low side Reset Release Voltage Level Bit: 0 
@@ -1936,18 +1936,18 @@ when not(defined(MSP430F5510)):
     SVMLOVPE_H* = (0x00000010) # SVM low side over-voltage enable 
     SVMLE_H* = (0x00000040)   # SVM low side enable 
     SVMLFP_H* = (0x00000080)  # SVM low side full performace mode 
-    SVSMLRRL_BIT0* = (0x00000000) # SVS and SVM low side Reset Release Voltage Level 0 
-    SVSMLRRL_BIT1* = (0x00000001) # SVS and SVM low side Reset Release Voltage Level 1 
-    SVSMLRRL_BIT2* = (0x00000002) # SVS and SVM low side Reset Release Voltage Level 2 
-    SVSMLRRL_BIT3* = (0x00000003) # SVS and SVM low side Reset Release Voltage Level 3 
-    SVSMLRRL_BIT4* = (0x00000004) # SVS and SVM low side Reset Release Voltage Level 4 
-    SVSMLRRL_BIT5* = (0x00000005) # SVS and SVM low side Reset Release Voltage Level 5 
-    SVSMLRRL_BIT6* = (0x00000006) # SVS and SVM low side Reset Release Voltage Level 6 
-    SVSMLRRL_BIT7* = (0x00000007) # SVS and SVM low side Reset Release Voltage Level 7 
-    SVSLRVL_BIT0* = (0x00000000) # SVS low side Reset Release Voltage Level 0 
-    SVSLRVL_BIT1* = (0x00000100) # SVS low side Reset Release Voltage Level 1 
-    SVSLRVL_BIT2* = (0x00000200) # SVS low side Reset Release Voltage Level 2 
-    SVSLRVL_BIT3* = (0x00000300) # SVS low side Reset Release Voltage Level 3 
+    SVSMLRRL_VAL_0* = (0x00000000) # SVS and SVM low side Reset Release Voltage Level 0 
+    SVSMLRRL_VAL_1* = (0x00000001) # SVS and SVM low side Reset Release Voltage Level 1 
+    SVSMLRRL_VAL_2* = (0x00000002) # SVS and SVM low side Reset Release Voltage Level 2 
+    SVSMLRRL_VAL_3* = (0x00000003) # SVS and SVM low side Reset Release Voltage Level 3 
+    SVSMLRRL_VAL_4* = (0x00000004) # SVS and SVM low side Reset Release Voltage Level 4 
+    SVSMLRRL_VAL_5* = (0x00000005) # SVS and SVM low side Reset Release Voltage Level 5 
+    SVSMLRRL_VAL_6* = (0x00000006) # SVS and SVM low side Reset Release Voltage Level 6 
+    SVSMLRRL_VAL_7* = (0x00000007) # SVS and SVM low side Reset Release Voltage Level 7 
+    SVSLRVL_VAL_0* = (0x00000000) # SVS low side Reset Release Voltage Level 0 
+    SVSLRVL_VAL_1* = (0x00000100) # SVS low side Reset Release Voltage Level 1 
+    SVSLRVL_VAL_2* = (0x00000200) # SVS low side Reset Release Voltage Level 2 
+    SVSLRVL_VAL_3* = (0x00000300) # SVS low side Reset Release Voltage Level 3 
   # SVSMIO Control Bits 
   const 
     SVMLOE* = (0x00000008)    # SVM low side output enable 
@@ -2116,10 +2116,10 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)  /* Reserved */
   ##define RESERVED            (0x8000)  /* Reserved */
   const 
-    REFVSEL_BIT0* = (0x00000000) # REF Reference Voltage Level Select 1.5V 
-    REFVSEL_BIT1* = (0x00000010) # REF Reference Voltage Level Select 2.0V 
-    REFVSEL_BIT2* = (0x00000020) # REF Reference Voltage Level Select 2.5V 
-    REFVSEL_BIT3* = (0x00000030) # REF Reference Voltage Level Select 2.5V 
+    REFVSEL_VAL_0* = (0x00000000) # REF Reference Voltage Level Select 1.5V 
+    REFVSEL_VAL_1* = (0x00000010) # REF Reference Voltage Level Select 2.0V 
+    REFVSEL_VAL_2* = (0x00000020) # REF Reference Voltage Level Select 2.5V 
+    REFVSEL_VAL_3* = (0x00000030) # REF Reference Voltage Level Select 2.5V 
   #***********************************************************
   # Real Time Clock
   #**********************************************************
@@ -2252,17 +2252,17 @@ when not(defined(MSP430F5510)):
   ##define Reserved          (0x0080)
   ##define Reserved          (0x0008)
   const 
-    RTCSSEL_BIT0* = (0x00000000) # RTC Source Select ACLK 
-    RTCSSEL_BIT1* = (0x00000400) # RTC Source Select SMCLK 
-    RTCSSEL_BIT2* = (0x00000800) # RTC Source Select RT1PS 
-    RTCSSEL_BIT3* = (0x00000C00) # RTC Source Select RT1PS 
+    RTCSSEL_VAL_0* = (0x00000000) # RTC Source Select ACLK 
+    RTCSSEL_VAL_1* = (0x00000400) # RTC Source Select SMCLK 
+    RTCSSEL_VAL_2* = (0x00000800) # RTC Source Select RT1PS 
+    RTCSSEL_VAL_3* = (0x00000C00) # RTC Source Select RT1PS 
     RTCSSEL_ACLK* = (0x00000000) # RTC Source Select ACLK 
     RTCSSEL_SMCLK* = (0x00000400) # RTC Source Select SMCLK 
     RTCSSEL_RT1PS* = (0x00000800) # RTC Source Select RT1PS 
-    RTCTEV_BIT0* = (0x00000000)  # RTC Time Event: 0 (Min. changed) 
-    RTCTEV_BIT1* = (0x00000100)  # RTC Time Event: 1 (Hour changed) 
-    RTCTEV_BIT2* = (0x00000200)  # RTC Time Event: 2 (12:00 changed) 
-    RTCTEV_BIT3* = (0x00000300)  # RTC Time Event: 3 (00:00 changed) 
+    RTCTEV_VAL_0* = (0x00000000)  # RTC Time Event: 0 (Min. changed) 
+    RTCTEV_VAL_1* = (0x00000100)  # RTC Time Event: 1 (Hour changed) 
+    RTCTEV_VAL_2* = (0x00000200)  # RTC Time Event: 2 (12:00 changed) 
+    RTCTEV_VAL_3* = (0x00000300)  # RTC Time Event: 3 (00:00 changed) 
     RTCTEV_MIN* = (0x00000000) # RTC Time Event: 0 (Min. changed) 
     RTCTEV_HOUR* = (0x00000100) # RTC Time Event: 1 (Hour changed) 
     RTCTEV_VAL_0000* = (0x00000200) # RTC Time Event: 2 (00:00 changed) 
@@ -2297,10 +2297,10 @@ when not(defined(MSP430F5510)):
     RTCCALF0_H* = (0x00000001) # RTC Calibration Frequency Bit 0 
   ##define Reserved          (0x0040)
   const 
-    RTCCALF_BIT0* = (0x00000000) # RTC Calibration Frequency: No Output 
-    RTCCALF_BIT1* = (0x00000100) # RTC Calibration Frequency: 512 Hz 
-    RTCCALF_BIT2* = (0x00000200) # RTC Calibration Frequency: 256 Hz 
-    RTCCALF_BIT3* = (0x00000300) # RTC Calibration Frequency: 1 Hz 
+    RTCCALF_VAL_0* = (0x00000000) # RTC Calibration Frequency: No Output 
+    RTCCALF_VAL_1* = (0x00000100) # RTC Calibration Frequency: 512 Hz 
+    RTCCALF_VAL_2* = (0x00000200) # RTC Calibration Frequency: 256 Hz 
+    RTCCALF_VAL_3* = (0x00000300) # RTC Calibration Frequency: 1 Hz 
   # RTCPS0CTL Control Bits 
   ##define Reserved          (0x8000)
   const 
@@ -2349,22 +2349,22 @@ when not(defined(MSP430F5510)):
   ##define Reserved          (0x0040)
   ##define Reserved          (0x0020)
   const 
-    RT0IP_BIT0* = (0x00000000)   # RTC Prescale Timer 0 Interrupt Interval /2 
-    RT0IP_BIT1* = (0x00000004)   # RTC Prescale Timer 0 Interrupt Interval /4 
-    RT0IP_BIT2* = (0x00000008)   # RTC Prescale Timer 0 Interrupt Interval /8 
-    RT0IP_BIT3* = (0x0000000C)   # RTC Prescale Timer 0 Interrupt Interval /16 
-    RT0IP_BIT4* = (0x00000010)   # RTC Prescale Timer 0 Interrupt Interval /32 
-    RT0IP_BIT5* = (0x00000014)   # RTC Prescale Timer 0 Interrupt Interval /64 
-    RT0IP_BIT6* = (0x00000018)   # RTC Prescale Timer 0 Interrupt Interval /128 
-    RT0IP_BIT7* = (0x0000001C)   # RTC Prescale Timer 0 Interrupt Interval /256 
-    RT0PSDIV_BIT0* = (0x00000000) # RTC Prescale Timer 0 Clock Divide /2 
-    RT0PSDIV_BIT1* = (0x00000800) # RTC Prescale Timer 0 Clock Divide /4 
-    RT0PSDIV_BIT2* = (0x00001000) # RTC Prescale Timer 0 Clock Divide /8 
-    RT0PSDIV_BIT3* = (0x00001800) # RTC Prescale Timer 0 Clock Divide /16 
-    RT0PSDIV_BIT4* = (0x00002000) # RTC Prescale Timer 0 Clock Divide /32 
-    RT0PSDIV_BIT5* = (0x00002800) # RTC Prescale Timer 0 Clock Divide /64 
-    RT0PSDIV_BIT6* = (0x00003000) # RTC Prescale Timer 0 Clock Divide /128 
-    RT0PSDIV_BIT7* = (0x00003800) # RTC Prescale Timer 0 Clock Divide /256 
+    RT0IP_VAL_0* = (0x00000000)   # RTC Prescale Timer 0 Interrupt Interval /2 
+    RT0IP_VAL_1* = (0x00000004)   # RTC Prescale Timer 0 Interrupt Interval /4 
+    RT0IP_VAL_2* = (0x00000008)   # RTC Prescale Timer 0 Interrupt Interval /8 
+    RT0IP_VAL_3* = (0x0000000C)   # RTC Prescale Timer 0 Interrupt Interval /16 
+    RT0IP_VAL_4* = (0x00000010)   # RTC Prescale Timer 0 Interrupt Interval /32 
+    RT0IP_VAL_5* = (0x00000014)   # RTC Prescale Timer 0 Interrupt Interval /64 
+    RT0IP_VAL_6* = (0x00000018)   # RTC Prescale Timer 0 Interrupt Interval /128 
+    RT0IP_VAL_7* = (0x0000001C)   # RTC Prescale Timer 0 Interrupt Interval /256 
+    RT0PSDIV_VAL_0* = (0x00000000) # RTC Prescale Timer 0 Clock Divide /2 
+    RT0PSDIV_VAL_1* = (0x00000800) # RTC Prescale Timer 0 Clock Divide /4 
+    RT0PSDIV_VAL_2* = (0x00001000) # RTC Prescale Timer 0 Clock Divide /8 
+    RT0PSDIV_VAL_3* = (0x00001800) # RTC Prescale Timer 0 Clock Divide /16 
+    RT0PSDIV_VAL_4* = (0x00002000) # RTC Prescale Timer 0 Clock Divide /32 
+    RT0PSDIV_VAL_5* = (0x00002800) # RTC Prescale Timer 0 Clock Divide /64 
+    RT0PSDIV_VAL_6* = (0x00003000) # RTC Prescale Timer 0 Clock Divide /128 
+    RT0PSDIV_VAL_7* = (0x00003800) # RTC Prescale Timer 0 Clock Divide /256 
   # RTCPS1CTL Control Bits 
   const 
     RT1SSEL1* = (0x00008000)  # RTC Prescale Timer 1 Source Select Bit 1 
@@ -2412,26 +2412,26 @@ when not(defined(MSP430F5510)):
   ##define Reserved          (0x0040)
   ##define Reserved          (0x0020)
   const 
-    RT1IP_BIT0* = (0x00000000)   # RTC Prescale Timer 1 Interrupt Interval /2 
-    RT1IP_BIT1* = (0x00000004)   # RTC Prescale Timer 1 Interrupt Interval /4 
-    RT1IP_BIT2* = (0x00000008)   # RTC Prescale Timer 1 Interrupt Interval /8 
-    RT1IP_BIT3* = (0x0000000C)   # RTC Prescale Timer 1 Interrupt Interval /16 
-    RT1IP_BIT4* = (0x00000010)   # RTC Prescale Timer 1 Interrupt Interval /32 
-    RT1IP_BIT5* = (0x00000014)   # RTC Prescale Timer 1 Interrupt Interval /64 
-    RT1IP_BIT6* = (0x00000018)   # RTC Prescale Timer 1 Interrupt Interval /128 
-    RT1IP_BIT7* = (0x0000001C)   # RTC Prescale Timer 1 Interrupt Interval /256 
-    RT1PSDIV_BIT0* = (0x00000000) # RTC Prescale Timer 1 Clock Divide /2 
-    RT1PSDIV_BIT1* = (0x00000800) # RTC Prescale Timer 1 Clock Divide /4 
-    RT1PSDIV_BIT2* = (0x00001000) # RTC Prescale Timer 1 Clock Divide /8 
-    RT1PSDIV_BIT3* = (0x00001800) # RTC Prescale Timer 1 Clock Divide /16 
-    RT1PSDIV_BIT4* = (0x00002000) # RTC Prescale Timer 1 Clock Divide /32 
-    RT1PSDIV_BIT5* = (0x00002800) # RTC Prescale Timer 1 Clock Divide /64 
-    RT1PSDIV_BIT6* = (0x00003000) # RTC Prescale Timer 1 Clock Divide /128 
-    RT1PSDIV_BIT7* = (0x00003800) # RTC Prescale Timer 1 Clock Divide /256 
-    RT1SSEL_BIT0* = (0x00000000) # RTC Prescale Timer Source Select ACLK 
-    RT1SSEL_BIT1* = (0x00004000) # RTC Prescale Timer Source Select SMCLK 
-    RT1SSEL_BIT2* = (0x00008000) # RTC Prescale Timer Source Select RT0PS 
-    RT1SSEL_BIT3* = (0x0000C000) # RTC Prescale Timer Source Select RT0PS 
+    RT1IP_VAL_0* = (0x00000000)   # RTC Prescale Timer 1 Interrupt Interval /2 
+    RT1IP_VAL_1* = (0x00000004)   # RTC Prescale Timer 1 Interrupt Interval /4 
+    RT1IP_VAL_2* = (0x00000008)   # RTC Prescale Timer 1 Interrupt Interval /8 
+    RT1IP_VAL_3* = (0x0000000C)   # RTC Prescale Timer 1 Interrupt Interval /16 
+    RT1IP_VAL_4* = (0x00000010)   # RTC Prescale Timer 1 Interrupt Interval /32 
+    RT1IP_VAL_5* = (0x00000014)   # RTC Prescale Timer 1 Interrupt Interval /64 
+    RT1IP_VAL_6* = (0x00000018)   # RTC Prescale Timer 1 Interrupt Interval /128 
+    RT1IP_VAL_7* = (0x0000001C)   # RTC Prescale Timer 1 Interrupt Interval /256 
+    RT1PSDIV_VAL_0* = (0x00000000) # RTC Prescale Timer 1 Clock Divide /2 
+    RT1PSDIV_VAL_1* = (0x00000800) # RTC Prescale Timer 1 Clock Divide /4 
+    RT1PSDIV_VAL_2* = (0x00001000) # RTC Prescale Timer 1 Clock Divide /8 
+    RT1PSDIV_VAL_3* = (0x00001800) # RTC Prescale Timer 1 Clock Divide /16 
+    RT1PSDIV_VAL_4* = (0x00002000) # RTC Prescale Timer 1 Clock Divide /32 
+    RT1PSDIV_VAL_5* = (0x00002800) # RTC Prescale Timer 1 Clock Divide /64 
+    RT1PSDIV_VAL_6* = (0x00003000) # RTC Prescale Timer 1 Clock Divide /128 
+    RT1PSDIV_VAL_7* = (0x00003800) # RTC Prescale Timer 1 Clock Divide /256 
+    RT1SSEL_VAL_0* = (0x00000000) # RTC Prescale Timer Source Select ACLK 
+    RT1SSEL_VAL_1* = (0x00004000) # RTC Prescale Timer Source Select SMCLK 
+    RT1SSEL_VAL_2* = (0x00008000) # RTC Prescale Timer Source Select RT0PS 
+    RT1SSEL_VAL_3* = (0x0000C000) # RTC Prescale Timer Source Select RT0PS 
   # RTC Definitions 
   const 
     RTCIV_NONE* = (0x00000000) # No Interrupt pending 
@@ -2831,18 +2831,18 @@ when not(defined(MSP430F5510)):
     TACLR* = (0x00000004)     # Timer A counter clear 
     TAIE* = (0x00000002)      # Timer A counter interrupt enable 
     TAIFG* = (0x00000001)     # Timer A counter interrupt flag 
-    MC_BIT0* = (0x00000000)      # Timer A mode control: 0 - Stop 
-    MC_BIT1* = (0x00000010)      # Timer A mode control: 1 - Up to CCR0 
-    MC_BIT2* = (0x00000020)      # Timer A mode control: 2 - Continuous up 
-    MC_BIT3* = (0x00000030)      # Timer A mode control: 3 - Up/Down 
-    ID_BIT0* = (0x00000000)      # Timer A input divider: 0 - /1 
-    ID_BIT1* = (0x00000040)      # Timer A input divider: 1 - /2 
-    ID_BIT2* = (0x00000080)      # Timer A input divider: 2 - /4 
-    ID_BIT3* = (0x000000C0)      # Timer A input divider: 3 - /8 
-    TASSEL_BIT0* = (0x00000000)  # Timer A clock source select: 0 - TACLK 
-    TASSEL_BIT1* = (0x00000100)  # Timer A clock source select: 1 - ACLK  
-    TASSEL_BIT2* = (0x00000200)  # Timer A clock source select: 2 - SMCLK 
-    TASSEL_BIT3* = (0x00000300)  # Timer A clock source select: 3 - INCLK 
+    MC_VAL_0* = (0x00000000)      # Timer A mode control: 0 - Stop 
+    MC_VAL_1* = (0x00000010)      # Timer A mode control: 1 - Up to CCR0 
+    MC_VAL_2* = (0x00000020)      # Timer A mode control: 2 - Continuous up 
+    MC_VAL_3* = (0x00000030)      # Timer A mode control: 3 - Up/Down 
+#    ID_VAL_0* = (0x00000000)      # Timer A input divider: 0 - /1 
+#    ID_VAL_1* = (0x00000040)      # Timer A input divider: 1 - /2 
+#    ID_VAL_2* = (0x00000080)      # Timer A input divider: 2 - /4 
+#    ID_VAL_3* = (0x000000C0)      # Timer A input divider: 3 - /8 
+    TASSEL_VAL_0* = (0x00000000)  # Timer A clock source select: 0 - TACLK 
+    TASSEL_VAL_1* = (0x00000100)  # Timer A clock source select: 1 - ACLK  
+    TASSEL_VAL_2* = (0x00000200)  # Timer A clock source select: 2 - SMCLK 
+    TASSEL_VAL_3* = (0x00000300)  # Timer A clock source select: 3 - INCLK 
     MC_STOP* = (0x00000000)  # Timer A mode control: 0 - Stop 
     MC_UP* = (0x00000010)    # Timer A mode control: 1 - Up to CCR0 
     MC_CONTINUOUS* = (0x00000020) # Timer A mode control: 2 - Continuous up 
@@ -2873,35 +2873,35 @@ when not(defined(MSP430F5510)):
     OUT* = (0x00000004)       # PWM Output signal if output mode 0 
     COV* = (0x00000002)       # Capture/compare overflow flag 
     CCIFG* = (0x00000001)     # Capture/compare interrupt flag 
-    OUTMOD_BIT0* = (0x00000000)  # PWM output mode: 0 - output only 
-    OUTMOD_BIT1* = (0x00000020)  # PWM output mode: 1 - set 
-    OUTMOD_BIT2* = (0x00000040)  # PWM output mode: 2 - PWM toggle/reset 
-    OUTMOD_BIT3* = (0x00000060)  # PWM output mode: 3 - PWM set/reset 
-    OUTMOD_BIT4* = (0x00000080)  # PWM output mode: 4 - toggle 
-    OUTMOD_BIT5* = (0x000000A0)  # PWM output mode: 5 - Reset 
-    OUTMOD_BIT6* = (0x000000C0)  # PWM output mode: 6 - PWM toggle/set 
-    OUTMOD_BIT7* = (0x000000E0)  # PWM output mode: 7 - PWM reset/set 
-    CCIS_BIT0* = (0x00000000)    # Capture input select: 0 - CCIxA 
-    CCIS_BIT1* = (0x00001000)    # Capture input select: 1 - CCIxB 
-    CCIS_BIT2* = (0x00002000)    # Capture input select: 2 - GND 
-    CCIS_BIT3* = (0x00003000)    # Capture input select: 3 - Vcc 
-    CM_BIT0* = (0x00000000)      # Capture mode: 0 - disabled 
-    CM_BIT1* = (0x00004000)      # Capture mode: 1 - pos. edge 
-    CM_BIT2* = (0x00008000)      # Capture mode: 1 - neg. edge 
-    CM_BIT3* = (0x0000C000)      # Capture mode: 1 - both edges 
+    OUTMOD_VAL_0* = (0x00000000)  # PWM output mode: 0 - output only 
+    OUTMOD_VAL_1* = (0x00000020)  # PWM output mode: 1 - set 
+    OUTMOD_VAL_2* = (0x00000040)  # PWM output mode: 2 - PWM toggle/reset 
+    OUTMOD_VAL_3* = (0x00000060)  # PWM output mode: 3 - PWM set/reset 
+    OUTMOD_VAL_4* = (0x00000080)  # PWM output mode: 4 - toggle 
+    OUTMOD_VAL_5* = (0x000000A0)  # PWM output mode: 5 - Reset 
+    OUTMOD_VAL_6* = (0x000000C0)  # PWM output mode: 6 - PWM toggle/set 
+    OUTMOD_VAL_7* = (0x000000E0)  # PWM output mode: 7 - PWM reset/set 
+    CCIS_VAL_0* = (0x00000000)    # Capture input select: 0 - CCIxA 
+    CCIS_VAL_1* = (0x00001000)    # Capture input select: 1 - CCIxB 
+    CCIS_VAL_2* = (0x00002000)    # Capture input select: 2 - GND 
+    CCIS_VAL_3* = (0x00003000)    # Capture input select: 3 - Vcc 
+    CM_VAL_0* = (0x00000000)      # Capture mode: 0 - disabled 
+    CM_VAL_1* = (0x00004000)      # Capture mode: 1 - pos. edge 
+    CM_VAL_2* = (0x00008000)      # Capture mode: 1 - neg. edge 
+    CM_VAL_3* = (0x0000C000)      # Capture mode: 1 - both edges 
   # TAxEX0 Control Bits 
   const 
     TAIDEX0* = (0x00000001)   # Timer A Input divider expansion Bit: 0 
     TAIDEX1* = (0x00000002)   # Timer A Input divider expansion Bit: 1 
     TAIDEX2* = (0x00000004)   # Timer A Input divider expansion Bit: 2 
-    TAIDEX_BIT0* = (0x00000000)  # Timer A Input divider expansion : /1 
-    TAIDEX_BIT1* = (0x00000001)  # Timer A Input divider expansion : /2 
-    TAIDEX_BIT2* = (0x00000002)  # Timer A Input divider expansion : /3 
-    TAIDEX_BIT3* = (0x00000003)  # Timer A Input divider expansion : /4 
-    TAIDEX_BIT4* = (0x00000004)  # Timer A Input divider expansion : /5 
-    TAIDEX_BIT5* = (0x00000005)  # Timer A Input divider expansion : /6 
-    TAIDEX_BIT6* = (0x00000006)  # Timer A Input divider expansion : /7 
-    TAIDEX_BIT7* = (0x00000007)  # Timer A Input divider expansion : /8 
+    TAIDEX_VAL_0* = (0x00000000)  # Timer A Input divider expansion : /1 
+    TAIDEX_VAL_1* = (0x00000001)  # Timer A Input divider expansion : /2 
+    TAIDEX_VAL_2* = (0x00000002)  # Timer A Input divider expansion : /3 
+    TAIDEX_VAL_3* = (0x00000003)  # Timer A Input divider expansion : /4 
+    TAIDEX_VAL_4* = (0x00000004)  # Timer A Input divider expansion : /5 
+    TAIDEX_VAL_5* = (0x00000005)  # Timer A Input divider expansion : /6 
+    TAIDEX_VAL_6* = (0x00000006)  # Timer A Input divider expansion : /7 
+    TAIDEX_VAL_7* = (0x00000007)  # Timer A Input divider expansion : /8 
   # T0A5IV Definitions 
   const 
     TA0IV_NONE* = (0x00000000) # No Interrupt pending 
@@ -2909,8 +2909,8 @@ when not(defined(MSP430F5510)):
     TA0IV_TA0CCR2* = (0x00000004) # TA0CCR2_CCIFG 
     TA0IV_TA0CCR3* = (0x00000006) # TA0CCR3_CCIFG 
     TA0IV_TA0CCR4* = (0x00000008) # TA0CCR4_CCIFG 
-    TA0IV_BIT5* = (0x0000000A)   # Reserved 
-    TA0IV_BIT6* = (0x0000000C)   # Reserved 
+    TA0IV_VAL_5* = (0x0000000A)   # Reserved 
+    TA0IV_VAL_6* = (0x0000000C)   # Reserved 
     TA0IV_TA0IFG* = (0x0000000E) # TA0IFG 
   #***********************************************************
   # Timer1_A3
@@ -2953,10 +2953,10 @@ when not(defined(MSP430F5510)):
     TA1IV_NONE* = (0x00000000) # No Interrupt pending 
     TA1IV_TA1CCR1* = (0x00000002) # TA1CCR1_CCIFG 
     TA1IV_TA1CCR2* = (0x00000004) # TA1CCR2_CCIFG 
-    TA1IV_BIT3* = (0x00000006)   # Reserved 
-    TA1IV_BIT4* = (0x00000008)   # Reserved 
-    TA1IV_BIT5* = (0x0000000A)   # Reserved 
-    TA1IV_BIT6* = (0x0000000C)   # Reserved 
+    TA1IV_VAL_3* = (0x00000006)   # Reserved 
+    TA1IV_VAL_4* = (0x00000008)   # Reserved 
+    TA1IV_VAL_5* = (0x0000000A)   # Reserved 
+    TA1IV_VAL_6* = (0x0000000C)   # Reserved 
     TA1IV_TA1IFG* = (0x0000000E) # TA1IFG 
   #***********************************************************
   # Timer2_A3
@@ -2999,10 +2999,10 @@ when not(defined(MSP430F5510)):
     TA2IV_NONE* = (0x00000000) # No Interrupt pending 
     TA2IV_TA1CCR1* = (0x00000002) # TA2CCR1_CCIFG 
     TA2IV_TA1CCR2* = (0x00000004) # TA2CCR2_CCIFG 
-    TA2IV_BIT3* = (0x00000006)   # Reserved 
-    TA2IV_BIT4* = (0x00000008)   # Reserved 
-    TA2IV_BIT5* = (0x0000000A)   # Reserved 
-    TA2IV_BIT6* = (0x0000000C)   # Reserved 
+    TA2IV_VAL_3* = (0x00000006)   # Reserved 
+    TA2IV_VAL_4* = (0x00000008)   # Reserved 
+    TA2IV_VAL_5* = (0x0000000A)   # Reserved 
+    TA2IV_VAL_6* = (0x0000000C)   # Reserved 
     TA2IV_TA2IFG* = (0x0000000E) # TA2IFG 
   #***********************************************************
   # Timer0_B7
@@ -3098,22 +3098,22 @@ when not(defined(MSP430F5510)):
     TBIFG* = (0x00000001)     # Timer0_B7 interrupt flag 
     SHR1* = (0x00004000)      # Timer0_B7 Compare latch load group 1 
     SHR0* = (0x00002000)      # Timer0_B7 Compare latch load group 0 
-    TBSSEL_BIT0* = (0x00000000)  # Clock Source: TBCLK 
-    TBSSEL_BIT1* = (0x00000100)  # Clock Source: ACLK  
-    TBSSEL_BIT2* = (0x00000200)  # Clock Source: SMCLK 
-    TBSSEL_BIT3* = (0x00000300)  # Clock Source: INCLK 
-    CNTL_BIT0* = (0x00000000)    # Counter lenght: 16 bit 
-    CNTL_BIT1* = (0x00000800)    # Counter lenght: 12 bit 
-    CNTL_BIT2* = (0x00001000)    # Counter lenght: 10 bit 
-    CNTL_BIT3* = (0x00001800)    # Counter lenght:  8 bit 
-    SHR_BIT0* = (0x00000000)     # Timer0_B7 Group: 0 - individually 
-    SHR_BIT1* = (0x00002000)     # Timer0_B7 Group: 1 - 3 groups (1-2, 3-4, 5-6) 
-    SHR_BIT2* = (0x00004000)     # Timer0_B7 Group: 2 - 2 groups (1-3, 4-6)
-    SHR_BIT3* = (0x00006000)     # Timer0_B7 Group: 3 - 1 group (all) 
-    TBCLGRP_BIT0* = (0x00000000) # Timer0_B7 Group: 0 - individually 
-    TBCLGRP_BIT1* = (0x00002000) # Timer0_B7 Group: 1 - 3 groups (1-2, 3-4, 5-6) 
-    TBCLGRP_BIT2* = (0x00004000) # Timer0_B7 Group: 2 - 2 groups (1-3, 4-6)
-    TBCLGRP_BIT3* = (0x00006000) # Timer0_B7 Group: 3 - 1 group (all) 
+    TBSSEL_VAL_0* = (0x00000000)  # Clock Source: TBCLK 
+    TBSSEL_VAL_1* = (0x00000100)  # Clock Source: ACLK  
+    TBSSEL_VAL_2* = (0x00000200)  # Clock Source: SMCLK 
+    TBSSEL_VAL_3* = (0x00000300)  # Clock Source: INCLK 
+    CNTL_VAL_0* = (0x00000000)    # Counter lenght: 16 bit 
+    CNTL_VAL_1* = (0x00000800)    # Counter lenght: 12 bit 
+    CNTL_VAL_2* = (0x00001000)    # Counter lenght: 10 bit 
+    CNTL_VAL_3* = (0x00001800)    # Counter lenght:  8 bit 
+    SHR_VAL_0* = (0x00000000)     # Timer0_B7 Group: 0 - individually 
+    SHR_VAL_1* = (0x00002000)     # Timer0_B7 Group: 1 - 3 groups (1-2, 3-4, 5-6) 
+    SHR_VAL_2* = (0x00004000)     # Timer0_B7 Group: 2 - 2 groups (1-3, 4-6)
+    SHR_VAL_3* = (0x00006000)     # Timer0_B7 Group: 3 - 1 group (all) 
+    TBCLGRP_VAL_0* = (0x00000000) # Timer0_B7 Group: 0 - individually 
+    TBCLGRP_VAL_1* = (0x00002000) # Timer0_B7 Group: 1 - 3 groups (1-2, 3-4, 5-6) 
+    TBCLGRP_VAL_2* = (0x00004000) # Timer0_B7 Group: 2 - 2 groups (1-3, 4-6)
+    TBCLGRP_VAL_3* = (0x00006000) # Timer0_B7 Group: 3 - 1 group (all) 
     TBSSEL_TACLK* = (0x00000000) # Timer0_B7 clock source select: 0 - TACLK 
     TBSSEL_ACLK* = (0x00000100) # Timer0_B7 clock source select: 1 - ACLK  
     TBSSEL_SMCLK* = (0x00000200) # Timer0_B7 clock source select: 2 - SMCLK 
@@ -3129,27 +3129,27 @@ when not(defined(MSP430F5510)):
     CLLD0* = (0x00000200)     # Compare latch load source 0 
     SLSHR1* = (0x00000400)    # Compare latch load source 1 
     SLSHR0* = (0x00000200)    # Compare latch load source 0 
-    SLSHR_BIT0* = (0x00000000)   # Compare latch load sourec : 0 - immediate 
-    SLSHR_BIT1* = (0x00000200)   # Compare latch load sourec : 1 - TBR counts to 0 
-    SLSHR_BIT2* = (0x00000400)   # Compare latch load sourec : 2 - up/down 
-    SLSHR_BIT3* = (0x00000600)   # Compare latch load sourec : 3 - TBR counts to TBCTL0 
-    CLLD_BIT0* = (0x00000000)    # Compare latch load sourec : 0 - immediate 
-    CLLD_BIT1* = (0x00000200)    # Compare latch load sourec : 1 - TBR counts to 0 
-    CLLD_BIT2* = (0x00000400)    # Compare latch load sourec : 2 - up/down 
-    CLLD_BIT3* = (0x00000600)    # Compare latch load sourec : 3 - TBR counts to TBCTL0 
+    SLSHR_VAL_0* = (0x00000000)   # Compare latch load sourec : 0 - immediate 
+    SLSHR_VAL_1* = (0x00000200)   # Compare latch load sourec : 1 - TBR counts to 0 
+    SLSHR_VAL_2* = (0x00000400)   # Compare latch load sourec : 2 - up/down 
+    SLSHR_VAL_3* = (0x00000600)   # Compare latch load sourec : 3 - TBR counts to TBCTL0 
+    CLLD_VAL_0* = (0x00000000)    # Compare latch load sourec : 0 - immediate 
+    CLLD_VAL_1* = (0x00000200)    # Compare latch load sourec : 1 - TBR counts to 0 
+    CLLD_VAL_2* = (0x00000400)    # Compare latch load sourec : 2 - up/down 
+    CLLD_VAL_3* = (0x00000600)    # Compare latch load sourec : 3 - TBR counts to TBCTL0 
   # TBxEX0 Control Bits 
   const 
     TBIDEX0* = (0x00000001)   # Timer0_B7 Input divider expansion Bit: 0 
     TBIDEX1* = (0x00000002)   # Timer0_B7 Input divider expansion Bit: 1 
     TBIDEX2* = (0x00000004)   # Timer0_B7 Input divider expansion Bit: 2 
-    TBIDEX_BIT0* = (0x00000000)  # Timer0_B7 Input divider expansion : /1 
-    TBIDEX_BIT1* = (0x00000001)  # Timer0_B7 Input divider expansion : /2 
-    TBIDEX_BIT2* = (0x00000002)  # Timer0_B7 Input divider expansion : /3 
-    TBIDEX_BIT3* = (0x00000003)  # Timer0_B7 Input divider expansion : /4 
-    TBIDEX_BIT4* = (0x00000004)  # Timer0_B7 Input divider expansion : /5 
-    TBIDEX_BIT5* = (0x00000005)  # Timer0_B7 Input divider expansion : /6 
-    TBIDEX_BIT6* = (0x00000006)  # Timer0_B7 Input divider expansion : /7 
-    TBIDEX_BIT7* = (0x00000007)  # Timer0_B7 Input divider expansion : /8 
+#    TBIDEX_VAL_0* = (0x00000000)  # Timer0_B7 Input divider expansion : /1 
+#    TBIDEX_VAL_1* = (0x00000001)  # Timer0_B7 Input divider expansion : /2 
+#    TBIDEX_VAL_2* = (0x00000002)  # Timer0_B7 Input divider expansion : /3 
+#    TBIDEX_VAL_3* = (0x00000003)  # Timer0_B7 Input divider expansion : /4 
+#    TBIDEX_VAL_4* = (0x00000004)  # Timer0_B7 Input divider expansion : /5 
+#    TBIDEX_VAL_5* = (0x00000005)  # Timer0_B7 Input divider expansion : /6 
+#    TBIDEX_VAL_6* = (0x00000006)  # Timer0_B7 Input divider expansion : /7 
+#    TBIDEX_VAL_7* = (0x00000007)  # Timer0_B7 Input divider expansion : /8 
     TBIDEX_VAL_1* = (0x00000000) # Timer0_B7 Input divider expansion : /1 
     TBIDEX_VAL_2* = (0x00000001) # Timer0_B7 Input divider expansion : /2 
     TBIDEX_VAL_3* = (0x00000002) # Timer0_B7 Input divider expansion : /3 
@@ -3163,10 +3163,10 @@ when not(defined(MSP430F5510)):
     TB0IV_NONE* = (0x00000000) # No Interrupt pending 
     TB0IV_TB1CCR1* = (0x00000002) # TBCCR1_CCIFG 
     TB0IV_TB1CCR2* = (0x00000004) # TBCCR2_CCIFG 
-    TB0IV_BIT3* = (0x00000006)   # Reserved 
-    TB0IV_BIT4* = (0x00000008)   # Reserved 
-    TB0IV_BIT5* = (0x0000000A)   # Reserved 
-    TB0IV_BIT6* = (0x0000000C)   # Reserved 
+    TB0IV_VAL_3* = (0x00000006)   # Reserved 
+    TB0IV_VAL_4* = (0x00000008)   # Reserved 
+    TB0IV_VAL_5* = (0x0000000A)   # Reserved 
+    TB0IV_VAL_6* = (0x0000000C)   # Reserved 
     TB0IV_TB0IFG* = (0x0000000E) # TBIFG 
   #***********************************************************
   # USB
@@ -3418,10 +3418,10 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)  /* USB -  */
   ##define RESERVED            (0x8000)  /* USB -  */
   const 
-    UCLKSEL_BIT0* = (0x00000000) # USB - Module Clock Select: 0 
-    UCLKSEL_BIT1* = (0x00000040) # USB - Module Clock Select: 1 
-    UCLKSEL_BIT2* = (0x00000080) # USB - Module Clock Select: 2 
-    UCLKSEL_BIT3* = (0x000000C0) # USB - Module Clock Select: 3 (Reserved) 
+    UCLKSEL_VAL_0* = (0x00000000) # USB - Module Clock Select: 0 
+    UCLKSEL_VAL_1* = (0x00000040) # USB - Module Clock Select: 1 
+    UCLKSEL_VAL_2* = (0x00000080) # USB - Module Clock Select: 2 
+    UCLKSEL_VAL_3* = (0x000000C0) # USB - Module Clock Select: 3 (Reserved) 
     UCLKSEL_PLLCLK* = (0x00000000) # USB - Module Clock Select: PLLCLK 
     UCLKSEL_XT1CLK* = (0x00000040) # USB - Module Clock Select: XT1CLK 
     UCLKSEL_XT2CLK* = (0x00000080) # USB - Module Clock Select: XT2CLK 
@@ -3472,49 +3472,49 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)  /* USB -  */
   ##define RESERVED            (0x8000)  /* USB -  */
   const 
-    USBPLL_SETCLK_1_BIT5* = (UPMB0 * 31 or UPQB0 * 0) # USB - PLL Set for 1.5 MHz input clock 
-    USBPLL_SETCLK_1_BIT6* = (UPMB0 * 29 or UPQB0 * 0) # USB - PLL Set for 1.6 MHz input clock 
-    USBPLL_SETCLK_1_BIT7778* = (UPMB0 * 26 or UPQB0 * 0) # USB - PLL Set for 1.7778 MHz input clock 
-    USBPLL_SETCLK_1_BIT8432* = (UPMB0 * 25 or UPQB0 * 0) # USB - PLL Set for 1.8432 MHz input clock 
-    USBPLL_SETCLK_1_BIT8461* = (UPMB0 * 25 or UPQB0 * 0) # USB - PLL Set for 1.8461 MHz input clock 
-    USBPLL_SETCLK_1_BIT92* = (UPMB0 * 24 or UPQB0 * 0) # USB - PLL Set for 1.92 MHz input clock 
-    USBPLL_SETCLK_2_BIT0* = (UPMB0 * 23 or UPQB0 * 0) # USB - PLL Set for 2.0 MHz input clock 
-    USBPLL_SETCLK_2_BIT4* = (UPMB0 * 19 or UPQB0 * 0) # USB - PLL Set for 2.4 MHz input clock 
-    USBPLL_SETCLK_2_BIT6667* = (UPMB0 * 17 or UPQB0 * 0) # USB - PLL Set for 2.6667 MHz input clock 
-    USBPLL_SETCLK_3_BIT0* = (UPMB0 * 15 or UPQB0 * 0) # USB - PLL Set for 3.0 MHz input clock 
-    USBPLL_SETCLK_3_BIT2* = (UPMB0 * 29 or UPQB0 * 1) # USB - PLL Set for 3.2 MHz input clock 
-    USBPLL_SETCLK_3_BIT5556* = (UPMB0 * 26 or UPQB0 * 1) # USB - PLL Set for 3.5556 MHz input clock 
-    USBPLL_SETCLK_3_BIT579545* = (UPMB0 * 26 or UPQB0 * 1) # USB - PLL Set for 3.579546 MHz input clock 
-    USBPLL_SETCLK_3_BIT84* = (UPMB0 * 24 or UPQB0 * 1) # USB - PLL Set for 3.84 MHz input clock 
-    USBPLL_SETCLK_4_BIT0* = (UPMB0 * 23 or UPQB0 * 1) # USB - PLL Set for 4.0 MHz input clock 
-    USBPLL_SETCLK_4_BIT1739* = (UPMB0 * 22 or UPQB0 * 1) # USB - PLL Set for 4.1739 MHz input clock 
-    USBPLL_SETCLK_4_BIT1943* = (UPMB0 * 22 or UPQB0 * 1) # USB - PLL Set for 4.1943 MHz input clock 
-    USBPLL_SETCLK_4_BIT332* = (UPMB0 * 21 or UPQB0 * 1) # USB - PLL Set for 4.332 MHz input clock 
-    USBPLL_SETCLK_4_BIT3636* = (UPMB0 * 21 or UPQB0 * 1) # USB - PLL Set for 4.3636 MHz input clock 
-    USBPLL_SETCLK_4_BIT5* = (UPMB0 * 31 or UPQB0 * 2) # USB - PLL Set for 4.5 MHz input clock 
-    USBPLL_SETCLK_4_BIT8* = (UPMB0 * 19 or UPQB0 * 1) # USB - PLL Set for 4.8 MHz input clock 
-    USBPLL_SETCLK_5_BIT33* = (UPMB0 * 17 or UPQB0 * 1) # USB - PLL Set for 5.33 MHz input clock 
-    USBPLL_SETCLK_5_BIT76* = (UPMB0 * 24 or UPQB0 * 2) # USB - PLL Set for 5.76 MHz input clock 
-    USBPLL_SETCLK_6_BIT0* = (UPMB0 * 23 or UPQB0 * 2) # USB - PLL Set for 6.0 MHz input clock 
-    USBPLL_SETCLK_6_BIT4* = (UPMB0 * 29 or UPQB0 * 3) # USB - PLL Set for 6.4 MHz input clock 
-    USBPLL_SETCLK_7_BIT2* = (UPMB0 * 19 or UPQB0 * 2) # USB - PLL Set for 7.2 MHz input clock 
-    USBPLL_SETCLK_7_BIT68* = (UPMB0 * 24 or UPQB0 * 3) # USB - PLL Set for 7.68 MHz input clock 
-    USBPLL_SETCLK_8_BIT0* = (UPMB0 * 17 or UPQB0 * 2) # USB - PLL Set for 8.0 MHz input clock 
-    USBPLL_SETCLK_9_BIT0* = (UPMB0 * 15 or UPQB0 * 2) # USB - PLL Set for 9.0 MHz input clock 
-    USBPLL_SETCLK_9_BIT6* = (UPMB0 * 19 or UPQB0 * 3) # USB - PLL Set for 9.6 MHz input clock 
-    USBPLL_SETCLK_10_BIT66* = (UPMB0 * 17 or UPQB0 * 3) # USB - PLL Set for 10.66 MHz input clock 
-    USBPLL_SETCLK_12_BIT0* = (UPMB0 * 15 or UPQB0 * 3) # USB - PLL Set for 12.0 MHz input clock 
-    USBPLL_SETCLK_12_BIT8* = (UPMB0 * 29 or UPQB0 * 5) # USB - PLL Set for 12.8 MHz input clock 
-    USBPLL_SETCLK_14_BIT4* = (UPMB0 * 19 or UPQB0 * 4) # USB - PLL Set for 14.4 MHz input clock 
-    USBPLL_SETCLK_16_BIT0* = (UPMB0 * 17 or UPQB0 * 4) # USB - PLL Set for 16.0 MHz input clock 
-    USBPLL_SETCLK_16_BIT9344* = (UPMB0 * 16 or UPQB0 * 4) # USB - PLL Set for 16.9344 MHz input clock 
-    USBPLL_SETCLK_16_BIT94118* = (UPMB0 * 16 or UPQB0 * 4) # USB - PLL Set for 16.94118 MHz input clock 
-    USBPLL_SETCLK_18_BIT0* = (UPMB0 * 15 or UPQB0 * 4) # USB - PLL Set for 18.0 MHz input clock 
-    USBPLL_SETCLK_19_BIT2* = (UPMB0 * 19 or UPQB0 * 5) # USB - PLL Set for 19.2 MHz input clock 
-    USBPLL_SETCLK_24_BIT0* = (UPMB0 * 15 or UPQB0 * 5) # USB - PLL Set for 24.0 MHz input clock 
-    USBPLL_SETCLK_25_BIT6* = (UPMB0 * 29 or UPQB0 * 7) # USB - PLL Set for 25.6 MHz input clock 
-    USBPLL_SETCLK_26_BIT0* = (UPMB0 * 23 or UPQB0 * 6) # USB - PLL Set for 26.0 MHz input clock 
-    USBPLL_SETCLK_32_BIT0* = (UPMB0 * 23 or UPQB0 * 7) # USB - PLL Set for 32.0 MHz input clock 
+    USBPLL_SETCLK_VAL_1P5* = (UPMB0 * 31 or UPQB0 * 0) # USB - PLL Set for 1.5 MHz input clock 
+    USBPLL_SETCLK_VAL_1P6* = (UPMB0 * 29 or UPQB0 * 0) # USB - PLL Set for 1.6 MHz input clock 
+    USBPLL_SETCLK_VAL_1P7778* = (UPMB0 * 26 or UPQB0 * 0) # USB - PLL Set for 1.7778 MHz input clock 
+    USBPLL_SETCLK_VAL_1P8432* = (UPMB0 * 25 or UPQB0 * 0) # USB - PLL Set for 1.8432 MHz input clock 
+    USBPLL_SETCLK_VAL_1P8461* = (UPMB0 * 25 or UPQB0 * 0) # USB - PLL Set for 1.8461 MHz input clock 
+    USBPLL_SETCLK_VAL_1P92* = (UPMB0 * 24 or UPQB0 * 0) # USB - PLL Set for 1.92 MHz input clock 
+    USBPLL_SETCLK_VAL_2P0* = (UPMB0 * 23 or UPQB0 * 0) # USB - PLL Set for 2.0 MHz input clock 
+    USBPLL_SETCLK_VAL_2P4* = (UPMB0 * 19 or UPQB0 * 0) # USB - PLL Set for 2.4 MHz input clock 
+    USBPLL_SETCLK_VAL_2P6667* = (UPMB0 * 17 or UPQB0 * 0) # USB - PLL Set for 2.6667 MHz input clock 
+    USBPLL_SETCLK_VAL_3P0* = (UPMB0 * 15 or UPQB0 * 0) # USB - PLL Set for 3.0 MHz input clock 
+    USBPLL_SETCLK_VAL_3P2* = (UPMB0 * 29 or UPQB0 * 1) # USB - PLL Set for 3.2 MHz input clock 
+    USBPLL_SETCLK_VAL_3P5556* = (UPMB0 * 26 or UPQB0 * 1) # USB - PLL Set for 3.5556 MHz input clock 
+    USBPLL_SETCLK_VAL_3P579545* = (UPMB0 * 26 or UPQB0 * 1) # USB - PLL Set for 3.579546 MHz input clock 
+    USBPLL_SETCLK_VAL_3P84* = (UPMB0 * 24 or UPQB0 * 1) # USB - PLL Set for 3.84 MHz input clock 
+    USBPLL_SETCLK_VAL_4P0* = (UPMB0 * 23 or UPQB0 * 1) # USB - PLL Set for 4.0 MHz input clock 
+    USBPLL_SETCLK_VAL_4P1739* = (UPMB0 * 22 or UPQB0 * 1) # USB - PLL Set for 4.1739 MHz input clock 
+    USBPLL_SETCLK_VAL_4P1943* = (UPMB0 * 22 or UPQB0 * 1) # USB - PLL Set for 4.1943 MHz input clock 
+    USBPLL_SETCLK_VAL_4P332* = (UPMB0 * 21 or UPQB0 * 1) # USB - PLL Set for 4.332 MHz input clock 
+    USBPLL_SETCLK_VAL_4P3636* = (UPMB0 * 21 or UPQB0 * 1) # USB - PLL Set for 4.3636 MHz input clock 
+    USBPLL_SETCLK_VAL_4P5* = (UPMB0 * 31 or UPQB0 * 2) # USB - PLL Set for 4.5 MHz input clock 
+    USBPLL_SETCLK_VAL_4P8* = (UPMB0 * 19 or UPQB0 * 1) # USB - PLL Set for 4.8 MHz input clock 
+    USBPLL_SETCLK_VAL_5P33* = (UPMB0 * 17 or UPQB0 * 1) # USB - PLL Set for 5.33 MHz input clock 
+    USBPLL_SETCLK_VAL_5P76* = (UPMB0 * 24 or UPQB0 * 2) # USB - PLL Set for 5.76 MHz input clock 
+    USBPLL_SETCLK_VAL_6P0* = (UPMB0 * 23 or UPQB0 * 2) # USB - PLL Set for 6.0 MHz input clock 
+    USBPLL_SETCLK_VAL_6P4* = (UPMB0 * 29 or UPQB0 * 3) # USB - PLL Set for 6.4 MHz input clock 
+    USBPLL_SETCLK_VAL_7P2* = (UPMB0 * 19 or UPQB0 * 2) # USB - PLL Set for 7.2 MHz input clock 
+    USBPLL_SETCLK_VAL_7P68* = (UPMB0 * 24 or UPQB0 * 3) # USB - PLL Set for 7.68 MHz input clock 
+    USBPLL_SETCLK_VAL_8P0* = (UPMB0 * 17 or UPQB0 * 2) # USB - PLL Set for 8.0 MHz input clock 
+    USBPLL_SETCLK_VAL_9P0* = (UPMB0 * 15 or UPQB0 * 2) # USB - PLL Set for 9.0 MHz input clock 
+    USBPLL_SETCLK_VAL_9P6* = (UPMB0 * 19 or UPQB0 * 3) # USB - PLL Set for 9.6 MHz input clock 
+    USBPLL_SETCLK_VAL_10P66* = (UPMB0 * 17 or UPQB0 * 3) # USB - PLL Set for 10.66 MHz input clock 
+    USBPLL_SETCLK_VAL_12P0* = (UPMB0 * 15 or UPQB0 * 3) # USB - PLL Set for 12.0 MHz input clock 
+    USBPLL_SETCLK_VAL_12P8* = (UPMB0 * 29 or UPQB0 * 5) # USB - PLL Set for 12.8 MHz input clock 
+    USBPLL_SETCLK_VAL_14P4* = (UPMB0 * 19 or UPQB0 * 4) # USB - PLL Set for 14.4 MHz input clock 
+    USBPLL_SETCLK_VAL_16P0* = (UPMB0 * 17 or UPQB0 * 4) # USB - PLL Set for 16.0 MHz input clock 
+    USBPLL_SETCLK_VAL_16P9344* = (UPMB0 * 16 or UPQB0 * 4) # USB - PLL Set for 16.9344 MHz input clock 
+    USBPLL_SETCLK_VAL_16P94118* = (UPMB0 * 16 or UPQB0 * 4) # USB - PLL Set for 16.94118 MHz input clock 
+    USBPLL_SETCLK_VAL_18P0* = (UPMB0 * 15 or UPQB0 * 4) # USB - PLL Set for 18.0 MHz input clock 
+    USBPLL_SETCLK_VAL_19P2* = (UPMB0 * 19 or UPQB0 * 5) # USB - PLL Set for 19.2 MHz input clock 
+    USBPLL_SETCLK_VAL_24P0* = (UPMB0 * 15 or UPQB0 * 5) # USB - PLL Set for 24.0 MHz input clock 
+    USBPLL_SETCLK_VAL_25P6* = (UPMB0 * 29 or UPQB0 * 7) # USB - PLL Set for 25.6 MHz input clock 
+    USBPLL_SETCLK_VAL_26P0* = (UPMB0 * 23 or UPQB0 * 6) # USB - PLL Set for 26.0 MHz input clock 
+    USBPLL_SETCLK_VAL_32P0* = (UPMB0 * 23 or UPQB0 * 7) # USB - PLL Set for 32.0 MHz input clock 
   # USBPLLIR Control Bits 
   const 
     USBOOLIFG* = (0x00000001) # USB - PLL out of lock Interrupt Flag 
@@ -3569,16 +3569,16 @@ when not(defined(MSP430F5510)):
   # ========================================================================= 
   const 
     USBIEPCNF_0_ADDR* = 0x00000920
-  sfrb(USBIEPCNF_BIT0, USBIEPCNF_0_ADDR)
+  sfrb(USBIEPCNF_0, USBIEPCNF_0_ADDR)
   const 
     USBIEPCNT_0_ADDR* = 0x00000921
-  sfrb(USBIEPCNT_BIT0, USBIEPCNT_0_ADDR)
+  sfrb(USBIEPCNT_0, USBIEPCNT_0_ADDR)
   const 
     USBOEPCNF_0_ADDR* = 0x00000922
-  sfrb(USBOEPCNF_BIT0, USBOEPCNF_0_ADDR)
+  sfrb(USBOEPCNF_0, USBOEPCNF_0_ADDR)
   const 
     USBOEPCNT_0_ADDR* = 0x00000923
-  sfrb(USBOEPCNT_BIT0, USBOEPCNT_0_ADDR)
+  sfrb(USBOEPCNT_0, USBOEPCNT_0_ADDR)
   const 
     USBIEPIE_ADDR* = 0x0000092E
   sfrb(USBIEPIE, USBIEPIE_ADDR)
@@ -3625,8 +3625,8 @@ when not(defined(MSP430F5510)):
   sfrb(USBFUNADR, USBFUNADR_ADDR)
   #const 
   template USBIV* = USBVECINT
-  # USBIEPCNF_BIT0 Control Bits 
-  # USBOEPCNF_BIT0 Control Bits 
+  # USBIEPCNF_0 Control Bits 
+  # USBOEPCNF_0 Control Bits 
   ##define RESERVED       (0x0001)  /* USB -  */
   ##define RESERVED       (0x0001)  /* USB -  */
   const 
@@ -3638,8 +3638,8 @@ when not(defined(MSP430F5510)):
   ##define RESERVED       (0x0040)  /* USB -  */
   const 
     UBME* = (0x00000080)      # USB - UBM In-Endpoint Enable 
-  # USBIEPBCNT_BIT0 Control Bits 
-  # USBOEPBCNT_BIT0 Control Bits 
+  # USBIEPBCNT_0 Control Bits 
+  # USBOEPBCNT_0 Control Bits 
   const 
     CNT0* = (0x00000001)      # USB - Byte Count Bit 0 
     CNT1* = (0x00000001)      # USB - Byte Count Bit 1 
@@ -3698,18 +3698,18 @@ when not(defined(MSP430F5510)):
     UTSEL0_H* = (0x00000020)  # USB - Timer Select Bit 0 
     UTSEL1_H* = (0x00000040)  # USB - Timer Select Bit 1 
     UTSEL2_H* = (0x00000080)  # USB - Timer Select Bit 2 
-    TSESEL_BIT0* = (0x00000000)  # USB - Time Stamp Event Select: 0 
-    TSESEL_BIT1* = (0x00000200)  # USB - Time Stamp Event Select: 1 
-    TSESEL_BIT2* = (0x00000400)  # USB - Time Stamp Event Select: 2 
-    TSESEL_BIT3* = (0x00000600)  # USB - Time Stamp Event Select: 3 
-    UTSEL_BIT0* = (0x00000000)   # USB - Timer Select: 0 
-    UTSEL_BIT1* = (0x00002000)   # USB - Timer Select: 1 
-    UTSEL_BIT2* = (0x00004000)   # USB - Timer Select: 2 
-    UTSEL_BIT3* = (0x00006000)   # USB - Timer Select: 3 
-    UTSEL_BIT4* = (0x00008000)   # USB - Timer Select: 4 
-    UTSEL_BIT5* = (0x0000A000)   # USB - Timer Select: 5 
-    UTSEL_BIT6* = (0x0000C000)   # USB - Timer Select: 6 
-    UTSEL_BIT7* = (0x0000E000)   # USB - Timer Select: 7 
+    TSESEL_VAL_0* = (0x00000000)  # USB - Time Stamp Event Select: 0 
+    TSESEL_VAL_1* = (0x00000200)  # USB - Time Stamp Event Select: 1 
+    TSESEL_VAL_2* = (0x00000400)  # USB - Time Stamp Event Select: 2 
+    TSESEL_VAL_3* = (0x00000600)  # USB - Time Stamp Event Select: 3 
+    UTSEL_VAL_0* = (0x00000000)   # USB - Timer Select: 0 
+    UTSEL_VAL_1* = (0x00002000)   # USB - Timer Select: 1 
+    UTSEL_VAL_2* = (0x00004000)   # USB - Timer Select: 2 
+    UTSEL_VAL_3* = (0x00006000)   # USB - Timer Select: 3 
+    UTSEL_VAL_4* = (0x00008000)   # USB - Timer Select: 4 
+    UTSEL_VAL_5* = (0x0000A000)   # USB - Timer Select: 5 
+    UTSEL_VAL_6* = (0x0000C000)   # USB - Timer Select: 6 
+    UTSEL_VAL_7* = (0x0000E000)   # USB - Timer Select: 7 
   # USBCTL Control Bits 
   const 
     DIR* = (0x00000001)       # USB - Data Response Bit 
@@ -3781,287 +3781,287 @@ when not(defined(MSP430F5510)):
   # ========================================================================= 
   const 
     USBIEPSIZXY_7_ADDR* = 0x000023FF
-  sfrb(USBIEPSIZXY_BIT7, USBIEPSIZXY_7_ADDR)
+  sfrb(USBIEPSIZXY_7, USBIEPSIZXY_7_ADDR)
   const 
     USBIEPBCTY_7_ADDR* = 0x000023FE
-  sfrb(USBIEPBCTY_BIT7, USBIEPBCTY_7_ADDR)
+  sfrb(USBIEPBCTY_7, USBIEPBCTY_7_ADDR)
   const 
     USBIEPBBAY_7_ADDR* = 0x000023FD
-  sfrb(USBIEPBBAY_BIT7, USBIEPBBAY_7_ADDR)
+  sfrb(USBIEPBBAY_7, USBIEPBBAY_7_ADDR)
   #sfrb    Spare    (0x23FC)   /* Not used  */
   #sfrb    Spare    (0x23FB)   /* Not used  */
   const 
     USBIEPBCTX_7_ADDR* = 0x000023FA
-  sfrb(USBIEPBCTX_BIT7, USBIEPBCTX_7_ADDR)
+  sfrb(USBIEPBCTX_7, USBIEPBCTX_7_ADDR)
   const 
     USBIEPBBAX_7_ADDR* = 0x000023F9
-  sfrb(USBIEPBBAX_BIT7, USBIEPBBAX_7_ADDR)
+  sfrb(USBIEPBBAX_7, USBIEPBBAX_7_ADDR)
   const 
     USBIEPCNF_7_ADDR* = 0x000023F8
-  sfrb(USBIEPCNF_BIT7, USBIEPCNF_7_ADDR)
+  sfrb(USBIEPCNF_7, USBIEPCNF_7_ADDR)
   const 
     USBIEPSIZXY_6_ADDR* = 0x000023F7
-  sfrb(USBIEPSIZXY_BIT6, USBIEPSIZXY_6_ADDR)
+  sfrb(USBIEPSIZXY_6, USBIEPSIZXY_6_ADDR)
   const 
     USBIEPBCTY_6_ADDR* = 0x000023F6
-  sfrb(USBIEPBCTY_BIT6, USBIEPBCTY_6_ADDR)
+  sfrb(USBIEPBCTY_6, USBIEPBCTY_6_ADDR)
   const 
     USBIEPBBAY_6_ADDR* = 0x000023F5
-  sfrb(USBIEPBBAY_BIT6, USBIEPBBAY_6_ADDR)
+  sfrb(USBIEPBBAY_6, USBIEPBBAY_6_ADDR)
   #sfrb    Spare    (0x23F4)   /* Not used  */
   #sfrb    Spare    (0x23F3)   /* Not used  */
   const 
     USBIEPBCTX_6_ADDR* = 0x000023F2
-  sfrb(USBIEPBCTX_BIT6, USBIEPBCTX_6_ADDR)
+  sfrb(USBIEPBCTX_6, USBIEPBCTX_6_ADDR)
   const 
     USBIEPBBAX_6_ADDR* = 0x000023F1
-  sfrb(USBIEPBBAX_BIT6, USBIEPBBAX_6_ADDR)
+  sfrb(USBIEPBBAX_6, USBIEPBBAX_6_ADDR)
   const 
     USBIEPCNF_6_ADDR* = 0x000023F0
-  sfrb(USBIEPCNF_BIT6, USBIEPCNF_6_ADDR)
+  sfrb(USBIEPCNF_6, USBIEPCNF_6_ADDR)
   const 
     USBIEPSIZXY_5_ADDR* = 0x000023EF
-  sfrb(USBIEPSIZXY_BIT5, USBIEPSIZXY_5_ADDR)
+  sfrb(USBIEPSIZXY_5, USBIEPSIZXY_5_ADDR)
   const 
     USBIEPBCTY_5_ADDR* = 0x000023EE
-  sfrb(USBIEPBCTY_BIT5, USBIEPBCTY_5_ADDR)
+  sfrb(USBIEPBCTY_5, USBIEPBCTY_5_ADDR)
   const 
     USBIEPBBAY_5_ADDR* = 0x000023ED
-  sfrb(USBIEPBBAY_BIT5, USBIEPBBAY_5_ADDR)
+  sfrb(USBIEPBBAY_5, USBIEPBBAY_5_ADDR)
   #sfrb    Spare    (0x23EC)   /* Not used */
   #sfrb    Spare    (0x23EB)   /* Not used */
   const 
     USBIEPBCTX_5_ADDR* = 0x000023EA
-  sfrb(USBIEPBCTX_BIT5, USBIEPBCTX_5_ADDR)
+  sfrb(USBIEPBCTX_5, USBIEPBCTX_5_ADDR)
   const 
     USBIEPBBAX_5_ADDR* = 0x000023E9
-  sfrb(USBIEPBBAX_BIT5, USBIEPBBAX_5_ADDR)
+  sfrb(USBIEPBBAX_5, USBIEPBBAX_5_ADDR)
   const 
     USBIEPCNF_5_ADDR* = 0x000023E8
-  sfrb(USBIEPCNF_BIT5, USBIEPCNF_5_ADDR)
+  sfrb(USBIEPCNF_5, USBIEPCNF_5_ADDR)
   const 
     USBIEPSIZXY_4_ADDR* = 0x000023E7
-  sfrb(USBIEPSIZXY_BIT4, USBIEPSIZXY_4_ADDR)
+  sfrb(USBIEPSIZXY_4, USBIEPSIZXY_4_ADDR)
   const 
     USBIEPBCTY_4_ADDR* = 0x000023E6
-  sfrb(USBIEPBCTY_BIT4, USBIEPBCTY_4_ADDR)
+  sfrb(USBIEPBCTY_4, USBIEPBCTY_4_ADDR)
   const 
     USBIEPBBAY_4_ADDR* = 0x000023E5
-  sfrb(USBIEPBBAY_BIT4, USBIEPBBAY_4_ADDR)
+  sfrb(USBIEPBBAY_4, USBIEPBBAY_4_ADDR)
   #sfrb    Spare    (0x23E4)   /* Not used */
   #sfrb    Spare    (0x23E3)   /* Not used */
   const 
     USBIEPBCTX_4_ADDR* = 0x000023E2
-  sfrb(USBIEPBCTX_BIT4, USBIEPBCTX_4_ADDR)
+  sfrb(USBIEPBCTX_4, USBIEPBCTX_4_ADDR)
   const 
     USBIEPBBAX_4_ADDR* = 0x000023E1
-  sfrb(USBIEPBBAX_BIT4, USBIEPBBAX_4_ADDR)
+  sfrb(USBIEPBBAX_4, USBIEPBBAX_4_ADDR)
   const 
     USBIEPCNF_4_ADDR* = 0x000023E0
-  sfrb(USBIEPCNF_BIT4, USBIEPCNF_4_ADDR)
+  sfrb(USBIEPCNF_4, USBIEPCNF_4_ADDR)
   const 
     USBIEPSIZXY_3_ADDR* = 0x000023DF
-  sfrb(USBIEPSIZXY_BIT3, USBIEPSIZXY_3_ADDR)
+  sfrb(USBIEPSIZXY_3, USBIEPSIZXY_3_ADDR)
   const 
     USBIEPBCTY_3_ADDR* = 0x000023DE
-  sfrb(USBIEPBCTY_BIT3, USBIEPBCTY_3_ADDR)
+  sfrb(USBIEPBCTY_3, USBIEPBCTY_3_ADDR)
   const 
     USBIEPBBAY_3_ADDR* = 0x000023DD
-  sfrb(USBIEPBBAY_BIT3, USBIEPBBAY_3_ADDR)
+  sfrb(USBIEPBBAY_3, USBIEPBBAY_3_ADDR)
   #sfrb    Spare    (0x23DC)   /* Not used */
   #sfrb    Spare    (0x23DB)   /* Not used */
   const 
     USBIEPBCTX_3_ADDR* = 0x000023DA
-  sfrb(USBIEPBCTX_BIT3, USBIEPBCTX_3_ADDR)
+  sfrb(USBIEPBCTX_3, USBIEPBCTX_3_ADDR)
   const 
     USBIEPBBAX_3_ADDR* = 0x000023D9
-  sfrb(USBIEPBBAX_BIT3, USBIEPBBAX_3_ADDR)
+  sfrb(USBIEPBBAX_3, USBIEPBBAX_3_ADDR)
   const 
     USBIEPCNF_3_ADDR* = 0x000023D8
-  sfrb(USBIEPCNF_BIT3, USBIEPCNF_3_ADDR)
+  sfrb(USBIEPCNF_3, USBIEPCNF_3_ADDR)
   const 
     USBIEPSIZXY_2_ADDR* = 0x000023D7
-  sfrb(USBIEPSIZXY_BIT2, USBIEPSIZXY_2_ADDR)
+  sfrb(USBIEPSIZXY_2, USBIEPSIZXY_2_ADDR)
   const 
     USBIEPBCTY_2_ADDR* = 0x000023D6
-  sfrb(USBIEPBCTY_BIT2, USBIEPBCTY_2_ADDR)
+  sfrb(USBIEPBCTY_2, USBIEPBCTY_2_ADDR)
   const 
     USBIEPBBAY_2_ADDR* = 0x000023D5
-  sfrb(USBIEPBBAY_BIT2, USBIEPBBAY_2_ADDR)
+  sfrb(USBIEPBBAY_2, USBIEPBBAY_2_ADDR)
   #sfrb    Spare    (0x23D4)   /* Not used */
   #sfrb    Spare    (0x23D3)   /* Not used */
   const 
     USBIEPBCTX_2_ADDR* = 0x000023D2
-  sfrb(USBIEPBCTX_BIT2, USBIEPBCTX_2_ADDR)
+  sfrb(USBIEPBCTX_2, USBIEPBCTX_2_ADDR)
   const 
     USBIEPBBAX_2_ADDR* = 0x000023D1
-  sfrb(USBIEPBBAX_BIT2, USBIEPBBAX_2_ADDR)
+  sfrb(USBIEPBBAX_2, USBIEPBBAX_2_ADDR)
   const 
     USBIEPCNF_2_ADDR* = 0x000023D0
-  sfrb(USBIEPCNF_BIT2, USBIEPCNF_2_ADDR)
+  sfrb(USBIEPCNF_2, USBIEPCNF_2_ADDR)
   const 
     USBIEPSIZXY_1_ADDR* = 0x000023CF
-  sfrb(USBIEPSIZXY_BIT1, USBIEPSIZXY_1_ADDR)
+  sfrb(USBIEPSIZXY_1, USBIEPSIZXY_1_ADDR)
   const 
     USBIEPBCTY_1_ADDR* = 0x000023CE
-  sfrb(USBIEPBCTY_BIT1, USBIEPBCTY_1_ADDR)
+  sfrb(USBIEPBCTY_1, USBIEPBCTY_1_ADDR)
   const 
     USBIEPBBAY_1_ADDR* = 0x000023CD
-  sfrb(USBIEPBBAY_BIT1, USBIEPBBAY_1_ADDR)
+  sfrb(USBIEPBBAY_1, USBIEPBBAY_1_ADDR)
   #sfrb    Spare    (0x23CC)   /* Not used */
   #sfrb    Spare    (0x23CB)   /* Not used */
   const 
     USBIEPBCTX_1_ADDR* = 0x000023CA
-  sfrb(USBIEPBCTX_BIT1, USBIEPBCTX_1_ADDR)
+  sfrb(USBIEPBCTX_1, USBIEPBCTX_1_ADDR)
   const 
     USBIEPBBAX_1_ADDR* = 0x000023C9
-  sfrb(USBIEPBBAX_BIT1, USBIEPBBAX_1_ADDR)
+  sfrb(USBIEPBBAX_1, USBIEPBBAX_1_ADDR)
   const 
     USBIEPCNF_1_ADDR* = 0x000023C8
-  sfrb(USBIEPCNF_BIT1, USBIEPCNF_1_ADDR)
+  sfrb(USBIEPCNF_1, USBIEPCNF_1_ADDR)
   #sfrb       (0x23C7)   0x0000 */
   #sfrb     RESERVED      (0x1C00)    /* */
   #sfrb       (0x23C0)   0x0000 */
   const 
     USBOEPSIZXY_7_ADDR* = 0x000023BF
-  sfrb(USBOEPSIZXY_BIT7, USBOEPSIZXY_7_ADDR)
+  sfrb(USBOEPSIZXY_7, USBOEPSIZXY_7_ADDR)
   const 
     USBOEPBCTY_7_ADDR* = 0x000023BE
-  sfrb(USBOEPBCTY_BIT7, USBOEPBCTY_7_ADDR)
+  sfrb(USBOEPBCTY_7, USBOEPBCTY_7_ADDR)
   const 
     USBOEPBBAY_7_ADDR* = 0x000023BD
-  sfrb(USBOEPBBAY_BIT7, USBOEPBBAY_7_ADDR)
+  sfrb(USBOEPBBAY_7, USBOEPBBAY_7_ADDR)
   #sfrb    Spare    (0x23BC)   /* Not used */
   #sfrb    Spare    (0x23BB)   /* Not used */
   const 
     USBOEPBCTX_7_ADDR* = 0x000023BA
-  sfrb(USBOEPBCTX_BIT7, USBOEPBCTX_7_ADDR)
+  sfrb(USBOEPBCTX_7, USBOEPBCTX_7_ADDR)
   const 
     USBOEPBBAX_7_ADDR* = 0x000023B9
-  sfrb(USBOEPBBAX_BIT7, USBOEPBBAX_7_ADDR)
+  sfrb(USBOEPBBAX_7, USBOEPBBAX_7_ADDR)
   const 
     USBOEPCNF_7_ADDR* = 0x000023B8
-  sfrb(USBOEPCNF_BIT7, USBOEPCNF_7_ADDR)
+  sfrb(USBOEPCNF_7, USBOEPCNF_7_ADDR)
   const 
     USBOEPSIZXY_6_ADDR* = 0x000023B7
-  sfrb(USBOEPSIZXY_BIT6, USBOEPSIZXY_6_ADDR)
+  sfrb(USBOEPSIZXY_6, USBOEPSIZXY_6_ADDR)
   const 
     USBOEPBCTY_6_ADDR* = 0x000023B6
-  sfrb(USBOEPBCTY_BIT6, USBOEPBCTY_6_ADDR)
+  sfrb(USBOEPBCTY_6, USBOEPBCTY_6_ADDR)
   const 
     USBOEPBBAY_6_ADDR* = 0x000023B5
-  sfrb(USBOEPBBAY_BIT6, USBOEPBBAY_6_ADDR)
+  sfrb(USBOEPBBAY_6, USBOEPBBAY_6_ADDR)
   #sfrb    Spare    (0x23B4)   /* Not used */
   #sfrb    Spare    (0x23B3)   /* Not used */
   const 
     USBOEPBCTX_6_ADDR* = 0x000023B2
-  sfrb(USBOEPBCTX_BIT6, USBOEPBCTX_6_ADDR)
+  sfrb(USBOEPBCTX_6, USBOEPBCTX_6_ADDR)
   const 
     USBOEPBBAX_6_ADDR* = 0x000023B1
-  sfrb(USBOEPBBAX_BIT6, USBOEPBBAX_6_ADDR)
+  sfrb(USBOEPBBAX_6, USBOEPBBAX_6_ADDR)
   const 
     USBOEPCNF_6_ADDR* = 0x000023B0
-  sfrb(USBOEPCNF_BIT6, USBOEPCNF_6_ADDR)
+  sfrb(USBOEPCNF_6, USBOEPCNF_6_ADDR)
   const 
     USBOEPSIZXY_5_ADDR* = 0x000023AF
-  sfrb(USBOEPSIZXY_BIT5, USBOEPSIZXY_5_ADDR)
+  sfrb(USBOEPSIZXY_5, USBOEPSIZXY_5_ADDR)
   const 
     USBOEPBCTY_5_ADDR* = 0x000023AE
-  sfrb(USBOEPBCTY_BIT5, USBOEPBCTY_5_ADDR)
+  sfrb(USBOEPBCTY_5, USBOEPBCTY_5_ADDR)
   const 
     USBOEPBBAY_5_ADDR* = 0x000023AD
-  sfrb(USBOEPBBAY_BIT5, USBOEPBBAY_5_ADDR)
+  sfrb(USBOEPBBAY_5, USBOEPBBAY_5_ADDR)
   #sfrb    Spare    (0x23AC)   /* Not used */
   #sfrb    Spare    (0x23AB)   /* Not used */
   const 
     USBOEPBCTX_5_ADDR* = 0x000023AA
-  sfrb(USBOEPBCTX_BIT5, USBOEPBCTX_5_ADDR)
+  sfrb(USBOEPBCTX_5, USBOEPBCTX_5_ADDR)
   const 
     USBOEPBBAX_5_ADDR* = 0x000023A9
-  sfrb(USBOEPBBAX_BIT5, USBOEPBBAX_5_ADDR)
+  sfrb(USBOEPBBAX_5, USBOEPBBAX_5_ADDR)
   const 
     USBOEPCNF_5_ADDR* = 0x000023A8
-  sfrb(USBOEPCNF_BIT5, USBOEPCNF_5_ADDR)
+  sfrb(USBOEPCNF_5, USBOEPCNF_5_ADDR)
   const 
     USBOEPSIZXY_4_ADDR* = 0x000023A7
-  sfrb(USBOEPSIZXY_BIT4, USBOEPSIZXY_4_ADDR)
+  sfrb(USBOEPSIZXY_4, USBOEPSIZXY_4_ADDR)
   const 
     USBOEPBCTY_4_ADDR* = 0x000023A6
-  sfrb(USBOEPBCTY_BIT4, USBOEPBCTY_4_ADDR)
+  sfrb(USBOEPBCTY_4, USBOEPBCTY_4_ADDR)
   const 
     USBOEPBBAY_4_ADDR* = 0x000023A5
-  sfrb(USBOEPBBAY_BIT4, USBOEPBBAY_4_ADDR)
+  sfrb(USBOEPBBAY_4, USBOEPBBAY_4_ADDR)
   #sfrb    Spare    (0x23A4)   /* Not used */
   #sfrb    Spare    (0x23A3)   /* Not used */
   const 
     USBOEPBCTX_4_ADDR* = 0x000023A2
-  sfrb(USBOEPBCTX_BIT4, USBOEPBCTX_4_ADDR)
+  sfrb(USBOEPBCTX_4, USBOEPBCTX_4_ADDR)
   const 
     USBOEPBBAX_4_ADDR* = 0x000023A1
-  sfrb(USBOEPBBAX_BIT4, USBOEPBBAX_4_ADDR)
+  sfrb(USBOEPBBAX_4, USBOEPBBAX_4_ADDR)
   const 
     USBOEPCNF_4_ADDR* = 0x000023A0
-  sfrb(USBOEPCNF_BIT4, USBOEPCNF_4_ADDR)
+  sfrb(USBOEPCNF_4, USBOEPCNF_4_ADDR)
   const 
     USBOEPSIZXY_3_ADDR* = 0x0000239F
-  sfrb(USBOEPSIZXY_BIT3, USBOEPSIZXY_3_ADDR)
+  sfrb(USBOEPSIZXY_3, USBOEPSIZXY_3_ADDR)
   const 
     USBOEPBCTY_3_ADDR* = 0x0000239E
-  sfrb(USBOEPBCTY_BIT3, USBOEPBCTY_3_ADDR)
+  sfrb(USBOEPBCTY_3, USBOEPBCTY_3_ADDR)
   const 
     USBOEPBBAY_3_ADDR* = 0x0000239D
-  sfrb(USBOEPBBAY_BIT3, USBOEPBBAY_3_ADDR)
+  sfrb(USBOEPBBAY_3, USBOEPBBAY_3_ADDR)
   #sfrb    Spare    (0x239C)   /* Not used */
   #sfrb    Spare    (0x239B)   /* Not used */
   const 
     USBOEPBCTX_3_ADDR* = 0x0000239A
-  sfrb(USBOEPBCTX_BIT3, USBOEPBCTX_3_ADDR)
+  sfrb(USBOEPBCTX_3, USBOEPBCTX_3_ADDR)
   const 
     USBOEPBBAX_3_ADDR* = 0x00002399
-  sfrb(USBOEPBBAX_BIT3, USBOEPBBAX_3_ADDR)
+  sfrb(USBOEPBBAX_3, USBOEPBBAX_3_ADDR)
   const 
     USBOEPCNF_3_ADDR* = 0x00002398
-  sfrb(USBOEPCNF_BIT3, USBOEPCNF_3_ADDR)
+  sfrb(USBOEPCNF_3, USBOEPCNF_3_ADDR)
   const 
     USBOEPSIZXY_2_ADDR* = 0x00002397
-  sfrb(USBOEPSIZXY_BIT2, USBOEPSIZXY_2_ADDR)
+  sfrb(USBOEPSIZXY_2, USBOEPSIZXY_2_ADDR)
   const 
     USBOEPBCTY_2_ADDR* = 0x00002396
-  sfrb(USBOEPBCTY_BIT2, USBOEPBCTY_2_ADDR)
+  sfrb(USBOEPBCTY_2, USBOEPBCTY_2_ADDR)
   const 
     USBOEPBBAY_2_ADDR* = 0x00002395
-  sfrb(USBOEPBBAY_BIT2, USBOEPBBAY_2_ADDR)
+  sfrb(USBOEPBBAY_2, USBOEPBBAY_2_ADDR)
   #sfrb    Spare    (0x2394)   /* Not used */
   #sfrb    Spare    (0x2393)   /* Not used */
   const 
     USBOEPBCTX_2_ADDR* = 0x00002392
-  sfrb(USBOEPBCTX_BIT2, USBOEPBCTX_2_ADDR)
+  sfrb(USBOEPBCTX_2, USBOEPBCTX_2_ADDR)
   const 
     USBOEPBBAX_2_ADDR* = 0x00002391
-  sfrb(USBOEPBBAX_BIT2, USBOEPBBAX_2_ADDR)
+  sfrb(USBOEPBBAX_2, USBOEPBBAX_2_ADDR)
   const 
     USBOEPCNF_2_ADDR* = 0x00002390
-  sfrb(USBOEPCNF_BIT2, USBOEPCNF_2_ADDR)
+  sfrb(USBOEPCNF_2, USBOEPCNF_2_ADDR)
   const 
     USBOEPSIZXY_1_ADDR* = 0x0000238F
-  sfrb(USBOEPSIZXY_BIT1, USBOEPSIZXY_1_ADDR)
+  sfrb(USBOEPSIZXY_1, USBOEPSIZXY_1_ADDR)
   const 
     USBOEPBCTY_1_ADDR* = 0x0000238E
-  sfrb(USBOEPBCTY_BIT1, USBOEPBCTY_1_ADDR)
+  sfrb(USBOEPBCTY_1, USBOEPBCTY_1_ADDR)
   const 
     USBOEPBBAY_1_ADDR* = 0x0000238D
-  sfrb(USBOEPBBAY_BIT1, USBOEPBBAY_1_ADDR)
+  sfrb(USBOEPBBAY_1, USBOEPBBAY_1_ADDR)
   #sfrb    Spare    (0x238C)   /* Not used */
   #sfrb    Spare    (0x238B)   /* Not used */
   const 
     USBOEPBCTX_1_ADDR* = 0x0000238A
-  sfrb(USBOEPBCTX_BIT1, USBOEPBCTX_1_ADDR)
+  sfrb(USBOEPBCTX_1, USBOEPBCTX_1_ADDR)
   const 
     USBOEPBBAX_1_ADDR* = 0x00002389
-  sfrb(USBOEPBBAX_BIT1, USBOEPBBAX_1_ADDR)
+  sfrb(USBOEPBBAX_1, USBOEPBBAX_1_ADDR)
   const 
     USBOEPCNF_1_ADDR* = 0x00002388
-  sfrb(USBOEPCNF_BIT1, USBOEPCNF_1_ADDR)
+  sfrb(USBOEPCNF_1, USBOEPCNF_1_ADDR)
   const 
     USBSUBLK_ADDR* = 0x00002380
   sfrb(USBSUBLK, USBSUBLK_ADDR)
@@ -4237,14 +4237,14 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)    /* RESERVED */
   ##define RESERVED            (0x8000)    /* RESERVED */
   const 
-    DCORSEL_BIT0* = (0x00000000) # DCO RSEL 0 
-    DCORSEL_BIT1* = (0x00000010) # DCO RSEL 1 
-    DCORSEL_BIT2* = (0x00000020) # DCO RSEL 2 
-    DCORSEL_BIT3* = (0x00000030) # DCO RSEL 3 
-    DCORSEL_BIT4* = (0x00000040) # DCO RSEL 4 
-    DCORSEL_BIT5* = (0x00000050) # DCO RSEL 5 
-    DCORSEL_BIT6* = (0x00000060) # DCO RSEL 6 
-    DCORSEL_BIT7* = (0x00000070) # DCO RSEL 7 
+    DCORSEL_VAL_0* = (0x00000000) # DCO RSEL 0 
+    DCORSEL_VAL_1* = (0x00000010) # DCO RSEL 1 
+    DCORSEL_VAL_2* = (0x00000020) # DCO RSEL 2 
+    DCORSEL_VAL_3* = (0x00000030) # DCO RSEL 3 
+    DCORSEL_VAL_4* = (0x00000040) # DCO RSEL 4 
+    DCORSEL_VAL_5* = (0x00000050) # DCO RSEL 5 
+    DCORSEL_VAL_6* = (0x00000060) # DCO RSEL 6 
+    DCORSEL_VAL_7* = (0x00000070) # DCO RSEL 7 
   # UCSCTL2 Control Bits 
   const 
     FLLN0* = (0x00000001)     # FLL Multipier Bit : 0 
@@ -4289,14 +4289,14 @@ when not(defined(MSP430F5510)):
     FLLD2_H* = (0x00000040)   # Loop Divider Bit : 1 
   ##define RESERVED            (0x8000)    /* RESERVED */
   const 
-    FLLD_BIT0* = (0x00000000)    # Multiply Selected Loop Freq. 1 
-    FLLD_BIT1* = (0x00001000)    # Multiply Selected Loop Freq. 2 
-    FLLD_BIT2* = (0x00002000)    # Multiply Selected Loop Freq. 4 
-    FLLD_BIT3* = (0x00003000)    # Multiply Selected Loop Freq. 8 
-    FLLD_BIT4* = (0x00004000)    # Multiply Selected Loop Freq. 16 
-    FLLD_BIT5* = (0x00005000)    # Multiply Selected Loop Freq. 32 
-    FLLD_BIT6* = (0x00006000)    # Multiply Selected Loop Freq. 32 
-    FLLD_BIT7* = (0x00007000)    # Multiply Selected Loop Freq. 32 
+#    FLLD_VAL_0* = (0x00000000)    # Multiply Selected Loop Freq. 1 
+#    FLLD_VAL_1* = (0x00001000)    # Multiply Selected Loop Freq. 2 
+#    FLLD_VAL_2* = (0x00002000)    # Multiply Selected Loop Freq. 4 
+#    FLLD_VAL_3* = (0x00003000)    # Multiply Selected Loop Freq. 8 
+#    FLLD_VAL_4* = (0x00004000)    # Multiply Selected Loop Freq. 16 
+#    FLLD_VAL_5* = (0x00005000)    # Multiply Selected Loop Freq. 32 
+#    FLLD_VAL_6* = (0x00006000)    # Multiply Selected Loop Freq. 32 
+#    FLLD_VAL_7* = (0x00007000)    # Multiply Selected Loop Freq. 32 
     FLLD_VAL_1* = (0x00000000)   # Multiply Selected Loop Freq. By 1 
     FLLD_VAL_2* = (0x00001000)   # Multiply Selected Loop Freq. By 2 
     FLLD_VAL_4* = (0x00002000)   # Multiply Selected Loop Freq. By 4 
@@ -4353,28 +4353,28 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)    /* RESERVED */
   ##define RESERVED            (0x8000)    /* RESERVED */
   const 
-    FLLREFDIV_BIT0* = (0x00000000) # Reference Divider: f(LFCLK)/1 
-    FLLREFDIV_BIT1* = (0x00000001) # Reference Divider: f(LFCLK)/2 
-    FLLREFDIV_BIT2* = (0x00000002) # Reference Divider: f(LFCLK)/4 
-    FLLREFDIV_BIT3* = (0x00000003) # Reference Divider: f(LFCLK)/8 
-    FLLREFDIV_BIT4* = (0x00000004) # Reference Divider: f(LFCLK)/12 
-    FLLREFDIV_BIT5* = (0x00000005) # Reference Divider: f(LFCLK)/16 
-    FLLREFDIV_BIT6* = (0x00000006) # Reference Divider: f(LFCLK)/16 
-    FLLREFDIV_BIT7* = (0x00000007) # Reference Divider: f(LFCLK)/16 
+#    FLLREFDIV_VAL_0* = (0x00000000) # Reference Divider: f(LFCLK)/1 
+#    FLLREFDIV_VAL_1* = (0x00000001) # Reference Divider: f(LFCLK)/2 
+#    FLLREFDIV_VAL_2* = (0x00000002) # Reference Divider: f(LFCLK)/4 
+#    FLLREFDIV_VAL_3* = (0x00000003) # Reference Divider: f(LFCLK)/8 
+#    FLLREFDIV_VAL_4* = (0x00000004) # Reference Divider: f(LFCLK)/12 
+#    FLLREFDIV_VAL_5* = (0x00000005) # Reference Divider: f(LFCLK)/16 
+#    FLLREFDIV_VAL_6* = (0x00000006) # Reference Divider: f(LFCLK)/16 
+#    FLLREFDIV_VAL_7* = (0x00000007) # Reference Divider: f(LFCLK)/16 
     FLLREFDIV_VAL_1* = (0x00000000) # Reference Divider: f(LFCLK)/1 
     FLLREFDIV_VAL_2* = (0x00000001) # Reference Divider: f(LFCLK)/2 
     FLLREFDIV_VAL_4* = (0x00000002) # Reference Divider: f(LFCLK)/4 
     FLLREFDIV_VAL_8* = (0x00000003) # Reference Divider: f(LFCLK)/8 
     FLLREFDIV_VAL_12* = (0x00000004) # Reference Divider: f(LFCLK)/12 
     FLLREFDIV_VAL_16* = (0x00000005) # Reference Divider: f(LFCLK)/16 
-    SELREF_BIT0* = (0x00000000)  # FLL Reference Clock Select 0 
-    SELREF_BIT1* = (0x00000010)  # FLL Reference Clock Select 1 
-    SELREF_BIT2* = (0x00000020)  # FLL Reference Clock Select 2 
-    SELREF_BIT3* = (0x00000030)  # FLL Reference Clock Select 3 
-    SELREF_BIT4* = (0x00000040)  # FLL Reference Clock Select 4 
-    SELREF_BIT5* = (0x00000050)  # FLL Reference Clock Select 5 
-    SELREF_BIT6* = (0x00000060)  # FLL Reference Clock Select 6 
-    SELREF_BIT7* = (0x00000070)  # FLL Reference Clock Select 7 
+    SELREF_VAL_0* = (0x00000000)  # FLL Reference Clock Select 0 
+    SELREF_VAL_1* = (0x00000010)  # FLL Reference Clock Select 1 
+    SELREF_VAL_2* = (0x00000020)  # FLL Reference Clock Select 2 
+    SELREF_VAL_3* = (0x00000030)  # FLL Reference Clock Select 3 
+    SELREF_VAL_4* = (0x00000040)  # FLL Reference Clock Select 4 
+    SELREF_VAL_5* = (0x00000050)  # FLL Reference Clock Select 5 
+    SELREF_VAL_6* = (0x00000060)  # FLL Reference Clock Select 6 
+    SELREF_VAL_7* = (0x00000070)  # FLL Reference Clock Select 7 
     SELREF_XT1CLK* = (0x00000000) # Multiply Selected Loop Freq. By XT1CLK 
     SELREF_REFOCLK* = (0x00000020) # Multiply Selected Loop Freq. By REFOCLK 
     SELREF_XT2CLK* = (0x00000050) # Multiply Selected Loop Freq. By XT2CLK 
@@ -4427,42 +4427,42 @@ when not(defined(MSP430F5510)):
   ##define RESERVED            (0x4000)    /* RESERVED */
   ##define RESERVED            (0x8000)    /* RESERVED */
   const 
-    SELM_BIT0* = (0x00000000)    # MCLK Source Select 0 
-    SELM_BIT1* = (0x00000001)    # MCLK Source Select 1 
-    SELM_BIT2* = (0x00000002)    # MCLK Source Select 2 
-    SELM_BIT3* = (0x00000003)    # MCLK Source Select 3 
-    SELM_BIT4* = (0x00000004)    # MCLK Source Select 4 
-    SELM_BIT5* = (0x00000005)    # MCLK Source Select 5 
-    SELM_BIT6* = (0x00000006)    # MCLK Source Select 6 
-    SELM_BIT7* = (0x00000007)    # MCLK Source Select 7 
+    SELM_VAL_0* = (0x00000000)    # MCLK Source Select 0 
+    SELM_VAL_1* = (0x00000001)    # MCLK Source Select 1 
+    SELM_VAL_2* = (0x00000002)    # MCLK Source Select 2 
+    SELM_VAL_3* = (0x00000003)    # MCLK Source Select 3 
+    SELM_VAL_4* = (0x00000004)    # MCLK Source Select 4 
+    SELM_VAL_5* = (0x00000005)    # MCLK Source Select 5 
+    SELM_VAL_6* = (0x00000006)    # MCLK Source Select 6 
+    SELM_VAL_7* = (0x00000007)    # MCLK Source Select 7 
     SELM_XT1CLK* = (0x00000000) # MCLK Source Select XT1CLK 
     SELM_VLOCLK* = (0x00000001) # MCLK Source Select VLOCLK 
     SELM_REFOCLK* = (0x00000002) # MCLK Source Select REFOCLK 
     SELM_DCOCLK* = (0x00000003) # MCLK Source Select DCOCLK 
     SELM_DCOCLKDIV* = (0x00000004) # MCLK Source Select DCOCLKDIV 
     SELM_XT2CLK* = (0x00000005) # MCLK Source Select XT2CLK 
-    SELS_BIT0* = (0x00000000)    # SMCLK Source Select 0 
-    SELS_BIT1* = (0x00000010)    # SMCLK Source Select 1 
-    SELS_BIT2* = (0x00000020)    # SMCLK Source Select 2 
-    SELS_BIT3* = (0x00000030)    # SMCLK Source Select 3 
-    SELS_BIT4* = (0x00000040)    # SMCLK Source Select 4 
-    SELS_BIT5* = (0x00000050)    # SMCLK Source Select 5 
-    SELS_BIT6* = (0x00000060)    # SMCLK Source Select 6 
-    SELS_BIT7* = (0x00000070)    # SMCLK Source Select 7 
+    SELS_VAL_0* = (0x00000000)    # SMCLK Source Select 0 
+    SELS_VAL_1* = (0x00000010)    # SMCLK Source Select 1 
+    SELS_VAL_2* = (0x00000020)    # SMCLK Source Select 2 
+    SELS_VAL_3* = (0x00000030)    # SMCLK Source Select 3 
+    SELS_VAL_4* = (0x00000040)    # SMCLK Source Select 4 
+    SELS_VAL_5* = (0x00000050)    # SMCLK Source Select 5 
+    SELS_VAL_6* = (0x00000060)    # SMCLK Source Select 6 
+    SELS_VAL_7* = (0x00000070)    # SMCLK Source Select 7 
     SELS_XT1CLK* = (0x00000000) # SMCLK Source Select XT1CLK 
     SELS_VLOCLK* = (0x00000010) # SMCLK Source Select VLOCLK 
     SELS_REFOCLK* = (0x00000020) # SMCLK Source Select REFOCLK 
     SELS_DCOCLK* = (0x00000030) # SMCLK Source Select DCOCLK 
     SELS_DCOCLKDIV* = (0x00000040) # SMCLK Source Select DCOCLKDIV 
     SELS_XT2CLK* = (0x00000050) # SMCLK Source Select XT2CLK 
-    SELA_BIT0* = (0x00000000)    # ACLK Source Select 0 
-    SELA_BIT1* = (0x00000100)    # ACLK Source Select 1 
-    SELA_BIT2* = (0x00000200)    # ACLK Source Select 2 
-    SELA_BIT3* = (0x00000300)    # ACLK Source Select 3 
-    SELA_BIT4* = (0x00000400)    # ACLK Source Select 4 
-    SELA_BIT5* = (0x00000500)    # ACLK Source Select 5 
-    SELA_BIT6* = (0x00000600)    # ACLK Source Select 6 
-    SELA_BIT7* = (0x00000700)    # ACLK Source Select 7 
+    SELA_VAL_0* = (0x00000000)    # ACLK Source Select 0 
+    SELA_VAL_1* = (0x00000100)    # ACLK Source Select 1 
+    SELA_VAL_2* = (0x00000200)    # ACLK Source Select 2 
+    SELA_VAL_3* = (0x00000300)    # ACLK Source Select 3 
+    SELA_VAL_4* = (0x00000400)    # ACLK Source Select 4 
+    SELA_VAL_5* = (0x00000500)    # ACLK Source Select 5 
+    SELA_VAL_6* = (0x00000600)    # ACLK Source Select 6 
+    SELA_VAL_7* = (0x00000700)    # ACLK Source Select 7 
     SELA_XT1CLK* = (0x00000000) # ACLK Source Select XT1CLK 
     SELA_VLOCLK* = (0x00000100) # ACLK Source Select VLOCLK 
     SELA_REFOCLK* = (0x00000200) # ACLK Source Select REFOCLK 
@@ -4517,56 +4517,56 @@ when not(defined(MSP430F5510)):
     DIVPA2_H* = (0x00000040)  # ACLK from Pin Divider Bit: 2 
   ##define RESERVED            (0x8000)    /* RESERVED */
   const 
-    DIVM_BIT0* = (0x00000000)    # MCLK Source Divider 0 
-    DIVM_BIT1* = (0x00000001)    # MCLK Source Divider 1 
-    DIVM_BIT2* = (0x00000002)    # MCLK Source Divider 2 
-    DIVM_BIT3* = (0x00000003)    # MCLK Source Divider 3 
-    DIVM_BIT4* = (0x00000004)    # MCLK Source Divider 4 
-    DIVM_BIT5* = (0x00000005)    # MCLK Source Divider 5 
-    DIVM_BIT6* = (0x00000006)    # MCLK Source Divider 6 
-    DIVM_BIT7* = (0x00000007)    # MCLK Source Divider 7 
+#    DIVM_VAL_0* = (0x00000000)    # MCLK Source Divider 0 
+#    DIVM_VAL_1* = (0x00000001)    # MCLK Source Divider 1 
+#    DIVM_VAL_2* = (0x00000002)    # MCLK Source Divider 2 
+#    DIVM_VAL_3* = (0x00000003)    # MCLK Source Divider 3 
+#    DIVM_VAL_4* = (0x00000004)    # MCLK Source Divider 4 
+#    DIVM_VAL_5* = (0x00000005)    # MCLK Source Divider 5 
+#    DIVM_VAL_6* = (0x00000006)    # MCLK Source Divider 6 
+#    DIVM_VAL_7* = (0x00000007)    # MCLK Source Divider 7 
     DIVM_VAL_1* = (0x00000000)   # MCLK Source Divider f(MCLK)/1 
     DIVM_VAL_2* = (0x00000001)   # MCLK Source Divider f(MCLK)/2 
     DIVM_VAL_4* = (0x00000002)   # MCLK Source Divider f(MCLK)/4 
     DIVM_VAL_8* = (0x00000003)   # MCLK Source Divider f(MCLK)/8 
     DIVM_VAL_16* = (0x00000004)  # MCLK Source Divider f(MCLK)/16 
     DIVM_VAL_32* = (0x00000005)  # MCLK Source Divider f(MCLK)/32 
-    DIVS_BIT0* = (0x00000000)    # SMCLK Source Divider 0 
-    DIVS_BIT1* = (0x00000010)    # SMCLK Source Divider 1 
-    DIVS_BIT2* = (0x00000020)    # SMCLK Source Divider 2 
-    DIVS_BIT3* = (0x00000030)    # SMCLK Source Divider 3 
-    DIVS_BIT4* = (0x00000040)    # SMCLK Source Divider 4 
-    DIVS_BIT5* = (0x00000050)    # SMCLK Source Divider 5 
-    DIVS_BIT6* = (0x00000060)    # SMCLK Source Divider 6 
-    DIVS_BIT7* = (0x00000070)    # SMCLK Source Divider 7 
+#    DIVS_VAL_0* = (0x00000000)    # SMCLK Source Divider 0 
+#    DIVS_VAL_1* = (0x00000010)    # SMCLK Source Divider 1 
+#    DIVS_VAL_2* = (0x00000020)    # SMCLK Source Divider 2 
+#    DIVS_VAL_3* = (0x00000030)    # SMCLK Source Divider 3 
+#    DIVS_VAL_4* = (0x00000040)    # SMCLK Source Divider 4 
+#    DIVS_VAL_5* = (0x00000050)    # SMCLK Source Divider 5 
+#    DIVS_VAL_6* = (0x00000060)    # SMCLK Source Divider 6 
+#    DIVS_VAL_7* = (0x00000070)    # SMCLK Source Divider 7 
     DIVS_VAL_1* = (0x00000000)   # SMCLK Source Divider f(SMCLK)/1 
     DIVS_VAL_2* = (0x00000010)   # SMCLK Source Divider f(SMCLK)/2 
     DIVS_VAL_4* = (0x00000020)   # SMCLK Source Divider f(SMCLK)/4 
     DIVS_VAL_8* = (0x00000030)   # SMCLK Source Divider f(SMCLK)/8 
     DIVS_VAL_16* = (0x00000040)  # SMCLK Source Divider f(SMCLK)/16 
     DIVS_VAL_32* = (0x00000050)  # SMCLK Source Divider f(SMCLK)/32 
-    DIVA_BIT0* = (0x00000000)    # ACLK Source Divider 0 
-    DIVA_BIT1* = (0x00000100)    # ACLK Source Divider 1 
-    DIVA_BIT2* = (0x00000200)    # ACLK Source Divider 2 
-    DIVA_BIT3* = (0x00000300)    # ACLK Source Divider 3 
-    DIVA_BIT4* = (0x00000400)    # ACLK Source Divider 4 
-    DIVA_BIT5* = (0x00000500)    # ACLK Source Divider 5 
-    DIVA_BIT6* = (0x00000600)    # ACLK Source Divider 6 
-    DIVA_BIT7* = (0x00000700)    # ACLK Source Divider 7 
+#    DIVA_VAL_0* = (0x00000000)    # ACLK Source Divider 0 
+#    DIVA_VAL_1* = (0x00000100)    # ACLK Source Divider 1 
+#    DIVA_VAL_2* = (0x00000200)    # ACLK Source Divider 2 
+#    DIVA_VAL_3* = (0x00000300)    # ACLK Source Divider 3 
+#    DIVA_VAL_4* = (0x00000400)    # ACLK Source Divider 4 
+#    DIVA_VAL_5* = (0x00000500)    # ACLK Source Divider 5 
+#    DIVA_VAL_6* = (0x00000600)    # ACLK Source Divider 6 
+#    DIVA_VAL_7* = (0x00000700)    # ACLK Source Divider 7 
     DIVA_VAL_1* = (0x00000000)   # ACLK Source Divider f(ACLK)/1 
     DIVA_VAL_2* = (0x00000100)   # ACLK Source Divider f(ACLK)/2 
     DIVA_VAL_4* = (0x00000200)   # ACLK Source Divider f(ACLK)/4 
     DIVA_VAL_8* = (0x00000300)   # ACLK Source Divider f(ACLK)/8 
     DIVA_VAL_16* = (0x00000400)  # ACLK Source Divider f(ACLK)/16 
     DIVA_VAL_32* = (0x00000500)  # ACLK Source Divider f(ACLK)/32 
-    DIVPA_BIT0* = (0x00000000)   # ACLK from Pin Source Divider 0 
-    DIVPA_BIT1* = (0x00001000)   # ACLK from Pin Source Divider 1 
-    DIVPA_BIT2* = (0x00002000)   # ACLK from Pin Source Divider 2 
-    DIVPA_BIT3* = (0x00003000)   # ACLK from Pin Source Divider 3 
-    DIVPA_BIT4* = (0x00004000)   # ACLK from Pin Source Divider 4 
-    DIVPA_BIT5* = (0x00005000)   # ACLK from Pin Source Divider 5 
-    DIVPA_BIT6* = (0x00006000)   # ACLK from Pin Source Divider 6 
-    DIVPA_BIT7* = (0x00007000)   # ACLK from Pin Source Divider 7 
+#    DIVPA_VAL_0* = (0x00000000)   # ACLK from Pin Source Divider 0 
+#    DIVPA_VAL_1* = (0x00001000)   # ACLK from Pin Source Divider 1 
+#    DIVPA_VAL_2* = (0x00002000)   # ACLK from Pin Source Divider 2 
+#    DIVPA_VAL_3* = (0x00003000)   # ACLK from Pin Source Divider 3 
+#    DIVPA_VAL_4* = (0x00004000)   # ACLK from Pin Source Divider 4 
+#    DIVPA_VAL_5* = (0x00005000)   # ACLK from Pin Source Divider 5 
+#    DIVPA_VAL_6* = (0x00006000)   # ACLK from Pin Source Divider 6 
+#    DIVPA_VAL_7* = (0x00007000)   # ACLK from Pin Source Divider 7 
     DIVPA_VAL_1* = (0x00000000)  # ACLK from Pin Source Divider f(ACLK)/1 
     DIVPA_VAL_2* = (0x00001000)  # ACLK from Pin Source Divider f(ACLK)/2 
     DIVPA_VAL_4* = (0x00002000)  # ACLK from Pin Source Divider f(ACLK)/4 
@@ -4619,18 +4619,18 @@ when not(defined(MSP430F5510)):
   const 
     XT2DRIVE0_H* = (0x00000040) # XT2 Drive Level mode Bit 0 
     XT2DRIVE1_H* = (0x00000080) # XT2 Drive Level mode Bit 1 
-    XCAP_BIT0* = (0x00000000)    # XIN/XOUT Cap 0 
-    XCAP_BIT1* = (0x00000004)    # XIN/XOUT Cap 1 
-    XCAP_BIT2* = (0x00000008)    # XIN/XOUT Cap 2 
-    XCAP_BIT3* = (0x0000000C)    # XIN/XOUT Cap 3 
-    XT1DRIVE_BIT0* = (0x00000000) # XT1 Drive Level mode: 0 
-    XT1DRIVE_BIT1* = (0x00000040) # XT1 Drive Level mode: 1 
-    XT1DRIVE_BIT2* = (0x00000080) # XT1 Drive Level mode: 2 
-    XT1DRIVE_BIT3* = (0x000000C0) # XT1 Drive Level mode: 3 
-    XT2DRIVE_BIT0* = (0x00000000) # XT2 Drive Level mode: 0 
-    XT2DRIVE_BIT1* = (0x00004000) # XT2 Drive Level mode: 1 
-    XT2DRIVE_BIT2* = (0x00008000) # XT2 Drive Level mode: 2 
-    XT2DRIVE_BIT3* = (0x0000C000) # XT2 Drive Level mode: 3 
+    XCAP_VAL_0* = (0x00000000)    # XIN/XOUT Cap 0 
+    XCAP_VAL_1* = (0x00000004)    # XIN/XOUT Cap 1 
+    XCAP_VAL_2* = (0x00000008)    # XIN/XOUT Cap 2 
+    XCAP_VAL_3* = (0x0000000C)    # XIN/XOUT Cap 3 
+    XT1DRIVE_VAL_0* = (0x00000000) # XT1 Drive Level mode: 0 
+    XT1DRIVE_VAL_1* = (0x00000040) # XT1 Drive Level mode: 1 
+    XT1DRIVE_VAL_2* = (0x00000080) # XT1 Drive Level mode: 2 
+    XT1DRIVE_VAL_3* = (0x000000C0) # XT1 Drive Level mode: 3 
+    XT2DRIVE_VAL_0* = (0x00000000) # XT2 Drive Level mode: 0 
+    XT2DRIVE_VAL_1* = (0x00004000) # XT2 Drive Level mode: 1 
+    XT2DRIVE_VAL_2* = (0x00008000) # XT2 Drive Level mode: 2 
+    XT2DRIVE_VAL_3* = (0x0000C000) # XT2 Drive Level mode: 3 
   # UCSCTL7 Control Bits 
   const 
     DCOFFG* = (0x00000001)    # DCO Fault Flag 
@@ -4853,10 +4853,10 @@ when not(defined(MSP430F5510)):
     UCMM* = (0x00000020)      # Multi-Master Environment 
   ##define res               (0x10)    /* reserved */
   const 
-    UCMODE_BIT0* = (0x00000000)  # Sync. Mode: USCI Mode: 0 
-    UCMODE_BIT1* = (0x00000002)  # Sync. Mode: USCI Mode: 1 
-    UCMODE_BIT2* = (0x00000004)  # Sync. Mode: USCI Mode: 2 
-    UCMODE_BIT3* = (0x00000006)  # Sync. Mode: USCI Mode: 3 
+    UCMODE_VAL_0* = (0x00000000)  # Sync. Mode: USCI Mode: 0 
+    UCMODE_VAL_1* = (0x00000002)  # Sync. Mode: USCI Mode: 1 
+    UCMODE_VAL_2* = (0x00000004)  # Sync. Mode: USCI Mode: 2 
+    UCMODE_VAL_3* = (0x00000006)  # Sync. Mode: USCI Mode: 3 
   # UCAxCTL1 UART-Mode Control Bits
   const 
     UCSSEL1* = (0x00000080)   # USCI 0 Clock Source Select 1 
@@ -4880,10 +4880,10 @@ when not(defined(MSP430F5510)):
     UCTXNACK* = (0x00000008)  # Transmit NACK 
     UCTXSTP* = (0x00000004)   # Transmit STOP 
     UCTXSTT* = (0x00000002)   # Transmit START 
-    UCSSEL_BIT0* = (0x00000000)  # USCI 0 Clock Source: 0 
-    UCSSEL_BIT1* = (0x00000040)  # USCI 0 Clock Source: 1 
-    UCSSEL_BIT2* = (0x00000080)  # USCI 0 Clock Source: 2 
-    UCSSEL_BIT3* = (0x000000C0)  # USCI 0 Clock Source: 3 
+    UCSSEL_VAL_0* = (0x00000000)  # USCI 0 Clock Source: 0 
+    UCSSEL_VAL_1* = (0x00000040)  # USCI 0 Clock Source: 1 
+    UCSSEL_VAL_2* = (0x00000080)  # USCI 0 Clock Source: 2 
+    UCSSEL_VAL_3* = (0x000000C0)  # USCI 0 Clock Source: 3 
     UCSSEL_UCLK* = (0x00000000) # USCI 0 Clock Source: UCLK 
     UCSSEL_ACLK* = (0x00000040) # USCI 0 Clock Source: ACLK 
     UCSSEL_SMCLK* = (0x00000080) # USCI 0 Clock Source: SMCLK 
@@ -4897,30 +4897,30 @@ when not(defined(MSP430F5510)):
     UCBRS1* = (0x00000004)    # USCI Second Stage Modulation Select 1 
     UCBRS0* = (0x00000002)    # USCI Second Stage Modulation Select 0 
     UCOS16* = (0x00000001)    # USCI 16-times Oversampling enable 
-    UCBRF_BIT0* = (0x00000000)   # USCI First Stage Modulation: 0 
-    UCBRF_BIT1* = (0x00000010)   # USCI First Stage Modulation: 1 
-    UCBRF_BIT2* = (0x00000020)   # USCI First Stage Modulation: 2 
-    UCBRF_BIT3* = (0x00000030)   # USCI First Stage Modulation: 3 
-    UCBRF_BIT4* = (0x00000040)   # USCI First Stage Modulation: 4 
-    UCBRF_BIT5* = (0x00000050)   # USCI First Stage Modulation: 5 
-    UCBRF_BIT6* = (0x00000060)   # USCI First Stage Modulation: 6 
-    UCBRF_BIT7* = (0x00000070)   # USCI First Stage Modulation: 7 
-    UCBRF_BIT8* = (0x00000080)   # USCI First Stage Modulation: 8 
-    UCBRF_BIT9* = (0x00000090)   # USCI First Stage Modulation: 9 
-    UCBRF_BIT10* = (0x000000A0)  # USCI First Stage Modulation: A 
-    UCBRF_BIT11* = (0x000000B0)  # USCI First Stage Modulation: B 
-    UCBRF_BIT12* = (0x000000C0)  # USCI First Stage Modulation: C 
-    UCBRF_BIT13* = (0x000000D0)  # USCI First Stage Modulation: D 
-    UCBRF_BIT14* = (0x000000E0)  # USCI First Stage Modulation: E 
-    UCBRF_BIT15* = (0x000000F0)  # USCI First Stage Modulation: F 
-    UCBRS_BIT0* = (0x00000000)   # USCI Second Stage Modulation: 0 
-    UCBRS_BIT1* = (0x00000002)   # USCI Second Stage Modulation: 1 
-    UCBRS_BIT2* = (0x00000004)   # USCI Second Stage Modulation: 2 
-    UCBRS_BIT3* = (0x00000006)   # USCI Second Stage Modulation: 3 
-    UCBRS_BIT4* = (0x00000008)   # USCI Second Stage Modulation: 4 
-    UCBRS_BIT5* = (0x0000000A)   # USCI Second Stage Modulation: 5 
-    UCBRS_BIT6* = (0x0000000C)   # USCI Second Stage Modulation: 6 
-    UCBRS_BIT7* = (0x0000000E)   # USCI Second Stage Modulation: 7 
+    UCBRF_VAL_0* = (0x00000000)   # USCI First Stage Modulation: 0 
+    UCBRF_VAL_1* = (0x00000010)   # USCI First Stage Modulation: 1 
+    UCBRF_VAL_2* = (0x00000020)   # USCI First Stage Modulation: 2 
+    UCBRF_VAL_3* = (0x00000030)   # USCI First Stage Modulation: 3 
+    UCBRF_VAL_4* = (0x00000040)   # USCI First Stage Modulation: 4 
+    UCBRF_VAL_5* = (0x00000050)   # USCI First Stage Modulation: 5 
+    UCBRF_VAL_6* = (0x00000060)   # USCI First Stage Modulation: 6 
+    UCBRF_VAL_7* = (0x00000070)   # USCI First Stage Modulation: 7 
+    UCBRF_VAL_8* = (0x00000080)   # USCI First Stage Modulation: 8 
+    UCBRF_VAL_9* = (0x00000090)   # USCI First Stage Modulation: 9 
+    UCBRF_VAL_10* = (0x000000A0)  # USCI First Stage Modulation: A 
+    UCBRF_VAL_11* = (0x000000B0)  # USCI First Stage Modulation: B 
+    UCBRF_VAL_12* = (0x000000C0)  # USCI First Stage Modulation: C 
+    UCBRF_VAL_13* = (0x000000D0)  # USCI First Stage Modulation: D 
+    UCBRF_VAL_14* = (0x000000E0)  # USCI First Stage Modulation: E 
+    UCBRF_VAL_15* = (0x000000F0)  # USCI First Stage Modulation: F 
+    UCBRS_VAL_0* = (0x00000000)   # USCI Second Stage Modulation: 0 
+    UCBRS_VAL_1* = (0x00000002)   # USCI Second Stage Modulation: 1 
+    UCBRS_VAL_2* = (0x00000004)   # USCI Second Stage Modulation: 2 
+    UCBRS_VAL_3* = (0x00000006)   # USCI Second Stage Modulation: 3 
+    UCBRS_VAL_4* = (0x00000008)   # USCI Second Stage Modulation: 4 
+    UCBRS_VAL_5* = (0x0000000A)   # USCI Second Stage Modulation: 5 
+    UCBRS_VAL_6* = (0x0000000C)   # USCI Second Stage Modulation: 6 
+    UCBRS_VAL_7* = (0x0000000E)   # USCI Second Stage Modulation: 7 
   # UCAxSTAT Control Bits 
   const 
     UCLISTEN* = (0x00000080)  # USCI Listen mode 
@@ -5190,14 +5190,14 @@ when not(defined(MSP430F5510)):
   # WDTCTL Control Bits 
   const 
     WDTPW* = (0x00005A00)
-    WDTIS_BIT0* = (0x00000000)   # WDT - Timer Interval Select: /2G 
-    WDTIS_BIT1* = (0x00000001)   # WDT - Timer Interval Select: /128M 
-    WDTIS_BIT2* = (0x00000002)   # WDT - Timer Interval Select: /8192k 
-    WDTIS_BIT3* = (0x00000003)   # WDT - Timer Interval Select: /512k 
-    WDTIS_BIT4* = (0x00000004)   # WDT - Timer Interval Select: /32k 
-    WDTIS_BIT5* = (0x00000005)   # WDT - Timer Interval Select: /8192 
-    WDTIS_BIT6* = (0x00000006)   # WDT - Timer Interval Select: /512 
-    WDTIS_BIT7* = (0x00000007)   # WDT - Timer Interval Select: /64 
+    WDTIS_VAL_0* = (0x00000000)   # WDT - Timer Interval Select: /2G 
+    WDTIS_VAL_1* = (0x00000001)   # WDT - Timer Interval Select: /128M 
+    WDTIS_VAL_2* = (0x00000002)   # WDT - Timer Interval Select: /8192k 
+    WDTIS_VAL_3* = (0x00000003)   # WDT - Timer Interval Select: /512k 
+    WDTIS_VAL_4* = (0x00000004)   # WDT - Timer Interval Select: /32k 
+    WDTIS_VAL_5* = (0x00000005)   # WDT - Timer Interval Select: /8192 
+    WDTIS_VAL_6* = (0x00000006)   # WDT - Timer Interval Select: /512 
+    WDTIS_VAL_7* = (0x00000007)   # WDT - Timer Interval Select: /64 
     WDTIS_VAL_2G* = (0x00000000) # WDT - Timer Interval Select: /2G 
     WDTIS_VAL_128M* = (0x00000001) # WDT - Timer Interval Select: /128M 
     WDTIS_VAL_8192K* = (0x00000002) # WDT - Timer Interval Select: /8192k 
@@ -5206,43 +5206,43 @@ when not(defined(MSP430F5510)):
     WDTIS_VAL_8192* = (0x00000005) # WDT - Timer Interval Select: /8192 
     WDTIS_VAL_512* = (0x00000006) # WDT - Timer Interval Select: /512 
     WDTIS_VAL_64* = (0x00000007) # WDT - Timer Interval Select: /64 
-    WDTSSEL_BIT0* = (0x00000000) # WDT - Timer Clock Source Select: SMCLK 
-    WDTSSEL_BIT1* = (0x00000020) # WDT - Timer Clock Source Select: ACLK 
-    WDTSSEL_BIT2* = (0x00000040) # WDT - Timer Clock Source Select: VLO_CLK 
-    WDTSSEL_BIT3* = (0x00000060) # WDT - Timer Clock Source Select: reserved 
+    WDTSSEL_VAL_0* = (0x00000000) # WDT - Timer Clock Source Select: SMCLK 
+    WDTSSEL_VAL_1* = (0x00000020) # WDT - Timer Clock Source Select: ACLK 
+    WDTSSEL_VAL_2* = (0x00000040) # WDT - Timer Clock Source Select: VLO_CLK 
+    WDTSSEL_VAL_3* = (0x00000060) # WDT - Timer Clock Source Select: reserved 
     WDTSSEL_SMCLK* = (0x00000000) # WDT - Timer Clock Source Select: SMCLK 
     WDTSSEL_ACLK* = (0x00000020) # WDT - Timer Clock Source Select: ACLK 
     WDTSSEL_VLO* = (0x00000040) # WDT - Timer Clock Source Select: VLO_CLK 
   # WDT-interval times [1ms] coded with Bits 0-2 
   # WDT is clocked by fSMCLK (assumed 1MHz) 
   const 
-    WDT_MDLY_BIT32* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2) # 32ms interval (default) 
-    WDT_MDLY_BIT8* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTIS0) # 8ms     " 
-    WDT_MDLY_0_BIT5* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTIS1) # 0.5ms   " 
-    WDT_MDLY_0_BIT064* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTIS1 + WDTIS0) # 
+    WDT_MDLY_32* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2) # 32ms interval (default) 
+    WDT_MDLY_8* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTIS0) # 8ms     " 
+    WDT_MDLY_VAL_0P5* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTIS1) # 0.5ms   " 
+    WDT_MDLY_VAL_0P064* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTIS1 + WDTIS0) # 
                                                                                # 0.064ms " 
   # WDT is clocked by fACLK (assumed 32KHz) 
   const 
-    WDT_ADLY_BIT1000* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0) # 1000ms  " 
-    WDT_ADLY_BIT250* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0 + WDTIS0) # 
+    WDT_ADLY_1000* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0) # 1000ms  " 
+    WDT_ADLY_250* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0 + WDTIS0) # 
                                                                                # 250ms   " 
-    WDT_ADLY_BIT16* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0 + WDTIS1) # 
+    WDT_ADLY_16* = (WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0 + WDTIS1) # 
                                                                               # 16ms    " 
-    WDT_ADLY_1_BIT9* = (
+    WDT_ADLY_VAL_1P9* = (
       WDTPW + WDTTMSEL + WDTCNTCL + WDTIS2 + WDTSSEL0 + WDTIS1 + WDTIS0) # 1.9ms   " 
   # Watchdog mode -> reset after expired time 
   # WDT is clocked by fSMCLK (assumed 1MHz) 
   const 
-    WDT_MRST_BIT32* = (WDTPW + WDTCNTCL + WDTIS2) # 32ms interval (default) 
-    WDT_MRST_BIT8* = (WDTPW + WDTCNTCL + WDTIS2 + WDTIS0) # 8ms     " 
-    WDT_MRST_0_BIT5* = (WDTPW + WDTCNTCL + WDTIS2 + WDTIS1) # 0.5ms   " 
-    WDT_MRST_0_BIT064* = (WDTPW + WDTCNTCL + WDTIS2 + WDTIS1 + WDTIS0) # 0.064ms " 
+    WDT_MRST_32* = (WDTPW + WDTCNTCL + WDTIS2) # 32ms interval (default) 
+    WDT_MRST_8* = (WDTPW + WDTCNTCL + WDTIS2 + WDTIS0) # 8ms     " 
+    WDT_MRST_VAL_0P5* = (WDTPW + WDTCNTCL + WDTIS2 + WDTIS1) # 0.5ms   " 
+    WDT_MRST_VAL_0P064* = (WDTPW + WDTCNTCL + WDTIS2 + WDTIS1 + WDTIS0) # 0.064ms " 
   # WDT is clocked by fACLK (assumed 32KHz) 
   const 
-    WDT_ARST_BIT1000* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2) # 1000ms  " 
-    WDT_ARST_BIT250* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2 + WDTIS0) # 250ms   " 
-    WDT_ARST_BIT16* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2 + WDTIS1) # 16ms    " 
-    WDT_ARST_1_BIT9* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2 + WDTIS1 + WDTIS0) # 
+    WDT_ARST_1000* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2) # 1000ms  " 
+    WDT_ARST_250* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2 + WDTIS0) # 250ms   " 
+    WDT_ARST_16* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2 + WDTIS1) # 16ms    " 
+    WDT_ARST_VAL_1P9* = (WDTPW + WDTCNTCL + WDTSSEL0 + WDTIS2 + WDTIS1 + WDTIS0) # 
                                                                              # 1.9ms   " 
   #***********************************************************
   # TLV Descriptors
