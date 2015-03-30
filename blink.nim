@@ -1,5 +1,6 @@
 import msp430
 import msp430usb
+import unsigned
 
 # Trivial blink demo for now.
 
@@ -23,7 +24,7 @@ ISR:
     else: return
 
 template toggleLED() =
-  PJ.OUT = PJ.OUT xor 8
+  PJ.OUT = PJ.OUT xor 8u16
 
 proc main =
   PJ.DIR[3] = 1
@@ -45,9 +46,9 @@ proc main =
       while i!=0:
         i = i - 1
     of On:
-      PJ.OUT = PJ.OUT or 8
+      PJ.OUT[3] = 1
     of Off:
-      PJ.OUT = PJ.OUT and not 8
+      PJ.OUT[3] = 0
 
 proc testvol =
   PA.OUT = 5

@@ -105,6 +105,6 @@ ISR:
       of OUTPUT_ENDPOINT7:
         PA.OUT = 9
 
-proc usbinit*():
+proc usbinit*() =
   # Enable XT2 oscillator
   enableXT2()
