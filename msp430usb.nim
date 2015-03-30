@@ -1,6 +1,5 @@
 import msp430
 
-
 type
   USBVECINT_value = enum
     NONE                   = 0x00
@@ -36,6 +35,11 @@ type
 var
   USBVECINT* {.header: "<msp430.h>", importc.} : USBVECINT_value
 
+{.pragma: usbram, codegenDecl: "$# __attribute__((section(\"usbram\"))) $#".}
+
+#var
+#  ep0buf {.usbram.} : array[0..7, int8] # = [1i8,2,3,4,5,6,7,8]
+
 ISR:
   proc USB_UBM() =
     while true:
@@ -63,7 +67,7 @@ ISR:
       of OUTPUT_ENDPOINT0:
         PA.OUT = 9
       of RSTR:
-        PA.OUT = 9
+        PA.OUT = 123 # ep0buf[2]
       of SUSR:
         PA.OUT = 9
       of RESR:

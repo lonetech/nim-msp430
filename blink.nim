@@ -3,16 +3,51 @@ import msp430usb
 
 # Trivial blink demo for now.
 
+# Button on P2_0, LED on PJ_3
+type
+  States = enum
+    Blinking
+    On
+    Off
+
+var state {.volatile.} : States
+
+ISR:
+  proc PORT2() =
+    case P2IV
+    of 2: 
+      case state
+      of Blinking: state = On
+      of On: state = Off
+      of Off: state = Blinking
+    else: return
+
 template toggleLED() =
   PJ.OUT = PJ.OUT xor 8
 
 proc main =
-  PJ.DIR = PJ.DIR or 8
+  PJ.DIR[3] = 1
+  PA.DIR[8] = 0
+  PA.OUT[8] = 1
+  PA.REN[8] = 1
+  PA.IES[8] = 1
+  PA.IE[8] = 1
+  PA.IFG = 0
+  enable_interrupts()
+
   while true:
-    toggleLED()
-    var i {.volatile.} = 0x7350  # volatile to keep delay loop
-    while i!=0:
-      i = i - 1
+    case state
+    of Blinking:
+      toggleLED()
+      #if ((PJ.OUT and 8)==0) != ((PA.IN and 256)==0):
+      #  toggleLED()
+      var i {.volatile.} = 0x7350  # volatile to keep delay loop
+      while i!=0:
+        i = i - 1
+    of On:
+      PJ.OUT = PJ.OUT or 8
+    of Off:
+      PJ.OUT = PJ.OUT and not 8
 
 proc testvol =
   PA.OUT = 5

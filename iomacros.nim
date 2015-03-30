@@ -10,8 +10,7 @@ macro sfrw*(nam: expr, loc: int16): stmt {.immediate.} =
   result = newNimNode(nnkStmtList)
   nam.expectKind(nnkIdent)
   let name = $nam.ident
-  #let decl = 
-  #echo decl
+  # Turns out the support library already has the symbols, use extern like C
   result.add(parseStmt("var "&name&"* {.volatile, extern:\"__"&name&"\".}: uint16"))
 
 # Note: may have to be redefined on 20-bit msp430s
