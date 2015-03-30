@@ -1,7 +1,7 @@
 #MCU=msp430f5510
 # MCU is now defined in msp403.nim
 
-NIMFLAGS=-d:release --os:standalone --opt:size --gc:none --deadCodeElim:on
+NIMFLAGS=-d:release --os:standalone --opt:size --gc:none
 # avr is the closest cpu for the moment
 NIMFLAGS+=--cpu:avr
 # running one C compiler lets its errors show
