@@ -1,5 +1,5 @@
 import msp430
-#import msp430usb
+import msp430usb
 
 # Trivial blink demo for now.
 
@@ -14,8 +14,12 @@ proc main =
     while i!=0:
       i = i - 1
 
-main()
+proc testvol =
+  PA.OUT = 5
+  PA.OUT = 5
 
+main()
+testvol()
 
 # My first project is a PC joystick to USB adapter based on an
 # Olimexino-5510 board (a MSP430 board resembling an Arduino Pro).
