@@ -4,12 +4,22 @@
 ,s/__\b//g
 # Except for addresses, where we append ADDR
 ,s/_\b/_ADDR/g
+# Comment out totally unhelpful bit or value definitions
+g/\b\(ADC[0-9]\+PDIV\|ID\|TBIDEX\|FLL[A-Z]\+\|DIV[SMAP]\+\)_\([0-9]\+\)\*/s/^/#/
 # Some parts have __ for symbolic part values
 ,s/\([A-Z0-9]\)__\([A-Z]\)/\1_\2/g
 # Others have it for numeric values, avoid clashing with bit names
 ,s/\B__\B/_VAL_/g
+# Some registers have _3 for value, not bit position
+,s/\b\([A-Z0-9]\+\)_\([0-9]\+\)\b/\1_VAL_\2/g
 # Some parts have _0 for bit and __1 for divider, for instance
-,s/\([^V]AL\|[^A]L\|[^L]\)_\([0-9]\+\)\b/\1_BIT\2/g
+#,s/\([^V]AL\|[^A]L\|[^L0-9]\|[^_0-9][0-9]\|[^_][0-9][0-9]\)_\([0-9]\+\)\b/\1_BIT\2/g
+# .. and the consts that broke
+g/REFVSEL_0\|PMMCOREV_0/-s/^  const/  #const/
+# Some use _ for decimal point
+,s/_\([0-9]\+\)_\([0-9]\+\)\b/_VAL_\1P\2/g
+# These are indices, not values
+,s/\(USB[A-Z0-9]*\)_VAL/\1/g
 # RTCYEARL is already RTCYEAR_L
 ,s/\(\b\([A-Z0-9]\+\)\([LH]\)\* = \2_\3\)/# \1/g
 # Move the interrupt vectors to avoid forward references
@@ -22,6 +32,7 @@
 -s/^/#/
 -s/^/#/
 # A lot of the defines are aliases, not constants
+# Move const line to below the template replacements
 /P4MAP0\*/-m/P4MAP7/
 /USBKEYPID\*/-m/USBKEYPID\*/
 /UCA0CTL1\*/-m/UCA0CTL0\*/
@@ -38,11 +49,12 @@
 /UCB1CTL1\*/-m/UCB1CTL0\*/
 /UCB1BR0\*/-m/UCB1BR1\*/
 /UCB1IE\*/-m/UCB1IFG\*/
-
+# Replace direct symbol macros with templates
 ,s/^    \([A-Z][A-Z0-9_]*\* = (\?[A-Z][A-Z0-9_]*)\? *\(#.*\)\?\)$/  template \1/
 g/^  template/-s/^  const/  #const/
 # Remove some legacy aliases (easier than fixing them up)
 g/^    PMAPPW/d
+g/sfrb(OP2_[LHB],/d
 # Inject iomacros import
 0i
 import iomacros

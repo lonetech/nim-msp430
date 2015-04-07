@@ -10,6 +10,10 @@ NIMFLAGS+=--parallelBuild:1 --verbosity:1
 %: %.nim panicoverride.nim
 	nim c $(NIMFLAGS) $<
 
+msp430f%.nim: /usr/msp430/include/msp430f%.h msp430_c2nim.ed
+	c2nim -o:$@ $<
+	ed -s $@ < msp430_c2nim.ed
+
 blink: blink.nim msp430usb.nim msp430.nim
 
 all: blink

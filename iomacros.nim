@@ -4,20 +4,22 @@ macro sfrb*(nam: expr, loc: int16): stmt {.immediate.} =
   result = newNimNode(nnkStmtList)
   nam.expectKind(nnkIdent)
   let name = $nam.ident
-  result.add(parseStmt("template "&name&"*: expr = cast[ptr uint8]("&loc.repr&")[]"))
+  result.add(parseStmt("var "&name&"* {.volatile, extern:\"__"&name&"\".}: uint8"))
 
 macro sfrw*(nam: expr, loc: int16): stmt {.immediate.} =
   result = newNimNode(nnkStmtList)
   nam.expectKind(nnkIdent)
   let name = $nam.ident
-  result.add(parseStmt("template "&name&"*: expr = cast[ptr uint16]("&loc.repr&")[]"))
+  # Turns out the support library already has the symbols, use extern like C
+  result.add(parseStmt("var "&name&"* {.volatile, extern:\"__"&name&"\".}: uint16"))
 
 # Note: may have to be redefined on 20-bit msp430s
 macro sfra*(nam: expr, loc: int16): stmt {.immediate.} =
   result = newNimNode(nnkStmtList)
   nam.expectKind(nnkIdent)
   let name = $nam.ident
-  result.add(parseStmt("template "&name&"*: expr = cast[ptr void]("&loc.repr&")[]"))
+  # TODO: use address type
+  result.add(parseStmt("var "&name&"* {.volatile, extern:\"__"&name&"\".}: uint16"))
 
 ## TODO: patch in volatile in appropriate places
 ## TODO: make const registers const

@@ -1,4 +1,4 @@
-import macros
+import macros, unsigned
 
 const mcu="msp430f5510"
 const msp430includes="/usr/msp430/include"
@@ -9,33 +9,34 @@ const msp430includes="/usr/msp430/include"
 
 macro importmsp430(header: static[string]): stmt =
   # We could use os.`/` but the target has no OS. 
-  discard staticExec("c2nim -o:"&header&".nim "&msp430includes&"/"&header&".h")
+  #discard staticExec("c2nim -o:"&header&".nim "&msp430includes&"/"&header&".h")
   # Rename __MSP430 macros and import iomacros
-  if header==mcu:
-    discard staticExec("ed -s "&header&".nim < msp430_c2nim.ed")
+  #if header==mcu:
+  #  discard staticExec("ed -s "&header&".nim < msp430_c2nim.ed")
+  discard staticExec("make "&header&".nim")
   return parseStmt("include "&header)
 importmsp430(mcu)
 
 type
   GPIO = tuple
-    IN:  int16
-    OUT: int16
-    DIR: int16
-    REN: int16
-    DS:  int16
-    SEL: int16
+    IN:  uint16
+    OUT: uint16
+    DIR: uint16
+    REN: uint16
+    DS:  uint16
+    SEL: uint16
     # Only port A (aka port 1 and 2) has interrupts
-    padc, pade, pad10, pad12, pad14, pad16: int16
-    IES: int16
-    IE:  int16
-    IFG: int16
+    padc, pade, pad10, pad12, pad14, pad16: uint16
+    IES: uint16
+    IE:  uint16
+    IFG: uint16
 
 # Some sugar to do bit twiddling
 proc `[]`*(word: int16, bit: range[0..15]): range[0..1] =
   if (word and (1 shl bit))!=0: return 1
   else: return 0
-template `[]=`*(word: var int16, bit: range[0..15], value: range[0..1]) =
-  let bitval : int16 =  1 shl bit
+template `[]=`*(word: var uint16, bit: range[0..15], value: range[0..1]) =
+  let bitval : uint16 =  1 shl bit
   if value!=0:
     word = word or bitval
   else:
@@ -50,8 +51,7 @@ macro declGPIO(n: expr): stmt {.immediate.} =
   # macros) which have initializers in the runtime (empty, but each wastes
   # six words). But building the expression directly is awfully clumsy.
   # This makes me see more appeal to lisp. 
-  result.add(#parseStmt("var "&name&"IN {.header: \"<msp430.h>\", importc.} : int16"),
-             parseStmt("template "&name&"*: expr = cast[ptr GPIO](addr "&name&"IN)"))
+  result.add(parseStmt("template "&name&"*: expr = cast[ptr GPIO](addr "&name&"IN)"))
 
 proc enable_interrupts*() {.header: "<intrinsics.h>", importc: "_EINT".}
 proc disable_interrupts*() {.header: "<intrinsics.h>", importc: "_DINT".}
@@ -88,7 +88,7 @@ proc setVCoreUp*(level: range[0..3]) =
 proc enableXT2*() {.inline.} =
   # TODO: Implement various possible values
   # Set XT2 parameters for 4MHz crystal
-  USCTL6 = (USCTL6 and 0xff) or 0b00_0_0_000_0_00000000
+  UCSCTL6 = (UCSCTL6 and 0xffu16) or 0b00_0_0_000_0_00000000u16
   #          00  lowest drive strength for 4MHz crystal
   #             -  reserved
   #               0  not bypassed (enable osc amp)
@@ -96,11 +96,11 @@ proc enableXT2*() {.inline.} =
   #                     0  turn osc on (even if not used by UCS)
   #                       xxxxxxxx  don't touch XT1 settings
   # Map the pins to XT2
-  PC.SEL = PC.SEL or 0b1100
+  PC_SEL = PC_SEL or 0b1100u16
   # We could wait for it to lock:
   when false:
-    while USCTL7[3]:
-      USCTL7[3]=0
+    while UCSCTL7[3]:
+      UCSCTL7[3]=0
 
 template setPragma(node: stmt, name: string, value: string) =
   if node.pragma.kind==nnkEmpty:
