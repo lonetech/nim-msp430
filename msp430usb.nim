@@ -31,11 +31,32 @@ type
     wIndex: uint16
     wLength: uint16
 
-#var
-#  ep0buf {.usbram.} : array[0..7, int8] # = [1i8,2,3,4,5,6,7,8]
+var
+  UsbSetupBlock {.extern:"USBSUBLK".} : UsbDeviceRequest
+  ep0inbuf {.extern:"USBIEP0BUF".} : array[0..7, uint8]
+  ep0outbuf {.extern:"USBOEP0BUF".} : array[0..7, uint8]
+  #ep1buf {.usbram.} : array[0..7, int8] # = [1i8,2,3,4,5,6,7,8]
 
 ISR:
   proc USB_UBM() =
+    if (USBIFG and SETUPIFG) != 0:      # Setup packet
+      if UsbSetupBlock.bmRequestType shr 7 != 0:  # in/out direction bit
+        USBCTL = USBCTL or DIR
+      else:
+        USBCTL = USBCTL and not cast[uint8](DIR)
+      case UsbSetupBlock.bmRequestType
+      of 0x80:   # standard device in
+        case UsbSetupBlock.bRequest
+        of 6:   # get descriptor
+          case UsbSetupBlock.wValue
+          of 0x0100:   # device descriptor 0
+            discard  # TODO: produce descriptor
+          else: discard
+        else: discard
+      else: discard
+      # Failure case: stall endpoint 0
+      USBIEPCNF_0 = USBIEPCNF_0 or STALL
+      USBOEPCNF_0 = USBOEPCNF_0 or STALL
     while true:
       # computedGoto does not seem to understand the values are all even
       # {.computedGoto.}
@@ -53,8 +74,8 @@ ISR:
       #of USBVECINT_RSTR:  # reset - might want to auto-reset with FRSTE
       #of USBVECINT_SUSR:  # suspend
       #of USBVECINT_RESR:  # resume
-      of USBVECINT_SETUP_PACKET_RECEIVED: discard
-      of USBVECINT_STPOW_PACKET_RECEIVED: discard
+      of USBVECINT_SETUP_PACKET_RECEIVED: discard # Setup transaction, handled above
+      #of USBVECINT_STPOW_PACKET_RECEIVED: discard # should not happen, setup overwrite
       #of USBVECINT_INPUT_ENDPOINT1:
       #of USBVECINT_INPUT_ENDPOINT2:
       #of USBVECINT_INPUT_ENDPOINT3:
@@ -89,6 +110,16 @@ proc usbinit*() =
   # TODO: Wait 2ms and check PLL lock?
   # Enable USB module and pull up resistor
   USBCNF = USBCNF or cast[uint16](PUR_EN or USB_EN)
+  USBCTL = FEN or FRSTE
+  USBIE = SETUPIE
   # Note: officially the resistor should not be enabled until PWR_VBUSOn
   UsbKeyID = 0    # Lock configuration registers
 
+  # Clear endpoint 0 status
+  USBIEPCNF_0 = UBME or USBIIE
+  USBIEPCNT_0 = 0
+  USBOEPCNF_0 = UBME or USBIIE
+  USBOEPCNT_0 = 0
+  # Enable interrupts for endpoint 0
+  USBIEPIE = 1
+  USBOEPIE = 1

@@ -2,7 +2,7 @@ import macros, unsigned
 
 const mcu="msp430f5510"
 const msp430includes="/usr/msp430/include"
-#const msp430includes=staticExec("msp430mcu-config --incpath"
+#const msp430includes=staticExec("msp430mcu-config --incpath")
 
 {.passC: "-mmcu="&mcu.}
 {.passL: "-mmcu="&mcu.}
@@ -68,27 +68,27 @@ proc setVCoreUp*(level: range[0..3]) =
   # Make sure no flags are set for iterative sequences
   while (PMMIFG and (SVSMHDLYIFG or SVSMLDLYIFG)) != 0: continue
   # Set SVS/SVM high side new level
-  SVSMHCTL = SVSHE or SVSHRVL0 * level or SVMHE or SVSMHRRL0 * level
+  SVSMHCTL = cast[uint16](SVSHE or SVSHRVL0 * level or SVMHE or SVSMHRRL0 * level)
   # Set SVM low side to new level
-  SVSMLCTL = SVSLE or SVMLE or SVSMLRRL0 * level
+  SVSMLCTL = cast[uint16](SVSLE or SVMLE or SVSMLRRL0 * level)
   # Wait till SVM is settled
   while (PMMIFG and SVSMLDLYIFG) == 0: continue
   # Clear already set flags
-  PMMIFG = PMMIFG and not (SVMLVLRIFG or SVMLIFG)
+  PMMIFG = cast[uint16](PMMIFG) and not cast[uint16](SVMLVLRIFG or SVMLIFG)
   # Set VCore to new level
   PMMCTL0_L = PMMCOREV0 * level
   # Wait till new level reached
   if (PMMIFG and SVMLIFG) != 0:
     while (PMMIFG and SVMLVLRIFG) == 0: continue
   # Set SVS/SVM low side to new level
-  SVSMLCTL = SVSLE or SVSLRVL0 * level or SVMLE or SVSMLRRL0 * level
+  SVSMLCTL = cast[uint16](SVSLE or SVSLRVL0 * level or SVMLE or SVSMLRRL0 * level)
   # Lock PMM registers for write access
   PMMCTL0_H = 0x00
 
 proc enableXT2*() {.inline.} =
   # TODO: Implement various possible values
   # Set XT2 parameters for 4MHz crystal
-  UCSCTL6 = (UCSCTL6 and 0xffu16) or 0b00_0_0_000_0_00000000u16
+  UCSCTL6 = cast[uint16]((UCSCTL6 and 0xff) or 0b00_0_0_000_0_00000000)
   #          00  lowest drive strength for 4MHz crystal
   #             -  reserved
   #               0  not bypassed (enable osc amp)
