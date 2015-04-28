@@ -34,6 +34,7 @@ proc main =
   PA.IES[8] = 1
   PA.IE[8] = 1
   PA.IFG = 0
+  usbinit()
   enable_interrupts()
 
   while true:
@@ -50,12 +51,13 @@ proc main =
     of Off:
       PJ.OUT[3] = 0
 
-proc testvol =
-  PA.OUT = 5
-  PA.OUT = 5
+#proc testvol =
+#  PA.OUT = 5
+#  PA.OUT = 5
 
 main()
-testvol()
+#testvol()
+
 
 # My first project is a PC joystick to USB adapter based on an
 # Olimexino-5510 board (a MSP430 board resembling an Arduino Pro).

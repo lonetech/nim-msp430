@@ -64,7 +64,11 @@ declGPIO(PJ)
 proc setVCoreUp*(level: range[0..3]) =
   ## Set core voltage level - only shift one level at a time!
   # Open PMM registers for write access
-  PMMCTL0_H = 0xa5
+  PMMCTL0_H = 0xa5u8
+  # Disable the automatic resets while altering voltages
+  PMMRIE = 0
+  # Clear flags first - because they don't do it on their own
+  PMMIFG = 0
   # Make sure no flags are set for iterative sequences
   while (PMMIFG and (SVSMHDLYIFG or SVSMLDLYIFG)) != 0: continue
   # Set SVS/SVM high side new level
@@ -82,6 +86,8 @@ proc setVCoreUp*(level: range[0..3]) =
     while (PMMIFG and SVMLVLRIFG) == 0: continue
   # Set SVS/SVM low side to new level
   SVSMLCTL = cast[uint16](SVSLE or SVSLRVL0 * level or SVMLE or SVSMLRRL0 * level)
+  # Reenable power failure resets
+  PMMRIE = SVSHPE or SVSLPE
   # Lock PMM registers for write access
   PMMCTL0_H = 0x00
 

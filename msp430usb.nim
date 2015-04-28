@@ -1,8 +1,13 @@
-import msp430, unsigned
+import msp430, unsigned, tables
+# Encodings requires local OS support. So it must be spawned as
+# a separate staticExec of a native program. Yay. 
+#import encodings
+#import marshal
 
 {.pragma: usbram, codegenDecl: "$# __attribute__((section(\"usbram\"))) $#".}
 
 type
+  index = int8
   Request* = enum
     GetStatus = 0
     ClearFeature = 1
@@ -16,26 +21,53 @@ type
     SetInterface = 11
     SynchFrame = 12
   DescriptorType* = enum
-    Device = 1
-    Configuration = 2
-    String = 3
-    Interface = 4
-    Endpoint = 5
-    DeviceQualifier = 6
-    OtherSpeedConfiguration = 7
-    InterfacePower = 8
+    dtDevice = 1
+    dtConfiguration = 2
+    dtString = 3
+    dtInterface = 4
+    dtEndpoint = 5
+    dtDeviceQualifier = 6
+    dtOtherSpeedConfiguration = 7
+    dtInterfacePower = 8
   UsbDeviceRequest* = tuple
     bmRequestType: uint8
     bRequest: uint8
     wValue: uint16
     wIndex: uint16
     wLength: uint16
+  UsbDeviceDescriptor* = tuple
+    bLength: uint8
+    bDescriptorType: uint8
+    bcdUSB: uint16
+    bDeviceClass: uint8
+    bDeviceSubClass: uint8
+    bDeviceProtocol: uint8
+    bMaxPacketSize0: uint8
+    idVendor: uint16
+    idProduct: uint16
+    bcdDevice: uint16
+    iManufacturer: index
+    iProduct: index
+    iSerialNumber: index
+    bNumConfigurations: int8
 
 var
   UsbSetupBlock {.extern:"USBSUBLK".} : UsbDeviceRequest
   ep0inbuf {.extern:"USBIEP0BUF".} : array[0..7, uint8]
   ep0outbuf {.extern:"USBOEP0BUF".} : array[0..7, uint8]
   #ep1buf {.usbram.} : array[0..7, int8] # = [1i8,2,3,4,5,6,7,8]
+  newaddress : uint8 = 0x80
+
+const
+  serial = staticExec("./toutf16", "MSP430 Joystick")
+  deviceDescriptor0 = (
+    bLength: 18, bDescriptorType: dtDevice, bcdUSB: 0x0310,
+    bDeviceClass: 0, bDeviceSubClass: 0, bDeviceProtocol: 0,
+    bMaxPacketSize0: 8, idVendor: 0x16c0, idProduct: 0x27dc,  # V-USB HID Joystick, must set serial number text
+    bcdDevice: 0, iManufacturer: 0, iProduct: 0, iSerialNumber: 0, bNumConfigurations: 0)
+  descriptors = {(ord(dtDevice) shl 8) or 0: deviceDescriptor0,
+                 #(ord(dtString) shl 8) or 0: serial,
+                 }.toTable
 
 ISR:
   proc USB_UBM() =
@@ -47,7 +79,11 @@ ISR:
       case UsbSetupBlock.bmRequestType
       of 0x80:   # standard device in
         case UsbSetupBlock.bRequest
-        of 6:   # get descriptor
+        of ord(SetAddress):
+          newaddress = UsbSetupBlock.wValue and 0xff
+          UsbIepCnt0 = 0
+        of ord(GetDescriptor):
+          #let desc = ref descriptors[UsbSetupBlock.wValue]
           case UsbSetupBlock.wValue
           of 0x0100:   # device descriptor 0
             discard  # TODO: produce descriptor
@@ -69,7 +105,10 @@ ISR:
       #of USBVECINT_PWR_VBUSOn:
       #of USBVECINT_PWR_VBUSOff:
       #of USBVECINT_USB_TIMESTAMP:
-      of USBVECINT_INPUT_ENDPOINT0: discard
+      of USBVECINT_INPUT_ENDPOINT0:
+        if (newaddress and 0x80) == 0:
+          UsbFunAdr = newaddress
+          newaddress = newaddress or 0x80
       of USBVECINT_OUTPUT_ENDPOINT0: discard
       #of USBVECINT_RSTR:  # reset - might want to auto-reset with FRSTE
       #of USBVECINT_SUSR:  # suspend
@@ -107,6 +146,7 @@ proc usbinit*() =
   UsbPllCtl = cast[uint16](UPLLEN or UPFDEN)
   UsbPllDivB = cast[uint16](UsbPll_setClk_val_4p0)
   UsbPhyCtl = PUSEL   # enable USB function of USB phy
+
   # TODO: Wait 2ms and check PLL lock?
   # Enable USB module and pull up resistor
   USBCNF = USBCNF or cast[uint16](PUR_EN or USB_EN)
